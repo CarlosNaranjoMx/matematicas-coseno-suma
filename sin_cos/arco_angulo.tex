@@ -18,3 +18,21 @@ Por ejemplo:
 \end{itemize}
 
 Así, el "arco de un ángulo" puede referirse tanto a la longitud sobre la circunferencia como a la función inversa en trigonometría.
+
+\begin{center}
+\begin{tikzpicture}[scale=2]
+  % Circunferencia
+  \draw[thick] (0,0) circle(1);
+  % Radio inicial
+  \draw[thick,->] (0,0) -- (1,0) node[anchor=west]{$r$};
+  % Radio final
+  \draw[thick,->] (0,0) -- ({cos(40)},{sin(40)}) node[anchor=south]{$r$};
+  % Arco
+  \draw[red,thick] (1,0) arc (0:40:1);
+  % Ángulo
+  \draw[->] (0.3,0) arc (0:40:0.3);
+  \node at (0.45,0.13) {$\theta$};
+  % Etiqueta del arco
+  \node[red] at (0.78,0.32) {$L$};
+\end{tikzpicture}
+\end{center}
