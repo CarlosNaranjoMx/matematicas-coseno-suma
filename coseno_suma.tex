@@ -1,0 +1,35 @@
+\documentclass{article}
+\usepackage{amsmath}
+\usepackage{hyperref}
+\usepackage{tikz}
+\usepackage{amssymb}
+
+\begin{document}
+
+\section*{Índice}
+\begin{enumerate}
+  \item \hyperref[sec:identidad]{Identidad del coseno de la suma}
+  \item \hyperref[sec:geom]{Demostración geométrica}
+  \item \hyperref[sec:rotacion]{Deducción de la matriz de rotación}
+  \item \hyperref[sec:demcos]{Demostración de la fórmula de cos(a+b)}
+  \item \hyperref[sec:complejos]{Representación de los números complejos como matrices 2x2}
+  \item \hyperref[sec:ejemplo]{Ejemplo: Rotación de 2 pi quintos como matriz 2x2}
+  \item \hyperref[sec:cosenoaureo]{Demostración de la relación entre cos(2pi/5) y el número áureo}
+  \item \hyperref[sec:chebfib]{Polinomio de Chebyshev y relación con Fibonacci}
+  \item \hyperref[sec:conclusion]{Conclusión}
+\end{enumerate}
+
+% Inclusión de secciones
+\input{identidad_coseno.tex}
+\input{demostracion_geometrica.tex}
+\input{deduccion_rotacion.tex}
+\input{demostracion_formula_coseno.tex}
+\input{complejos_matriz.tex}
+\input{ejemplo_rotacion.tex}
+\input{demostracion_coseno_aureo.tex}
+\input{chebyshev_fibonacci.tex}
+
+\section{Conclusión}\label{sec:conclusion}
+La fórmula se demuestra usando la composición de rotaciones en el plano, y se verifica algebraicamente con matrices de rotación.
+
+\end{document}

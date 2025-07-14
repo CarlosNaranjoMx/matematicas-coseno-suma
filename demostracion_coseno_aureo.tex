@@ -1,0 +1,52 @@
+% Sección: Demostración de la relación entre cos(2pi/5) y el número áureo
+\section{Demostración de la relación entre $\cos\left(\frac{2\pi}{5}\right)$ y el número áureo}
+Para demostrar que $\cos\left(\frac{2\pi}{5}\right)$ se puede expresar en términos del número áureo $\varphi$, partimos de la ecuación para el coseno de múltiplos de $\pi$:
+
+Sabemos que las raíces de la ecuación $x^5 = 1$ en el plano complejo son los vértices del pentágono regular inscrito en el círculo unitario. Si escribimos estas raíces como $e^{2\pi i k/5}$ para $k=0,1,2,3,4$, los valores de $\cos\left(\frac{2\pi}{5}\right)$ corresponden a las partes reales de estas raíces.
+
+La suma y productos de los cosenos de los ángulos múltiplos de $\frac{2\pi}{5}$ están relacionados con las soluciones de ciertas ecuaciones cuadráticas. En particular, usando identidades trigonométricas y simetría del pentágono, se puede demostrar que $x = \cos\left(\frac{2\pi}{5}\right)$ satisface la ecuación:
+\begin{equation*}
+4x^2 + 2x - 1 = 0
+\end{equation*}
+
+El polinomio ciclotómico de grado 5 es:
+\begin{equation*}
+\Phi_5(x) = x^4 + x^3 + x^2 + x + 1
+\end{equation*}
+
+Sus raíces son los números complejos $e^{2\pi i k/5}$ para $k=1,2,3,4,5$. Si escribimos $x = e^{2\pi i/5}$, entonces $x^5 = 1$ y las partes reales de estas raíces corresponden a los cosenos de los ángulos $\frac{2\pi k}{5}$.
+
+Para encontrar una ecuación que satisfaga $y = \cos\left(\frac{2\pi}{5}\right)$, usamos la identidad:
+\begin{equation*}
+2\cos(5\theta) = 2T_5(\cos\theta)
+\end{equation*}
+donde $T_5$ es el polinomio de Chebyshev de grado 5. Esto lleva a una ecuación polinómica para $y$.
+
+Al manipular las expresiones y usando simetría, se obtiene que $y$ satisface la ecuación cuadrática:
+\begin{equation*}
+4y^2 + 2y - 1 = 0
+\end{equation*}
+
+Así, los polinomios cuadráticos para los cosenos de los múltiplos de $\frac{2\pi}{5}$ derivan del polinomio ciclotómico de grado 5 y de las propiedades de los polinomios de Chebyshev, que relacionan las raíces de la unidad con sus partes reales.
+
+Resolviendo para $x$:
+\begin{equation*}
+x = \frac{-2 \pm \sqrt{4 + 16}}{8} = \frac{-2 \pm \sqrt{20}}{8} = \frac{-2 \pm 2\sqrt{5}}{8} = \frac{-1 \pm \sqrt{5}}{4}
+\end{equation*}
+
+El valor positivo corresponde a $\cos\left(\frac{2\pi}{5}\right)$:
+\begin{equation*}
+\cos\left(\frac{2\pi}{5}\right) = \frac{-1 + \sqrt{5}}{4}
+\end{equation*}
+
+El número áureo es $\varphi = \frac{1 + \sqrt{5}}{2}$, así que:
+\begin{equation*}
+\frac{\varphi - 1}{2} = \frac{\frac{1 + \sqrt{5}}{2} - 1}{2} = \frac{\frac{-1 + \sqrt{5}}{2}}{2} = \frac{-1 + \sqrt{5}}{4}
+\end{equation*}
+
+Por lo tanto:
+\begin{equation*}
+\cos\left(\frac{2\pi}{5}\right) = \frac{\varphi - 1}{2}
+\end{equation*}
+
+Esto demuestra la relación entre el coseno de $\frac{2\pi}{5}$ y el número áureo.

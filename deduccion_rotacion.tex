@@ -1,0 +1,31 @@
+% Sección: Deducción de la matriz de rotación
+\section{Deducción de la matriz de rotación}\label{sec:rotacion}
+La matriz de rotación por un ángulo $\theta$ en el plano se deduce así:
+
+Si rotamos el punto $(x, y)$ por un ángulo $\theta$ respecto al origen, las nuevas coordenadas $(x', y')$ son:
+\begin{align*}
+x' &= x \cos \theta - y \sin \theta \\
+y' &= x \sin \theta + y \cos \theta
+\end{align*}
+Esto se puede escribir en forma matricial:
+\begin{equation*}
+\begin{pmatrix}
+x' \\
+y'
+\end{pmatrix} =
+\begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{pmatrix}
+\begin{pmatrix}
+x \\
+y
+\end{pmatrix}
+\end{equation*}
+Por lo tanto, la matriz de rotación es:
+\begin{equation*}
+R(\theta) = \begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{pmatrix}
+\end{equation*}

@@ -1,0 +1,74 @@
+% Sección: Demostración de la fórmula de cos(a+b)
+\section{Demostración de la fórmula de cos(a+b)}\label{sec:demcos}
+Multiplicando las matrices de rotación:
+\begin{equation*}
+R(a) R(b) = R(a + b)
+\end{equation*}
+
+Calculando el producto:
+\begin{equation*}
+\begin{pmatrix}
+\cos a & -\sin a \\
+\sin a & \cos a
+\end{pmatrix}
+\begin{pmatrix}
+\cos b & -\sin b \\
+\sin b & \cos b
+\end{pmatrix}
+\end{equation*}
+
+El elemento (1,1) del resultado es:
+\begin{equation*}
+\cos a \cos b - \sin a \sin b
+\end{equation*}
+
+Por lo tanto:
+\begin{equation*}
+\cos(a + b) = \cos a \cos b - \sin a \sin b
+\end{equation*}
+
+% Demostración alternativa usando el círculo unitario
+\subsection*{Demostración alternativa usando el círculo unitario}
+Consideremos los puntos $A = (\cos a, \sin a)$ y $B = (\cos b, \sin b)$ en el círculo unitario. La rotación de $A$ por un ángulo $b$ produce el punto $C$:
+\begin{align*}
+C_x &= \cos a \cos b - \sin a \sin b \\
+C_y &= \cos a \sin b + \sin a \cos b
+\end{align*}
+
+El componente $x$ de $C$ corresponde a $\cos(a+b)$, por lo tanto:
+\begin{equation*}
+\cos(a+b) = \cos a \cos b - \sin a \sin b
+\end{equation*}
+
+Esta demostración se basa en la composición de coordenadas en el círculo unitario y la definición de la suma de ángulos.
+
+% Demostración alternativa usando números complejos y la fórmula de Euler
+\subsection*{Demostración alternativa usando la fórmula de Euler}
+Recordemos que:
+\begin{equation*}
+e^{i\theta} = \cos\theta + i\sin\theta
+\end{equation*}
+
+Entonces:
+\begin{equation*}
+e^{i(a+b)} = e^{ia} e^{ib} = (\cos a + i \sin a)(\cos b + i \sin b)
+\end{equation*}
+
+Multiplicando:
+\begin{align*}
+& (\cos a + i \sin a)(\cos b + i \sin b) = \\
+& \cos a \cos b + i \cos a \sin b + i \sin a \cos b + i^2 \sin a \sin b \\
+& = \cos a \cos b + i(\cos a \sin b + \sin a \cos b) - \sin a \sin b
+\end{align*}
+
+El término real es:
+\begin{equation*}
+\cos a \cos b - \sin a \sin b
+\end{equation*}
+
+Por lo tanto:
+\begin{equation*}
+\cos(a+b) = \cos a \cos b - \sin a \sin b
+\end{equation*}
+
+Esta demostración utiliza la notación exponencial compleja y la fórmula de Euler.
