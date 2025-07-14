@@ -1,0 +1,52 @@
+\section{Polinomios de Chebyshev y su relación trigonométrica}
+
+Sea $P_0(x) = 1$, $P_1(x) = x$ y para $n > 1$:
+\[
+    P_{n+1}(x) = x P_n(x) - P_{n-1}(x)
+\]
+Estos son los polinomios de Chebyshev de primer tipo, definidos por recurrencia.
+
+Ahora, demostraremos que:
+\[
+    P_n(2 \cos \theta) = \frac{\sin(n+1)\theta}{\sin \theta}
+\]
+
+\textbf{Demostración:}
+
+Consideremos la recurrencia para $P_n(x)$ y tomemos $x = 2 \cos \theta$.
+
+Definimos $S_n = \sin(n\theta)$.
+
+Sabemos que:
+\[
+    S_{n+1} = 2 \cos \theta S_n - S_{n-1}
+\]
+
+Esto es la misma recurrencia que para $P_n(x)$ con $x = 2 \cos \theta$.
+
+Por inducción:
+- Para $n=0$: $P_0(2\cos\theta) = 1 = \frac{\sin(1\cdot\theta)}{\sin\theta}$
+- Para $n=1$: $P_1(2\cos\theta) = 2\cos\theta = \frac{\sin(2\theta)}{\sin\theta}$
+
+Supongamos que $P_n(2\cos\theta) = \frac{\sin((n+1)\theta)}{\sin\theta}$ y $P_{n-1}(2\cos\theta) = \frac{\sin(n\theta)}{\sin\theta}$.
+
+Entonces:
+\[
+\begin{align*}
+P_{n+1}(2\cos\theta) &= 2\cos\theta P_n(2\cos\theta) - P_{n-1}(2\cos\theta) \\
+&= 2\cos\theta \frac{\sin((n+1)\theta)}{\sin\theta} - \frac{\sin(n\theta)}{\sin\theta} \\
+&= \frac{2\cos\theta \sin((n+1)\theta) - \sin(n\theta)}{\sin\theta}
+\end{align*}
+\]
+
+Usando la identidad trigonométrica:
+\[
+    2\cos\theta \sin((n+1)\theta) = \sin((n+2)\theta) + \sin(n\theta)
+\]
+
+Por lo tanto:
+\[
+    P_{n+1}(2\cos\theta) = \frac{\sin((n+2)\theta) + \sin(n\theta) - \sin(n\theta)}{\sin\theta} = \frac{\sin((n+2)\theta)}{\sin\theta}
+\]
+
+Esto completa la inducción y la demostración.
