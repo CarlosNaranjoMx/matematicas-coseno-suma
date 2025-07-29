@@ -8,10 +8,10 @@
             "args": [
                 "-interaction=nonstopmode",
                 "-file-line-error",
-                "${relativeFile}"
+                "general.tex"
             ],
             "options": {
-                "cwd": "${fileDirname}"
+                "cwd": "${workspaceFolder}/sin_cos"
             },
             "group": {
                 "kind": "build",
@@ -27,7 +27,7 @@
             },
             "problemMatcher": {
                 "owner": "latex",
-                "fileLocation": ["relative", "${fileDirname}"],
+                "fileLocation": ["relative", "${workspaceFolder}/sin_cos"],
                 "pattern": {
                     "regexp": "^(.*):(\\d+):\\s+(.*)",
                     "file": 1,

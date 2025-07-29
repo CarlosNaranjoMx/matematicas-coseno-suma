@@ -13,10 +13,11 @@
 		},
 		{
 			"name": "Compile LaTeX",
-			"type": "node",
+			"type": "PowerShell",
 			"request": "launch",
 			"preLaunchTask": "Compile LaTeX to PDF",
-			"program": "${workspaceFolder}/dummy.js"
+			"script": "${workspaceFolder}/compile_latex.ps1",
+			"args": []
 		}
 	]
 }
