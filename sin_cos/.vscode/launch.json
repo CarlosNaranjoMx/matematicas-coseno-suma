@@ -5,14 +5,14 @@
             "name": "Compile LaTeX to PDF",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}/sin_cos/compile_latex_local.ps1",
+            "script": "${workspaceFolder}\\compile_latex_local.ps1",
             "args": []
         },
         {
             "name": "Compile LaTeX (Full Build)",
             "type": "PowerShell",
             "request": "launch",
-            "script": "${workspaceFolder}/sin_cos/compile_latex_full.ps1",
+            "script": "${workspaceFolder}\\compile_latex_full.ps1",
             "args": []
         }
     ]

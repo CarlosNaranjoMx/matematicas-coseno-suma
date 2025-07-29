@@ -29,3 +29,55 @@ R(\theta) = \begin{pmatrix}
 \sin \theta & \cos \theta
 \end{pmatrix}
 \end{equation*}
+
+\subsection{Justificación mediante el Teorema de Pitágoras}
+
+La deducción de la matriz de rotación está fundamentada en el teorema de Pitágoras y las definiciones trigonométricas. Consideremos un punto $P(x, y)$ que se encuentra a una distancia $r$ del origen, donde:
+
+\begin{equation*}
+r = \sqrt{x^2 + y^2}
+\end{equation*}
+
+Si el punto $P$ forma un ángulo $\alpha$ con el eje $x$ positivo, entonces por definición trigonométrica:
+\begin{align*}
+x &= r \cos \alpha \\
+y &= r \sin \alpha
+\end{align*}
+
+Al rotar este punto por un ángulo $\theta$, el nuevo ángulo con respecto al eje $x$ será $(\alpha + \theta)$. Las nuevas coordenadas del punto rotado $P'(x', y')$ serán:
+\begin{align*}
+x' &= r \cos(\alpha + \theta) \\
+y' &= r \sin(\alpha + \theta)
+\end{align*}
+
+Aplicando las identidades trigonométricas para la suma de ángulos:
+\begin{align*}
+x' &= r[\cos \alpha \cos \theta - \sin \alpha \sin \theta] \\
+y' &= r[\sin \alpha \cos \theta + \cos \alpha \sin \theta]
+\end{align*}
+
+Sustituyendo $x = r \cos \alpha$ y $y = r \sin \alpha$:
+\begin{align*}
+x' &= x \cos \theta - y \sin \theta \\
+y' &= x \sin \theta + y \cos \theta
+\end{align*}
+
+\textbf{Verificación con el Teorema de Pitágoras:}
+
+Una propiedad fundamental de las rotaciones es que preservan las distancias. Esto significa que:
+\begin{equation*}
+|P'| = |P| \Rightarrow \sqrt{(x')^2 + (y')^2} = \sqrt{x^2 + y^2}
+\end{equation*}
+
+Verificando:
+\begin{align*}
+(x')^2 + (y')^2 &= (x \cos \theta - y \sin \theta)^2 + (x \sin \theta + y \cos \theta)^2 \\
+&= x^2 \cos^2 \theta - 2xy \cos \theta \sin \theta + y^2 \sin^2 \theta \\
+&\quad + x^2 \sin^2 \theta + 2xy \sin \theta \cos \theta + y^2 \cos^2 \theta \\
+&= x^2(\cos^2 \theta + \sin^2 \theta) + y^2(\sin^2 \theta + \cos^2 \theta) \\
+&= x^2 + y^2
+\end{align*}
+
+donde hemos usado la identidad pitagórica fundamental $\cos^2 \theta + \sin^2 \theta = 1$.
+
+Esta verificación confirma que la matriz de rotación preserva la magnitud de los vectores, validando así nuestra deducción mediante el teorema de Pitágoras.
