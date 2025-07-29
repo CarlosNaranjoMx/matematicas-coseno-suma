@@ -19,6 +19,43 @@ Por ejemplo:
 
 Así, el "arco de un ángulo" puede referirse tanto a la longitud sobre la circunferencia como a la función inversa en trigonometría.
 
+\subsection{Gráfica de la función arcocoseno}
+
+La función arcocoseno $\arccos(x)$ tiene las siguientes características:
+\begin{itemize}
+    \item Dominio: $[-1, 1]$
+    \item Rango: $[0, \pi]$
+    \item Es una función decreciente
+    \item $\arccos(-1) = \pi$, $\arccos(0) = \frac{\pi}{2}$, $\arccos(1) = 0$
+\end{itemize}
+
+\begin{center}
+\begin{tikzpicture}[scale=1.5]
+  % Ejes
+  \draw[->] (-1.5,0) -- (1.5,0) node[right] {$x$};
+  \draw[->] (0,-0.3) -- (0,3.5) node[above] {$\arccos(x)$};
+  
+  % Etiquetas de los ejes
+  \draw (-1,-0.1) -- (-1,0.1) node[below] {$-1$};
+  \draw (1,-0.1) -- (1,0.1) node[below] {$1$};
+  \draw (-0.1,{3.14159}) -- (0.1,{3.14159}) node[left] {$\pi$};
+  \draw (-0.1,{1.5708}) -- (0.1,{1.5708}) node[left] {$\frac{\pi}{2}$};
+  
+  % Gráfica del arcocoseno (aproximación con líneas)
+  \draw[blue, thick, domain=-1:1, samples=100] plot (\x, {acos(\x r)});
+  
+  % Puntos importantes
+  \fill[red] (-1,{3.14159}) circle (1.5pt);
+  \fill[red] (0,{1.5708}) circle (1.5pt);
+  \fill[red] (1,0) circle (1.5pt);
+  
+  % Etiquetas de puntos
+  \node[above right] at (-1,{3.14159}) {$(-1,\pi)$};
+  \node[above right] at (0,{1.5708}) {$(0,\frac{\pi}{2})$};
+  \node[above right] at (1,0) {$(1,0)$};
+\end{tikzpicture}
+\end{center}
+
 \begin{center}
 \begin{tikzpicture}[scale=2]
   % Circunferencia
