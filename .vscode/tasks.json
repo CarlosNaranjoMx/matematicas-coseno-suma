@@ -1,0 +1,56 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Compile LaTeX to PDF",
+            "type": "shell",
+            "command": "pdflatex",
+            "args": [
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "${relativeFile}"
+            ],
+            "options": {
+                "cwd": "${fileDirname}"
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "shared",
+                "showReuseMessage": true,
+                "clear": false
+            },
+            "problemMatcher": {
+                "owner": "latex",
+                "fileLocation": ["relative", "${fileDirname}"],
+                "pattern": {
+                    "regexp": "^(.*):(\\d+):\\s+(.*)",
+                    "file": 1,
+                    "line": 2,
+                    "message": 3
+                }
+            }
+        },
+        {
+            "label": "Clean LaTeX auxiliary files",
+            "type": "shell",
+            "command": "powershell",
+            "args": [
+                "-Command",
+                "Remove-Item -Path '${fileDirname}\\*.aux', '${fileDirname}\\*.log', '${fileDirname}\\*.out', '${fileDirname}\\*.toc', '${fileDirname}\\*.fdb_latexmk', '${fileDirname}\\*.fls', '${fileDirname}\\*.synctex.gz' -Force -ErrorAction SilentlyContinue"
+            ],
+            "group": "build",
+            "presentation": {
+                "echo": true,
+                "reveal": "silent",
+                "focus": false,
+                "panel": "shared"
+            }
+        }
+    ]
+}
