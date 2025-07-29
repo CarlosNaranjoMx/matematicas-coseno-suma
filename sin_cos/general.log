@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  28 JUL 2025 20:09
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  28 JUL 2025 20:27
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -561,54 +561,121 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (H:\miktex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-
-LaTeX Warning: Hyper reference `sec:arco' on page 1 undefined on input line 15.
-
+LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
 
 
-LaTeX Warning: Hyper reference `sec:cosenoaureo' on page 1 undefined on input l
-ine 22.
-
-(01_arco_angulo.tex
-LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
- (H:\miktex\tex/latex/amsfonts\umsa.fd
+(H:\miktex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
 
-(H:\miktex\tex/latex/amsfonts\umsb.fd
+ (H:\miktex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+(01_arco_angulo.tex
 
 [1
 
-{C:/Users/carlosmx/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
-! Dimension too large.
-\pgfmathacos@ ...ax \pgfmath@x =\pgfmathresult pt 
-                                                  \ifdim \pgfmath@x <0pt\rel...
-l.45 ...-1:1, samples=100] plot (\x, {acos(\x r)})
-                                                  ;
-? git add 01_arco_angulo.tex 08_demostracion_coseno_aureo.tex
-Type <return> to proceed, S to scroll future error messages,
-R to run without stopping, Q to run quietly,
-I to insert something, E to edit your file,
-1 or ... or 9 to ignore the next 1 to 9 tokens of input,
-H for help, X to quit.
-? 
-! Emergency stop.
-\pgfmathacos@ ...ax \pgfmath@x =\pgfmathresult pt 
-                                                  \ifdim \pgfmath@x <0pt\rel...
-l.45 ...-1:1, samples=100] plot (\x, {acos(\x r)})
-                                                  ;
-End of file on the terminal!
+{C:/Users/carlosmx/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}])
 
- 
+[2] (02_identidad_coseno.tex)
+
+[3] (03_demostracion_geometrica.tex
+Overfull \hbox (7.93799pt too wide) in paragraph at lines 2--2
+[]\OT1/cmr/bx/n/14.4 Demostraci^^Son geom^^Setrica us-ando el c^^S^^Prculo uni-
+
+ []
+
+)
+
+[4] (04_deduccion_rotacion.tex)
+
+[5] (05_demostracion_formula_coseno.tex)
+
+[6] (06_complejos_matriz.tex
+Overfull \hbox (6.5014pt too wide) in paragraph at lines 2--2
+[]\OT1/cmr/bx/n/14.4 Representaci^^Son de los n^^Sumeros com-ple-jos como
+ []
+
+)
+
+[7] (07_ejemplo_rotacion.tex
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\begingroup' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\endgroup' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\@@over' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+)
+
+[8] (08_demostracion_coseno_aureo.tex
+
+[9])
+
+[10] (09_chebyshev_fibonacci.tex
+
+[11]
+
+[12])
+
+[13]
+
+[14] (general.aux)
+ ***********
+LaTeX2e <2025-06-01> patch level 1
+L3 programming layer <2025-06-09>
+ ***********
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `general.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `general.out':
+(rerunfilecheck)             Before: C9F1404183294F28DCE9B424505525A0;4675
+(rerunfilecheck)             After:  3E4457FA443A5354441BB0D5DAF8AEE0;4619.
+ ) 
 Here is how much of TeX's memory you used:
- 20183 strings out of 468221
- 366819 string characters out of 5449717
- 750188 words of memory out of 5000000
- 48379 multiletter control sequences out of 15000+600000
- 630069 words of font info for 53 fonts, out of 8000000 for 9000
+ 20286 strings out of 468221
+ 370242 string characters out of 5449717
+ 750280 words of memory out of 5000000
+ 48435 multiletter control sequences out of 15000+600000
+ 631624 words of font info for 59 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,6n,107p,412b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
-!  ==> Fatal error occurred, no output PDF file produced!
+ 102i,9n,107p,442b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\carlosmx\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
+crm1000.pk><H:/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><H:/miktex/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><H:/miktex/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><H:/miktex/fon
+ts/type1/public/amsfonts/cm/cmmi7.pfb><H:/miktex/fonts/type1/public/amsfonts/cm
+/cmr10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><H:/miktex/fonts/
+type1/public/amsfonts/cm/cmsy10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/c
+msy7.pfb><H:/miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb><H:/miktex/f
+onts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on general.pdf (14 pages, 173922 bytes).
+PDF statistics:
+ 247 PDF objects out of 1000 (max. 8388607)
+ 51 named destinations out of 1000 (max. 500000)
+ 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+
