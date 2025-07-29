@@ -3,11 +3,16 @@
 \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage{amssymb}
+\usepackage{xcolor}
+
+% Definir el color carne
+\definecolor{carne}{RGB}{255, 218, 185}
 
 \begin{document}
 
 \section*{Índice}
 \begin{enumerate}
+  \item \hyperref[sec:arco]{Definición de arco de un ángulo}
   \item \hyperref[sec:identidad]{Identidad del coseno de la suma}
   \item \hyperref[sec:geom]{Demostración geométrica}
   \item \hyperref[sec:rotacion]{Deducción de la matriz de rotación}
@@ -19,18 +24,55 @@
   \item \hyperref[sec:conclusion]{Conclusión}
 \end{enumerate}
 
-% Inclusión de secciones
+% Inclusión de secciones con fondos alternados
 
-\input{arco_angulo.tex}
-\input{identidad_coseno.tex}
-\input{demostracion_geometrica.tex}
-\input{deduccion_rotacion.tex}
-\input{demostracion_formula_coseno.tex}
-\input{complejos_matriz.tex}
-\input{ejemplo_rotacion.tex}
-\input{demostracion_coseno_aureo.tex}
-\input{chebyshev_fibonacci.tex}
+% Sección 1 - Fondo carne
+\pagecolor{carne}
+\input{01_arco_angulo.tex}
+\newpage
 
+% Sección 2 - Fondo blanco
+\pagecolor{white}
+\input{02_identidad_coseno.tex}
+\newpage
+
+% Sección 3 - Fondo carne
+\pagecolor{carne}
+\input{03_demostracion_geometrica.tex}
+\newpage
+
+% Sección 4 - Fondo blanco
+\pagecolor{white}
+\input{04_deduccion_rotacion.tex}
+\newpage
+
+% Sección 5 - Fondo carne
+\pagecolor{carne}
+\input{05_demostracion_formula_coseno.tex}
+\newpage
+
+% Sección 6 - Fondo blanco
+\pagecolor{white}
+\input{06_complejos_matriz.tex}
+\newpage
+
+% Sección 7 - Fondo carne
+\pagecolor{carne}
+\input{07_ejemplo_rotacion.tex}
+\newpage
+
+% Sección 8 - Fondo blanco
+\pagecolor{white}
+\input{08_demostracion_coseno_aureo.tex}
+\newpage
+
+% Sección 9 - Fondo carne
+\pagecolor{carne}
+\input{09_chebyshev_fibonacci.tex}
+\newpage
+
+% Conclusión - Fondo blanco
+\pagecolor{white}
 \section{Conclusión}\label{sec:conclusion}
 La fórmula se demuestra usando la composición de rotaciones en el plano, y se verifica algebraicamente con matrices de rotación.
 

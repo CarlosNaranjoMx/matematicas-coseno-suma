@@ -1,0 +1,150 @@
+\section{Polinomio de Chebyshev y relacion con Fibonacci}\label{sec:chebfib}
+
+\subsection{Puntos por hacer}
+\begin{itemize}
+  \item[$\square$] Agregar ejemplos adicionales de polinomios de Chebyshev
+  \item[$\square$] Relacionar con otras funciones trigonométricas
+\end{itemize}
+
+Los polinomios de Chebyshev $T_n(x)$ son una familia de polinomios definidos por:
+\begin{equation*}
+T_n(x) = \cos(n \arccos x)
+\end{equation*}
+
+Son útiles porque relacionan los cosenos de múltiplos de un ángulo con potencias de $x = \cos \theta$. Por ejemplo, para $n=5$:
+\begin{equation*}
+T_5(x) = 16x^5 - 20x^3 + 5x
+\end{equation*}
+
+La identidad $\cos(5\theta) = T_5(\cos \theta)$ permite obtener ecuaciones polinómicas para los cosenos de múltiplos de un ángulo.
+
+\subsection{Demostracion de los polinomios de Chebyshev}
+
+\subsection{Puntos por hacer}
+\begin{itemize}
+  \item[$\square$] Incluir demostración gráfica
+  \item[$\square$] Agregar ejercicios de recurrencia
+\end{itemize}
+
+Los polinomios de Chebyshev $T_n(x)$ se definen recursivamente:
+\begin{align*}
+T_0(x) &= 1 \\
+T_1(x) &= x \\
+T_{n+1}(x) &= 2x T_n(x) - T_{n-1}(x)
+\end{align*}
+
+Por ejemplo:
+\begin{align*}
+T_2(x) &= 2x T_1(x) - T_0(x) = 2x^2 - 1 \\
+T_3(x) &= 2x T_2(x) - T_1(x) = 4x^3 - 3x \\
+T_4(x) &= 2x T_3(x) - T_2(x) = 8x^4 - 8x^2 + 1 \\
+T_5(x) &= 2x T_4(x) - T_3(x) = 16x^5 - 20x^3 + 5x
+\end{align*}
+
+Estos polinomios cumplen la identidad:
+\begin{equation*}
+T_n(x) = \cos(n \arccos x)
+\end{equation*}
+
+Por eso, si $x = \cos \theta$, entonces $T_5(x) = \cos(5\theta)$, lo que permite obtener ecuaciones polinómicas para los cosenos de múltiplos de un ángulo.
+
+\subsection{Relacion entre Chebyshev y Fibonacci}
+
+\subsection{Puntos por hacer}
+\begin{itemize}
+  \item[$\square$] Profundizar en la relación con la sucesión de Fibonacci
+  \item[$\square$] Ejemplos numéricos
+\end{itemize}
+
+Existe una relación entre los polinomios de Chebyshev y la sucesión de Fibonacci. Si evaluamos el polinomio de Chebyshev de segundo tipo $U_n(x)$ en $x = \frac{1}{2}$, obtenemos:
+\begin{equation*}
+U_n\left(\frac{1}{2}\right) = F_{n+1}
+\end{equation*}
+donde $F_{n+1}$ es el número de Fibonacci de orden $n+1$.
+
+Además, para el polinomio de Chebyshev de primer tipo $T_n(x)$, existe la relación:
+\begin{equation*}
+T_n\left(\frac{1}{2}\right) = \frac{1}{2} F_n
+\end{equation*}
+
+Esto se debe a que ambos cumplen relaciones de recurrencia similares y están conectados a través de funciones trigonométricas e hiperbólicas.
+
+Por ejemplo:
+\begin{align*}
+T_5\left(\frac{1}{2}\right) &= 16\left(\frac{1}{2}\right)^5 - 20\left(\frac{1}{2}\right)^3 + 5\left(\frac{1}{2}\right) \\
+&= 0.5
+\end{align*}
+que corresponde a $\frac{1}{2} F_5$ ya que $F_5 = 5$.
+
+\subsection{Polinomios de Chebyshev y su relacion trigonometrica}
+
+\subsection{Puntos por hacer}
+\begin{itemize}
+  \item[$\square$] Agregar ejemplos con valores específicos de theta
+  \item[$\square$] Incluir aplicaciones en física y matemáticas
+\end{itemize}
+
+Sea $P_0(x) = 1$, $P_1(x) = x$ y para $n > 1$:
+\[
+    P_{n+1}(x) = x P_n(x) - P_{n-1}(x)
+\]
+Estos son los polinomios de Chebyshev de primer tipo, definidos por recurrencia.
+
+Ahora, demostraremos que:
+\[
+    P_n(2 \cos \theta) = \frac{\sin(n+1)\theta}{\sin \theta}
+\]
+
+\textbf{Demostración:}
+
+Consideremos la recurrencia para $P_n(x)$ y tomemos $x = 2 \cos \theta$.
+
+Definimos $S_n = \sin(n\theta)$.
+
+Sabemos que:
+\[
+    S_{n+1} = 2 \cos \theta S_n - S_{n-1}
+\]
+
+Esto es la misma recurrencia que para $P_n(x)$ con $x = 2 \cos \theta$.
+
+\subsection{Puntos por hacer}
+\begin{itemize}
+  \item[$\square$] Verificar casos base
+  \item[$\square$] Completar demostración por inducción
+  \item[$\square$] Agregar ejemplos numéricos
+\end{itemize}
+
+Por inducción:
+\begin{itemize}
+\item Para $n=0$: $P_0(2\cos\theta) = 1 = \frac{\sin(\theta)}{\sin\theta}$
+\item Para $n=1$: $P_1(2\cos\theta) = 2\cos\theta = \frac{\sin(2\theta)}{\sin\theta}$
+\end{itemize}
+
+Supongamos que $P_n(2\cos\theta) = \frac{\sin((n+1)\theta)}{\sin\theta}$ y $P_{n-1}(2\cos\theta) = \frac{\sin(n\theta)}{\sin\theta}$.
+
+Entonces:
+\begin{align}
+P_{n+1}(2\cos\theta) &= 2\cos\theta P_n(2\cos\theta) - P_{n-1}(2\cos\theta) \\
+&= 2\cos\theta \frac{\sin((n+1)\theta)}{\sin\theta} - \frac{\sin(n\theta)}{\sin\theta} \\
+&= \frac{2\cos\theta \sin((n+1)\theta) - \sin(n\theta)}{\sin\theta}
+\end{align}
+
+Usando la identidad trigonométrica:
+\[
+    2\cos\theta \sin((n+1)\theta) = \sin((n+2)\theta) + \sin(n\theta)
+\]
+
+Por lo tanto:
+\[
+    P_{n+1}(2\cos\theta) = \frac{\sin((n+2)\theta) + \sin(n\theta) - \sin(n\theta)}{\sin\theta} = \frac{\sin((n+2)\theta)}{\sin\theta}
+\]
+
+Esto completa la inducción y la demostración.
+
+\subsection{Puntos por hacer}
+\begin{itemize}
+  \item[$\square$] Agregar conexión con Fibonacci
+  \item[$\square$] Incluir gráficas comparativas
+  \item[$\square$] Verificar con ejemplos específicos
+\end{itemize}
