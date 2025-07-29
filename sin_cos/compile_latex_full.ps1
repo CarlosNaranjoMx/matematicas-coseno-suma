@@ -1,6 +1,11 @@
 # Script para compilación completa con múltiples pasadas
 Write-Host "Compilación completa de LaTeX (múltiples pasadas)..." -ForegroundColor Green
 
+# Cambiar al directorio sin_cos (hardcodeado)
+Set-Location "D:\resources_psycho\resources_github\repos_publicos\matematicas\sin_cos"
+
+Write-Host "Directorio actual: $(Get-Location)" -ForegroundColor Cyan
+
 # Primera pasada
 Write-Host "Primera pasada..." -ForegroundColor Yellow
 pdflatex -interaction=nonstopmode general.tex

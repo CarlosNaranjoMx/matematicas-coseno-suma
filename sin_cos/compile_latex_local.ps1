@@ -1,6 +1,11 @@
 # Script para compilar LaTeX en el directorio actual
 Write-Host "Compilando general.tex..." -ForegroundColor Green
 
+# Cambiar al directorio sin_cos (hardcodeado)
+Set-Location "D:\resources_psycho\resources_github\repos_publicos\matematicas\sin_cos"
+
+Write-Host "Directorio actual: $(Get-Location)" -ForegroundColor Cyan
+
 # Compilar LaTeX
 pdflatex -interaction=nonstopmode -file-line-error general.tex
 
