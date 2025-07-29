@@ -3,10 +3,10 @@
 La matriz de rotación por un ángulo $\theta$ en el plano se deduce así:
 
 Si rotamos el punto $(x, y)$ por un ángulo $\theta$ respecto al origen, las nuevas coordenadas $(x', y')$ son:
-\begin{align*}
-x' &= x \cos \theta - y \sin \theta \\
-y' &= x \sin \theta + y \cos \theta
-\end{align*}
+\begin{align}
+x' &= x \cos \theta - y \sin \theta \label{eq:rotacion_x}\\
+y' &= x \sin \theta + y \cos \theta \label{eq:rotacion_y}
+\end{align}
 Esto se puede escribir en forma matricial:
 \begin{equation*}
 \begin{pmatrix}
@@ -23,20 +23,20 @@ y
 \end{pmatrix}
 \end{equation*}
 Por lo tanto, la matriz de rotación es:
-\begin{equation*}
+\begin{equation}\label{eq:matriz_rotacion}
 R(\theta) = \begin{pmatrix}
 \cos \theta & -\sin \theta \\
 \sin \theta & \cos \theta
 \end{pmatrix}
-\end{equation*}
+\end{equation}
 
 \subsection{Justificación mediante el Teorema de Pitágoras}
 
 La deducción de la matriz de rotación está fundamentada en el teorema de Pitágoras y las definiciones trigonométricas. Consideremos un punto $P(x, y)$ que se encuentra a una distancia $r$ del origen, donde:
 
-\begin{equation*}
+\begin{equation}\label{eq:distancia_origen}
 r = \sqrt{x^2 + y^2}
-\end{equation*}
+\end{equation}
 
 Si el punto $P$ forma un ángulo $\alpha$ con el eje $x$ positivo, entonces por definición trigonométrica:
 \begin{align*}
@@ -65,9 +65,9 @@ y' &= x \sin \theta + y \cos \theta
 \textbf{Verificación con el Teorema de Pitágoras:}
 
 Una propiedad fundamental de las rotaciones es que preservan las distancias. Esto significa que:
-\begin{equation*}
+\begin{equation}\label{eq:preservacion_distancia}
 |P'| = |P| \Rightarrow \sqrt{(x')^2 + (y')^2} = \sqrt{x^2 + y^2}
-\end{equation*}
+\end{equation}
 
 Verificando:
 \begin{align*}

@@ -1,33 +1,28 @@
 % Sección: Ejemplo de rotación de 2\pi/5
 \section{Ejemplo: Rotación de $\frac{2\pi}{5}$ como matriz 2x2}\label{sec:ejemplo}
-La matriz de rotación por un ángulo $\theta$ en el plano es:
-\begin{equation*}
+La matriz de rotación por un ángulo $\theta$ en el plano es (referencia a \eqref{eq:matriz_rotacion}):
+\begin{equation}\label{eq:matriz_rotacion_general}
 R(\theta) = \begin{pmatrix}
 \cos \theta & -\sin \theta \\
 \sin \theta & \cos \theta
 \end{pmatrix}
-\end{equation*}
+\end{equation}
 
 Para $\theta = \frac{2\pi}{5}$:
-\begin{equation*}
+\begin{equation}\label{eq:matriz_2pi_5}
 R\left(\frac{2\pi}{5}\right) = \begin{pmatrix}
 \cos\left(\frac{2\pi}{5}\right) & -\sin\left(\frac{2\pi}{5}\right) \\
 \sin\left(\frac{2\pi}{5}\right) & \cos\left(\frac{2\pi}{5}\right)
 \end{pmatrix}
-\end{equation*}
-
-Aproximando los valores:
-\begin{equation*}
-\cos\left(\frac{2\pi}{5}\right) \approx 0.3090, \quad \sin\left(\frac{2\pi}{5}\right) \approx 0.9511
-\end{equation*}
+\end{equation}
 
 Además, $\cos\left(\frac{2\pi}{5}\right)$ se puede expresar en términos del número áureo $\varphi$:
-\begin{equation*}
+\begin{equation}\label{eq:numero_aureo}
 \varphi = \frac{1 + \sqrt{5}}{2}
-\end{equation*}
-\begin{equation*}
+\end{equation}
+\begin{equation}\label{eq:cos_2pi_5_aureo}
 \cos\left(\frac{2\pi}{5}\right) = \frac{\varphi - 1}{2}
-\end{equation*}
+\end{equation}
 
 Por lo tanto, la matriz de rotación puede escribirse como:
 \begin{equation*}

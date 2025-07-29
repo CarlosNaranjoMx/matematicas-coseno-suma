@@ -7,16 +7,16 @@
 \end{itemize}
 
 Los polinomios de Chebyshev $T_n(x)$ son una familia de polinomios definidos por:
-\begin{equation*}
+\begin{equation}\label{eq:def_chebyshev}
 T_n(x) = \cos(n \arccos x)
-\end{equation*}
+\end{equation}
 
 Son útiles porque relacionan los cosenos de múltiplos de un ángulo con potencias de $x = \cos \theta$. Por ejemplo, para $n=5$:
-\begin{equation*}
+\begin{equation}\label{eq:T5_chebyshev}
 T_5(x) = 16x^5 - 20x^3 + 5x
-\end{equation*}
+\end{equation}
 
-La identidad $\cos(5\theta) = T_5(\cos \theta)$ permite obtener ecuaciones polinómicas para los cosenos de múltiplos de un ángulo.
+La identidad $\cos(5\theta) = T_5(\cos \theta)$ permite obtener ecuaciones polinómicas para los cosenos de múltiplos de un ángulo, como se usó en \eqref{eq:chebyshev_identity}.
 
 \subsection{Demostracion de los polinomios de Chebyshev}
 
@@ -27,11 +27,11 @@ La identidad $\cos(5\theta) = T_5(\cos \theta)$ permite obtener ecuaciones polin
 \end{itemize}
 
 Los polinomios de Chebyshev $T_n(x)$ se definen recursivamente:
-\begin{align*}
-T_0(x) &= 1 \\
-T_1(x) &= x \\
-T_{n+1}(x) &= 2x T_n(x) - T_{n-1}(x)
-\end{align*}
+\begin{align}
+T_0(x) &= 1 \label{eq:T0_chebyshev}\\
+T_1(x) &= x \label{eq:T1_chebyshev}\\
+T_{n+1}(x) &= 2x T_n(x) - T_{n-1}(x) \label{eq:recurrencia_chebyshev}
+\end{align}
 
 Por ejemplo:
 \begin{align*}

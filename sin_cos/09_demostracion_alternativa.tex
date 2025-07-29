@@ -1,19 +1,19 @@
-\section{Demostración alternativa de la ecuación para cos(2\pi/5)}\label{sec:demostracion_alternativa}
+\section{Demostracion alternativa de la ecuacion para cos($2\pi/5$)}\label{sec:demostracion_alternativa}
 
-Una segunda razón por la cual $\cos\left(\frac{2\pi}{5}\right)$ satisface la ecuación $4x^2 + 2x - 1 = 0$ se basa en las propiedades del pentágono regular y la teoría de números complejos.
+Una segunda razón por la cual $\cos\left(\frac{2\pi}{5}\right)$ satisface la ecuación \eqref{eq:ecuacion_cuadratica_cos} se basa en las propiedades del pentágono regular y la teoría de números complejos.
 
 \subsection{Enfoque mediante las raíces quintas de la unidad}
 
 Las raíces quintas de la unidad son las soluciones de $z^5 = 1$, dadas por:
-\[
+\begin{equation}\label{eq:raices_quintas}
 z_k = e^{2\pi i k/5} = \cos\left(\frac{2\pi k}{5}\right) + i\sin\left(\frac{2\pi k}{5}\right)
-\]
+\end{equation}
 para $k = 0, 1, 2, 3, 4$.
 
 La suma de todas las raíces quintas de la unidad es cero:
-\[
+\begin{equation}\label{eq:suma_raices_quintas}
 \sum_{k=0}^{4} z_k = 1 + z_1 + z_2 + z_3 + z_4 = 0
-\]
+\end{equation}
 
 Por lo tanto: $z_1 + z_2 + z_3 + z_4 = -1$
 
@@ -46,18 +46,18 @@ Para el producto $\alpha \beta$:
 \end{align}
 
 Por lo tanto, $\alpha$ y $\beta$ son raíces de la ecuación cuadrática:
-\[
+\begin{equation}\label{eq:cuadratica_alpha_beta}
 t^2 + t - 1 = 0
-\]
+\end{equation}
 
-Como $\alpha = 2\cos\left(\frac{2\pi}{5}\right)$, si hacemos $x = \cos\left(\frac{2\pi}{5}\right)$, entonces $2x$ satisface:
-\[
+Como $\alpha = 2\cos\left(\frac{2\pi}{5}\right)$, si hacemos $x = \cos\left(\frac{2\pi}{5}\right)$, entonces $2x$ satisface \eqref{eq:cuadratica_alpha_beta}:
+\begin{equation}\label{eq:sustitucion_2x}
 (2x)^2 + (2x) - 1 = 0
-\]
+\end{equation}
 
-Simplificando:
-\[
+Simplificando, confirmamos la ecuación \eqref{eq:ecuacion_cuadratica_cos}:
+\begin{equation}\label{eq:confirmacion_ecuacion}
 4x^2 + 2x - 1 = 0
-\]
+\end{equation}
 
 Esta es otra demostración de por qué $\cos\left(\frac{2\pi}{5}\right)$ satisface exactamente esta ecuación cuadrática.

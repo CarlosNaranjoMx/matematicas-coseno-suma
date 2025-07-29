@@ -16,36 +16,36 @@ El polinomio ciclotómico de grado 5 es:
 Sus raíces son los números complejos $e^{2\pi i k/5}$ para $k=1,2,3,4,5$. Si escribimos $x = e^{2\pi i/5}$, entonces $x^5 = 1$ y las partes reales de estas raíces corresponden a los cosenos de los ángulos $\frac{2\pi k}{5}$.
 
 Para encontrar una ecuación que satisfaga $y = \cos\left(\frac{2\pi}{5}\right)$, usamos la identidad:
-\begin{equation*}
+\begin{equation}\label{eq:chebyshev_identity}
 2\cos(5\theta) = 2T_5(\cos\theta)
-\end{equation*}
+\end{equation}
 donde $T_5$ es el polinomio de Chebyshev de grado 5. Esto lleva a una ecuación polinómica para $y$.
 
 Al manipular las expresiones y usando simetría, se obtiene que $y$ satisface la ecuación cuadrática:
-\begin{equation*}
+\begin{equation}\label{eq:ecuacion_cuadratica_cos}
 4y^2 + 2y - 1 = 0
-\end{equation*}
+\end{equation}
 
 Así, los polinomios cuadráticos para los cosenos de los múltiplos de $\frac{2\pi}{5}$ derivan del polinomio ciclotómico de grado 5 y de las propiedades de los polinomios de Chebyshev, que relacionan las raíces de la unidad con sus partes reales.
 
-Resolviendo para $x$:
-\begin{equation*}
+Resolviendo la ecuación \eqref{eq:ecuacion_cuadratica_cos} para $x$:
+\begin{equation}\label{eq:solucion_cuadratica}
 x = \frac{-2 \pm \sqrt{4 + 16}}{8} = \frac{-2 \pm \sqrt{20}}{8} = \frac{-2 \pm 2\sqrt{5}}{8} = \frac{-1 \pm \sqrt{5}}{4}
-\end{equation*}
+\end{equation}
 
 El valor positivo corresponde a $\cos\left(\frac{2\pi}{5}\right)$:
-\begin{equation*}
+\begin{equation}\label{eq:cos_2pi_5_final}
 \cos\left(\frac{2\pi}{5}\right) = \frac{-1 + \sqrt{5}}{4}
-\end{equation*}
+\end{equation}
 
-El número áureo es $\varphi = \frac{1 + \sqrt{5}}{2}$, así que:
-\begin{equation*}
+Considerando el número áureo definido en \eqref{eq:numero_aureo} como $\varphi = \frac{1 + \sqrt{5}}{2}$, así que:
+\begin{equation}\label{eq:relacion_aureo_cos}
 \frac{\varphi - 1}{2} = \frac{\frac{1 + \sqrt{5}}{2} - 1}{2} = \frac{\frac{-1 + \sqrt{5}}{2}}{2} = \frac{-1 + \sqrt{5}}{4}
-\end{equation*}
+\end{equation}
 
-Por lo tanto:
-\begin{equation*}
+Por lo tanto, confirmamos la relación \eqref{eq:cos_2pi_5_aureo}:
+\begin{equation}\label{eq:cos_aureo_confirmado}
 \cos\left(\frac{2\pi}{5}\right) = \frac{\varphi - 1}{2}
-\end{equation*}
+\end{equation}
 
 Esto demuestra la relación entre el coseno de $\frac{2\pi}{5}$ y el número áureo.
