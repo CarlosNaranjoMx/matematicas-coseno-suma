@@ -1,0 +1,14 @@
+[
+    {
+        "key": "ctrl+shift+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Compile LaTeX to PDF",
+        "when": "resourceExtname == .tex"
+    },
+    {
+        "key": "ctrl+alt+b",
+        "command": "workbench.action.tasks.runTask",
+        "args": "Full LaTeX Build",
+        "when": "resourceExtname == .tex"
+    }
+]
