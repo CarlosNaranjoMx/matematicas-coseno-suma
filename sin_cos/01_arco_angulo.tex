@@ -1,4 +1,4 @@
-\section{¿Qué es el arco de un ángulo?}\label{sec:arcoangulo}
+\section{¿Qué es el arco de un ángulo?}\label{sec:arco}
 
 El arco de un ángulo en una circunferencia es la porción de la circunferencia que corresponde a ese ángulo central. Si el ángulo es $\theta$ (en radianes), el arco es la longitud que abarca sobre la circunferencia, y se calcula como:
 
@@ -41,8 +41,11 @@ La función arcocoseno $\arccos(x)$ tiene las siguientes características:
   \draw (-0.1,{3.14159}) -- (0.1,{3.14159}) node[left] {$\pi$};
   \draw (-0.1,{1.5708}) -- (0.1,{1.5708}) node[left] {$\frac{\pi}{2}$};
   
-  % Gráfica del arcocoseno (aproximación con líneas)
-  \draw[blue, thick, domain=-1:1, samples=100] plot (\x, {acos(\x r)});
+  % Gráfica del arcocoseno (aproximación manual con coordenadas)
+  \draw[blue, thick] (-1,3.14159) 
+    -- (-0.8,2.678) -- (-0.6,2.214) -- (-0.4,1.833) -- (-0.2,1.773)
+    -- (0,1.5708) -- (0.2,1.369) -- (0.4,1.159) -- (0.6,0.927) 
+    -- (0.8,0.644) -- (1,0);
   
   % Puntos importantes
   \fill[red] (-1,{3.14159}) circle (1.5pt);

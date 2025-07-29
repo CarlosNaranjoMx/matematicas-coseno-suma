@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  28 JUL 2025 18:27
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  28 JUL 2025 20:09
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -517,25 +517,25 @@ File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
 ) (general.aux)
 \openout1 = `general.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 7.
-LaTeX Font Info:    ... okay on input line 7.
-Package hyperref Info: Link coloring OFF on input line 7.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
+LaTeX Font Info:    ... okay on input line 11.
+Package hyperref Info: Link coloring OFF on input line 11.
  (general.out) (general.out)
 \@outlinefile=\write4
 \openout4 = `general.out'.
@@ -562,14 +562,53 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
 
+LaTeX Warning: Hyper reference `sec:arco' on page 1 undefined on input line 15.
+
+
+
 LaTeX Warning: Hyper reference `sec:cosenoaureo' on page 1 undefined on input l
-ine 17.
-
-
-LaTeX Warning: Hyper reference `sec:chebfib' on page 1 undefined on input line 
-18.
+ine 22.
 
 (01_arco_angulo.tex
 LaTeX Font Info:    Trying to load font information for U+msa on input line 3.
  (H:\miktex\tex/latex/amsfonts\umsa.fd
-File: umsa.fd 2013/01/14 v3.01 AM
+File: umsa.fd 2013/01/14 v3.01 AMS symbols A
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 3.
+
+(H:\miktex\tex/latex/amsfonts\umsb.fd
+File: umsb.fd 2013/01/14 v3.01 AMS symbols B
+)
+
+[1
+
+{C:/Users/carlosmx/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}]
+! Dimension too large.
+\pgfmathacos@ ...ax \pgfmath@x =\pgfmathresult pt 
+                                                  \ifdim \pgfmath@x <0pt\rel...
+l.45 ...-1:1, samples=100] plot (\x, {acos(\x r)})
+                                                  ;
+? git add 01_arco_angulo.tex 08_demostracion_coseno_aureo.tex
+Type <return> to proceed, S to scroll future error messages,
+R to run without stopping, Q to run quietly,
+I to insert something, E to edit your file,
+1 or ... or 9 to ignore the next 1 to 9 tokens of input,
+H for help, X to quit.
+? 
+! Emergency stop.
+\pgfmathacos@ ...ax \pgfmath@x =\pgfmathresult pt 
+                                                  \ifdim \pgfmath@x <0pt\rel...
+l.45 ...-1:1, samples=100] plot (\x, {acos(\x r)})
+                                                  ;
+End of file on the terminal!
+
+ 
+Here is how much of TeX's memory you used:
+ 20183 strings out of 468221
+ 366819 string characters out of 5449717
+ 750188 words of memory out of 5000000
+ 48379 multiletter control sequences out of 15000+600000
+ 630069 words of font info for 53 fonts, out of 8000000 for 9000
+ 1141 hyphenation exceptions out of 8191
+ 102i,6n,107p,412b,632s stack positions out of 10000i,1000n,20000p,200000b,200000s
+!  ==> Fatal error occurred, no output PDF file produced!
