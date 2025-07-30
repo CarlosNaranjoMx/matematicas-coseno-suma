@@ -1,0 +1,93 @@
+% Sección: Ejemplos de uso de teoremas, definiciones y corolarios
+\section{Teoremas y Definiciones Fundamentales}\label{sec:teoremas}
+
+\begin{definition}[Coseno de un ángulo]
+Sea $\theta$ un ángulo en el círculo unitario. El \textbf{coseno} de $\theta$ se define como la coordenada $x$ del punto donde el lado terminal del ángulo interseca el círculo unitario.
+\end{definition}
+
+\begin{definition}[Seno de un ángulo]
+Sea $\theta$ un ángulo en el círculo unitario. El \textbf{seno} de $\theta$ se define como la coordenada $y$ del punto donde el lado terminal del ángulo interseca el círculo unitario.
+\end{definition}
+
+\begin{theorem}[Identidad Fundamental del Coseno de Suma]\label{thm:coseno_suma}
+Para cualquier par de ángulos $a$ y $b$:
+\begin{equation}\label{eq:teorema_coseno_suma}
+\cos(a + b) = \cos a \cos b - \sin a \sin b
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Esta identidad puede demostrarse de múltiples formas:
+\begin{enumerate}
+\item Usando la multiplicación de matrices de rotación (ver sección \ref{sec:demcos})
+\item Mediante geometría del círculo unitario
+\item Utilizando la fórmula de Euler y números complejos
+\end{enumerate}
+Las demostraciones detalladas se encuentran en las secciones anteriores.
+\end{proof}
+
+\begin{corollary}[Identidad del Coseno de Diferencia]
+Para cualquier par de ángulos $a$ y $b$:
+\begin{equation}\label{eq:coseno_diferencia}
+\cos(a - b) = \cos a \cos b + \sin a \sin b
+\end{equation}
+\end{corollary}
+
+\begin{proof}
+Aplicando el Teorema \ref{thm:coseno_suma} con $b$ reemplazado por $-b$:
+\begin{align}
+\cos(a - b) &= \cos(a + (-b)) \\
+&= \cos a \cos(-b) - \sin a \sin(-b) \\
+&= \cos a \cos b - \sin a (-\sin b) \\
+&= \cos a \cos b + \sin a \sin b
+\end{align}
+donde usamos que $\cos(-b) = \cos b$ y $\sin(-b) = -\sin b$.
+\end{proof}
+
+\begin{lemma}[Propiedades de Paridad]\label{lemma:paridad}
+Para cualquier ángulo $\theta$:
+\begin{align}
+\cos(-\theta) &= \cos \theta \quad \text{(función par)} \\
+\sin(-\theta) &= -\sin \theta \quad \text{(función impar)}
+\end{align}
+\end{lemma}
+
+\begin{proposition}[Matriz de Rotación]
+La rotación de un punto en el plano por un ángulo $\theta$ puede expresarse mediante la matriz:
+\begin{equation}\label{eq:matriz_rotacion_prop}
+R(\theta) = \begin{pmatrix}
+\cos \theta & -\sin \theta \\
+\sin \theta & \cos \theta
+\end{pmatrix}
+\end{equation}
+\end{proposition}
+
+\begin{example}[Aplicación de la Identidad]
+Calculemos $\cos(75^\circ)$ usando $\cos(75^\circ) = \cos(45^\circ + 30^\circ)$:
+\begin{align}
+\cos(75^\circ) &= \cos(45^\circ + 30^\circ) \\
+&= \cos 45^\circ \cos 30^\circ - \sin 45^\circ \sin 30^\circ \\
+&= \frac{\sqrt{2}}{2} \cdot \frac{\sqrt{3}}{2} - \frac{\sqrt{2}}{2} \cdot \frac{1}{2} \\
+&= \frac{\sqrt{6}}{4} - \frac{\sqrt{2}}{4} \\
+&= \frac{\sqrt{6} - \sqrt{2}}{4}
+\end{align}
+\end{example}
+
+\begin{remark}
+La identidad del coseno de suma es fundamental en trigonometría y tiene aplicaciones en:
+\begin{itemize}
+\item Análisis de Fourier
+\item Procesamiento de señales
+\item Mecánica cuántica
+\item Cristalografía
+\end{itemize}
+\end{remark}
+
+\begin{note}
+El paquete \texttt{amsthm} permite definir diferentes estilos:
+\begin{itemize}
+\item \textbf{plain}: Para teoremas, lemas, corolarios (texto en cursiva)
+\item \textbf{definition}: Para definiciones y ejemplos (texto normal)
+\item \textbf{remark}: Para observaciones y notas (texto normal)
+\end{itemize}
+\end{note}

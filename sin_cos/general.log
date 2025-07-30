@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  28 JUL 2025 21:29
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  30 JUL 2025 14:15
 entering extended mode
  restricted \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **./general.tex
 (general.tex
@@ -90,6 +89,18 @@ LaTeX Info: Redefining \Relbar on input line 970.
 LaTeX Info: Redefining \[ on input line 2949.
 LaTeX Info: Redefining \] on input line 2950.
 )
+(H:\miktex\tex/latex/amscls\amsthm.sty
+Package: amsthm 2020/05/29 v2.20.6
+\thm@style=\toks22
+\thm@bodyfont=\toks23
+\thm@headfont=\toks24
+\thm@notefont=\toks25
+\thm@headpunct=\toks26
+\thm@preskip=\skip54
+\thm@postskip=\skip55
+\thm@headsep=\skip56
+\dth@everypar=\toks27
+)
 (H:\miktex\tex/latex/hyperref\hyperref.sty
 Package: hyperref 2025-06-21 v7.01n Hypertext links for LaTeX
 
@@ -98,7 +109,7 @@ Package: iftex 2024/12/12 v1.0g TeX engine tests
 )
 (H:\miktex\tex/latex/graphics\keyval.sty
 Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
-\KV@toks@=\toks22
+\KV@toks@=\toks28
 )
 (H:\miktex\tex/latex/kvsetkeys\kvsetkeys.sty
 Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
@@ -219,13 +230,13 @@ Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 84.
 )
-\Hy@SectionHShift=\skip54
+\Hy@SectionHShift=\skip57
 )
 (H:\miktex\tex/latex/pgf/frontendlayer\tikz.sty
 (H:\miktex\tex/latex/pgf/basiclayer\pgf.sty
 (H:\miktex\tex/latex/pgf/utilities\pgfrcs.sty
 (H:\miktex\tex/generic/pgf/utilities\pgfutil-common.tex
-\pgfutil@everybye=\toks23
+\pgfutil@everybye=\toks29
 \pgfutil@tempdima=\dimen162
 \pgfutil@tempdimb=\dimen163
 )
@@ -264,11 +275,11 @@ File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
 Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 
 (H:\miktex\tex/generic/pgf/utilities\pgfkeys.code.tex
-\pgfkeys@pathtoks=\toks24
-\pgfkeys@temptoks=\toks25
+\pgfkeys@pathtoks=\toks30
+\pgfkeys@temptoks=\toks31
 
 (H:\miktex\tex/generic/pgf/utilities\pgfkeyslibraryfiltered.code.tex
-\pgfkeys@tmptoks=\toks26
+\pgfkeys@tmptoks=\toks32
 ))
 \pgf@x=\dimen166
 \pgf@y=\dimen167
@@ -286,9 +297,9 @@ Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
 \c@pgf@countb=\count308
 \c@pgf@countc=\count309
 \c@pgf@countd=\count310
-\t@pgf@toka=\toks27
-\t@pgf@tokb=\toks28
-\t@pgf@tokc=\toks29
+\t@pgf@toka=\toks33
+\t@pgf@tokb=\toks34
+\t@pgf@tokc=\toks35
 \pgf@sys@id@count=\count311
 
 (H:\miktex\tex/generic/pgf/systemlayer\pgf.cfg
@@ -338,9 +349,9 @@ Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
 \pgfmath@dimen=\dimen176
 \pgfmath@count=\count314
 \pgfmath@box=\box56
-\pgfmath@toks=\toks30
-\pgfmath@stack@operand=\toks31
-\pgfmath@stack@operation=\toks32
+\pgfmath@toks=\toks36
+\pgfmath@stack@operand=\toks37
+\pgfmath@stack@operation=\toks38
 )
 (H:\miktex\tex/generic/pgf/math\pgfmathfunctions.code.tex)
 (H:\miktex\tex/generic/pgf/math\pgfmathfunctions.basic.code.tex)
@@ -462,8 +473,8 @@ Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
 Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
 \pgffor@iter=\dimen259
 \pgffor@skip=\dimen260
-\pgffor@stack=\toks33
-\pgffor@toks=\toks34
+\pgffor@stack=\toks39
+\pgffor@toks=\toks40
 ))
 (H:\miktex\tex/generic/pgf/frontendlayer/tikz\tikz.code.tex
 Package: tikz 2023-01-15 v3.1.10 (3.1.10)
@@ -512,48 +523,56 @@ LaTeX Font Info:    Redeclaring math symbol \hbar on input line 98.
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
+\c@definition=\count328
+\c@example=\count329
+\c@theorem=\count330
+\c@corollary=\count331
+\c@proposition=\count332
+\c@remark=\count333
+\c@note=\count334
+
 (H:\miktex\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-06-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count328
+\l__color_backend_stack_int=\count335
 ) (general.aux)
 \openout1 = `general.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 11.
-LaTeX Font Info:    ... okay on input line 11.
-Package hyperref Info: Link coloring OFF on input line 11.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 27.
+LaTeX Font Info:    ... okay on input line 27.
+Package hyperref Info: Link coloring OFF on input line 27.
  (general.out) (general.out)
 \@outlinefile=\write4
 \openout4 = `general.out'.
 
  (H:\miktex\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count329
+\scratchcounter=\count336
 \scratchdimen=\dimen270
 \scratchbox=\box66
-\nofMPsegments=\count330
-\nofMParguments=\count331
-\everyMPshowfont=\toks35
-\MPscratchCnt=\count332
+\nofMPsegments=\count337
+\nofMParguments=\count338
+\everyMPshowfont=\toks41
+\MPscratchCnt=\count339
 \MPscratchDim=\dimen271
-\MPnumerator=\count333
-\makeMPintoPDFobject=\count334
-\everyMPtoPDFconversion=\toks36
+\MPnumerator=\count340
+\makeMPintoPDFobject=\count341
+\everyMPtoPDFconversion=\toks42
 ) (H:\miktex\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -562,34 +581,17 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (H:\miktex\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 37.
 
 
 (H:\miktex\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 21.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 37.
 
  (H:\miktex\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-
-LaTeX Warning: Hyper reference `sec:demostracion_alternativa' on page 1 undefin
-ed on input line 23.
-
-
-general.tex:23: LaTeX Error: Unicode character π (U+03C0)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 ...ternativa de la ecuación para cos(2π/5)}
-                                                  
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
 (01_arco_angulo.tex
 
 [1
@@ -606,18 +608,22 @@ Overfull \hbox (7.93799pt too wide) in paragraph at lines 2--2
 
 )
 
-[4] (04_deduccion_rotacion.tex)
+[4] (04_deduccion_rotacion.tex
 
-[5] (05_demostracion_formula_coseno.tex)
+[5])
 
-[6] (06_complejos_matriz.tex
+[6] (05_demostracion_formula_coseno.tex)
+
+[7]
+
+[8] (06_complejos_matriz.tex
 Overfull \hbox (6.5014pt too wide) in paragraph at lines 2--2
 []\OT1/cmr/bx/n/14.4 Representaci^^Son de los n^^Sumeros com-ple-jos como
  []
 
 )
 
-[7] (07_ejemplo_rotacion.tex
+[9] (07_ejemplo_rotacion.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
@@ -644,102 +650,84 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 )
 
-[8] (08_demostracion_coseno_aureo.tex
-
-[9])
-
-[10] (09_demostracion_alternativa.tex
-
-09_demostracion_alternativa.tex:1: LaTeX Error: Unicode character π (U+03C0)
-               not set up for use with LaTeX.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.1 ...lternativa de la ecuación para cos(2π/5)}
-                                                  \label{sec:demostracion_al...
-
-You may provide a definition with
-\DeclareUnicodeCharacter 
-
-
+[10] (08_demostracion_coseno_aureo.tex
 
 [11])
 
-[12] (10_chebyshev_fibonacci.tex
+[12] (09_demostracion_alternativa.tex
 
-[13]
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
-[14])
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+
+[13])
+
+[14] (10_chebyshev_fibonacci.tex
 
 [15]
 
-[16] (general.aux)
+[16])
+
+[17] (11_teoremas_ejemplo.tex
+Overfull \hbox (17.5904pt too wide) in paragraph at lines 66--67
+[][]\OT1/cmr/bx/n/10 Ejemplo 11.1 \OT1/cmr/m/n/10 (Apli-caci^^Son de la Iden-ti
+-dad)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/n/10 Cal-cule-mos $[](75[])$ us-ando $[](7
+5[]) =
+ []
+
+
+
+[18]
+Overfull \hbox (14.86731pt too wide) in paragraph at lines 77--78
+[][]\OT1/cmr/m/it/10 Observaci^^Son \OT1/cmr/m/n/10 11.1\OT1/cmr/m/it/10 . []\O
+T1/cmr/m/n/10 La iden-ti-dad del coseno de suma es fun-da-men-tal en trigonomet
+r^^S^^Pa
+ []
+
+)
+
+[19]
+
+[20] (general.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
-
-Package rerunfilecheck Warning: File `general.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `general.out':
-(rerunfilecheck)             Before: 3E4457FA443A5354441BB0D5DAF8AEE0;4619
-(rerunfilecheck)             After:  565C295A50D714052D7C0D9F3AB12B18;5726.
+Package rerunfilecheck Info: File `general.out' has not changed.
+(rerunfilecheck)             Checksum: 9CAE9287E93A95A338844273A9F50045;6260.
  ) 
 Here is how much of TeX's memory you used:
- 20312 strings out of 468221
- 370772 string characters out of 5449717
- 751278 words of memory out of 5000000
- 48440 multiletter control sequences out of 15000+600000
- 631624 words of font info for 59 fonts, out of 8000000 for 9000
+ 20591 strings out of 468221
+ 375178 string characters out of 5449717
+ 760087 words of memory out of 5000000
+ 48647 multiletter control sequences out of 15000+600000
+ 632836 words of font info for 63 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,9n,107p,442b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{subsection.9.9} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.9.8} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.9.7} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.9.6} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.9.5} has been referenced but does not ex
-ist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{subsection.9.4} has been referenced but does not ex
-ist, replaced by a fixed one
-
- <C:\Users\carlosmx\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcr
-m1000.pk><H:/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><H:/miktex/fonts/
-type1/public/amsfonts/cm/cmbx12.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/c
-mex10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><H:/miktex/fonts
-/type1/public/amsfonts/cm/cmmi7.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/c
-mr10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmr7.pfb><H:/miktex/fonts/ty
-pe1/public/amsfonts/cm/cmsy10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cms
-y7.pfb><H:/miktex/fonts/type1/public/amsfonts/symbols/msam10.pfb><H:/miktex/fon
-ts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on general.pdf (16 pages, 181943 bytes).
+ 102i,11n,107p,546b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\carlosmx\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
+crm1000.pk><H:/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><H:/miktex/font
+s/type1/public/amsfonts/cm/cmbx12.pfb><H:/miktex/fonts/type1/public/amsfonts/cm
+/cmex10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmmi10.pfb><H:/miktex/fon
+ts/type1/public/amsfonts/cm/cmmi12.pfb><H:/miktex/fonts/type1/public/amsfonts/c
+m/cmmi7.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmr10.pfb><H:/miktex/font
+s/type1/public/amsfonts/cm/cmr12.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/
+cmr7.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmsy10.pfb><H:/miktex/fonts/
+type1/public/amsfonts/cm/cmsy7.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cm
+ti10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><H:/miktex/fonts/
+type1/public/amsfonts/symbols/msam10.pfb><H:/miktex/fonts/type1/public/amsfonts
+/symbols/msbm10.pfb>
+Output written on general.pdf (20 pages, 251317 bytes).
 PDF statistics:
- 274 PDF objects out of 1000 (max. 8388607)
- 69 named destinations out of 1000 (max. 500000)
- 173 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 416 PDF objects out of 1000 (max. 8388607)
+ 131 named destinations out of 1000 (max. 500000)
+ 221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,5 +1,6 @@
 \documentclass{article}
 \usepackage{amsmath}
+\usepackage{amsthm}
 \usepackage{hyperref}
 \usepackage{tikz}
 \usepackage{amssymb}
@@ -7,6 +8,21 @@
 
 % Definir el color carne
 \definecolor{carne}{RGB}{255, 218, 185}
+
+% Definir entornos de teoremas
+\theoremstyle{definition}
+\newtheorem{definition}{Definición}[section]
+\newtheorem{example}{Ejemplo}[section]
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Teorema}[section]
+\newtheorem{corollary}{Corolario}[theorem]
+\newtheorem{lemma}[theorem]{Lema}
+\newtheorem{proposition}{Proposición}[section]
+
+\theoremstyle{remark}
+\newtheorem{remark}{Observación}[section]
+\newtheorem{note}{Nota}[section]
 
 \begin{document}
 
@@ -20,8 +36,9 @@
   \item \hyperref[sec:complejos]{Representacion de los numeros complejos como matrices 2x2}
   \item \hyperref[sec:ejemplo]{Ejemplo: Rotacion de $\frac{2\pi}{5}$ como matriz 2x2}
   \item \hyperref[sec:cosenoaureo]{Demostracion de la relacion entre cos(2pi/5) y el numero aureo}
-  \item \hyperref[sec:demostracion_alternativa]{Demostracion alternativa de la ecuacion para cos(2\pi/5)}
+  \item \hyperref[sec:demostracion_alternativa]{Demostracion alternativa de la ecuacion para cos($2\pi/5$)}
   \item \hyperref[sec:chebfib]{Polinomio de Chebyshev y relacion con Fibonacci}
+  \item \hyperref[sec:teoremas]{Teoremas y Definiciones Fundamentales}
   \item \hyperref[sec:conclusion]{Conclusion}
 \end{enumerate}
 
@@ -75,6 +92,11 @@
 % Sección 10 - Fondo blanco
 \pagecolor{white}
 \input{10_chebyshev_fibonacci.tex}
+\newpage
+
+% Sección 11 - Fondo carne  
+\pagecolor{carne}
+\input{11_teoremas_ejemplo.tex}
 \newpage
 
 % Conclusión - Fondo blanco
