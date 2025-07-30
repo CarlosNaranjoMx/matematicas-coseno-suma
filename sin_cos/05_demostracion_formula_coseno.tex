@@ -1,9 +1,9 @@
 % Sección: Demostración de la fórmula de cos(a+b)
 \section{Demostración de la fórmula de cos(a+b)}\label{sec:demcos}
-Multiplicando las matrices de rotación:
-\begin{equation*}
+Multiplicando las matrices de rotación (utilizando \eqref{eq:matriz_rotacion}):
+\begin{equation}\label{eq:producto_matrices}
 R(a) R(b) = R(a + b)
-\end{equation*}
+\end{equation}
 
 Calculando el producto:
 \begin{equation*}
@@ -22,10 +22,10 @@ El elemento (1,1) del resultado es:
 \cos a \cos b - \sin a \sin b
 \end{equation*}
 
-Por lo tanto:
-\begin{equation*}
+Por lo tanto, confirmamos la identidad \eqref{eq:coseno_suma}:
+\begin{equation}\label{eq:coseno_suma_confirmado}
 \cos(a + b) = \cos a \cos b - \sin a \sin b
-\end{equation*}
+\end{equation}
 
 % Demostración alternativa usando el círculo unitario
 \subsection*{Demostración alternativa usando el círculo unitario}
@@ -35,24 +35,24 @@ C_x &= \cos a \cos b - \sin a \sin b \\
 C_y &= \cos a \sin b + \sin a \cos b
 \end{align*}
 
-El componente $x$ de $C$ corresponde a $\cos(a+b)$, por lo tanto:
-\begin{equation*}
+El componente $x$ de $C$ corresponde a $\cos(a+b)$, confirmando nuevamente \eqref{eq:coseno_suma}:
+\begin{equation}\label{eq:coseno_suma_circulo}
 \cos(a+b) = \cos a \cos b - \sin a \sin b
-\end{equation*}
+\end{equation}
 
 Esta demostración se basa en la composición de coordenadas en el círculo unitario y la definición de la suma de ángulos.
 
 % Demostración alternativa usando números complejos y la fórmula de Euler
 \subsection*{Demostración alternativa usando la fórmula de Euler}
 Recordemos que:
-\begin{equation*}
+\begin{equation}\label{eq:euler}
 e^{i\theta} = \cos\theta + i\sin\theta
-\end{equation*}
+\end{equation}
 
 Entonces:
-\begin{equation*}
+\begin{equation}\label{eq:euler_suma}
 e^{i(a+b)} = e^{ia} e^{ib} = (\cos a + i \sin a)(\cos b + i \sin b)
-\end{equation*}
+\end{equation}
 
 Multiplicando:
 \begin{align*}
@@ -66,9 +66,9 @@ El término real es:
 \cos a \cos b - \sin a \sin b
 \end{equation*}
 
-Por lo tanto:
-\begin{equation*}
+Por lo tanto, confirmamos una vez más \eqref{eq:coseno_suma}:
+\begin{equation}\label{eq:coseno_suma_euler}
 \cos(a+b) = \cos a \cos b - \sin a \sin b
-\end{equation*}
+\end{equation}
 
-Esta demostración utiliza la notación exponencial compleja y la fórmula de Euler.
+Esta demostración utiliza la notación exponencial compleja y la fórmula de Euler \eqref{eq:euler}.
