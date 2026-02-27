@@ -1,0 +1,9 @@
+\contentsline {section}{\numberline {1}Análisis de División: $\frac {a}{b}$ bajo Diferentes Condiciones}{2}{section.1}%
+\contentsline {subsection}{\numberline {1.1}Definición de los Cuatro Casos}{2}{subsection.1.1}%
+\contentsline {subsection}{\numberline {1.2}Combinación 1: $0 < a < 1$ y $b > 1$}{2}{subsection.1.2}%
+\contentsline {subsection}{\numberline {1.3}Combinación 2: $0 < a < 1$ y $0 < b < 1$}{2}{subsection.1.3}%
+\contentsline {subsection}{\numberline {1.4}Combinación 3: $a > 1$ y $b > 1$}{3}{subsection.1.4}%
+\contentsline {subsection}{\numberline {1.5}Combinación 4: $a > 1$ y $0 < b < 1$}{4}{subsection.1.5}%
+\contentsline {section}{\numberline {2}Resumen de Efectos: Tabla Comparativa}{4}{section.2}%
+\contentsline {section}{\numberline {3}Reglas Prácticas}{4}{section.3}%
+\contentsline {section}{\numberline {4}Visualización Conceptual}{5}{section.4}%

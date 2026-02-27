@@ -1,0 +1,87 @@
+% Spivak Capítulo 4, Problema 5
+\section*{Spivak Capítulo 4, Problema 5}
+\addcontentsline{toc}{section}{Spivak Capítulo 4, Problema 5}
+
+Dibujar los conjuntos de puntos $(x,y)$ que satisfacen cada una de las
+relaciones indicadas. La sugerencia de Spivak es intercambiar $x$ e $y$;
+esto nos permite reconocer inmediatamente curvas ya vistas en el capítulo
+anterior.
+
+\begin{enumerate}[label=(\roman*)]
+\item $x=y^{2}$.
+
+  Aquí $x$ está expresado en función de $y$; para cada valor de $y$ se
+  obtiene un único $x$ no negativo. La curva es la parábola clásica con
+  eje horizontal y vértice en el origen. Si intercambiamos variables
+  obtenemos $y=x^{2}$, que es la parábola con eje vertical conocida de
+  antes; así confirmamos que se abre hacia la derecha.
+
+  % dibujo
+  \begin{center}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[->] (-1,0) -- (4,0) node[right]{$x$};
+    \draw[->] (0,-2) -- (0,2) node[above]{$y$};
+    \draw[domain=-2:2,smooth,variable=\t,blue] plot ({\t*\t},{\t});
+  \end{tikzpicture}
+  \end{center}
+
+\item $\displaystyle\frac{y^{2}}{a^{2}}-\frac{x^{2}}{b^{2}}=1$.
+
+  Esta ecuación se reconoce como la hipérbola estándar con ejes alineados
+  con los ejes coordenados, pero con los papeles de $x$ e $y$ cambiados en
+  comparación con la forma $x^{2}/a^{2}-y^{2}/b^{2}=1$ estudiada en el
+  capítulo anterior. Por lo tanto la hipérbola tiene ramas que se abren
+  hacia arriba y hacia abajo; el parámetro $a$ controla la distancia del
+  vértice al origen sobre el eje $y$, y $b$ la asíntota se aproxima al
+  eje horizontal. En el plano la curva es la imagen rotada 90° de la
+  hipérbola "horizontal".
+
+  % dibujo con a=2,b=1
+  \begin{center}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[->] (-2,0) -- (2,0) node[right]{$x$};
+    \draw[->] (0,-3) -- (0,3) node[above]{$y$};
+    \draw[domain=1.4:3,smooth,variable=\t,blue] plot ({\t/2},{\t});
+    \draw[domain=-3:-1.4,smooth,variable=\t,blue] plot ({\t/2},{\t});
+  \end{tikzpicture}
+  \end{center}
+
+\item $x=|y|$.
+
+  La ecuación se descompone en dos semirrectas: cuando $y\ge0$ da $x=y$,
+  y cuando $y\le0$ da $x=-y$. Geométricamente es el doble cono con vértice
+  en $(0,0)$, abriéndose hacia la derecha; intercambiando $x$ e $y$ se
+  obtiene el mismo dibujo porque $|x|=y$ representa el cono hacia arriba y
+  abajo.
+
+  \begin{center}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[->] (-1,0) -- (3,0) node[right]{$x$};
+    \draw[->] (0,-3) -- (0,3) node[above]{$y$};
+    \draw[blue] (0,0) -- (2,2);
+    \draw[blue] (0,0) -- (2,-2);
+  \end{tikzpicture}
+  \end{center}
+
+\item $x=\sin y$.
+
+  Para cada $y$ real el valor de $x$ se sitúa entre $-1$ y $1$; la gráfica
+  es la famosa curva ondulada que cruza el eje $x$ con periodo $2\pi$.
+  Si se quiere ver con más claridad, se puede despejar $y=\arcsin x$, en
+  cuyo caso aparece la función inversa estudiada anteriormente, excepto
+  que ahora $y$ no está restringido al intervalo $[-\pi/2,\pi/2]$ y existe
+  una infinidad de $y$ para cada $x\in[-1,1]$. Alternativamente, pensar en
+  la sustitución $u=y$ de la parábola $u=\sin x$ estudiada antes da la
+  misma forma tras intercambiar los ejes.
+
+  \begin{center}
+  \begin{tikzpicture}[scale=0.7]
+    \draw[->] (-1.5,0) -- (1.5,0) node[right]{$x$};
+    \draw[->] (0,-3.5) -- (0,3.5) node[above]{$y$};
+    \draw[domain=-3.14:3.14,smooth,variable=\t,blue] plot ({sin(\t)},{\t});
+  \end{tikzpicture}
+  \end{center}
+\end{enumerate}
+
+Estas descripciones son suficientes para trazar las curvas con lápiz y
+papel; la indicación de intercambiar variables facilita el reconocimiento.  

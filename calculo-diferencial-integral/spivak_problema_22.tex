@@ -1,0 +1,158 @@
+% Problema 22 del Cálculo de Spivak
+% Demostración de acotación para la función recíproca
+
+\section*{Problema 22 - Spivak: Demostración de acotación para $\left|\frac{1}{y} - \frac{1}{y_0}\right|$}
+\addcontentsline{toc}{section}{Problema 22 - Spivak: Demostración de acotación para $\left|\frac{1}{y} - \frac{1}{y_0}\right|$}
+
+\subsection*{Enunciado}
+
+Demostrar que si $y_0 \neq 0$ y 
+\[
+|y - y_0| < \min\left(\frac{|y_0|}{2}, \frac{\varepsilon|y_0|^2}{2}\right),
+\]
+entonces $y \neq 0$ y 
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| < \varepsilon.
+\]
+
+\subsection*{Demostración}
+
+\subsubsection*{Paso 1: Demostrar que $y \neq 0$}
+
+De la hipótesis, $|y - y_0| < \dfrac{|y_0|}{2}$. Esto implica:
+\[
+-\frac{|y_0|}{2} < y - y_0 < \frac{|y_0|}{2}.
+\]
+
+Sumando $y_0$ a todos los lados:
+\[
+y_0 - \frac{|y_0|}{2} < y < y_0 + \frac{|y_0|}{2}.
+\]
+
+\textbf{Caso 1:} Si $y_0 > 0$, entonces $|y_0| = y_0$:
+\[
+y_0 - \frac{y_0}{2} < y < y_0 + \frac{y_0}{2},
+\]
+\[
+\frac{y_0}{2} < y < \frac{3y_0}{2}.
+\]
+En particular, $y > \dfrac{y_0}{2} > 0$, por lo que $y \neq 0$.
+
+\textbf{Caso 2:} Si $y_0 < 0$, entonces $|y_0| = -y_0$:
+\[
+y_0 - \frac{-y_0}{2} < y < y_0 + \frac{-y_0}{2},
+\]
+\[
+y_0 + \frac{y_0}{2} < y < y_0 - \frac{y_0}{2},
+\]
+\[
+\frac{3y_0}{2} < y < \frac{y_0}{2}.
+\]
+In particular, $y < \dfrac{y_0}{2} < 0$, por lo que $y \neq 0$.
+
+Combinando ambos casos: $|y| \geq \dfrac{|y_0|}{2} > 0$, así que $y \neq 0$ ✓.
+
+\subsubsection*{Paso 2: Acotar $\left|\frac{1}{y} - \frac{1}{y_0}\right|$}
+
+Escribimos:
+\[
+\frac{1}{y} - \frac{1}{y_0} = \frac{y_0 - y}{yy_0}.
+\]
+
+Tomando valor absoluto:
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| = \frac{|y_0 - y|}{|y| \cdot |y_0|} = \frac{|y - y_0|}{|y| \cdot |y_0|}.
+\]
+
+Del Paso 1 sabemos que $|y| \geq \dfrac{|y_0|}{2}$. Por tanto:
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| \leq \frac{|y - y_0|}{\frac{|y_0|}{2} \cdot |y_0|} = \frac{|y - y_0|}{\frac{|y_0|^2}{2}} = \frac{2|y - y_0|}{|y_0|^2}.
+\]
+
+De la hipótesis, $|y - y_0| < \dfrac{\varepsilon|y_0|^2}{2}$, así que:
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| < \frac{2 \cdot \frac{\varepsilon|y_0|^2}{2}}{|y_0|^2} = \frac{\varepsilon|y_0|^2}{|y_0|^2} = \varepsilon.
+\]
+
+\subsubsection*{Conclusión}
+
+Hemos demostrado que:
+\begin{enumerate}
+\item $y \neq 0$ (usar la primera condición: $|y - y_0| < \dfrac{|y_0|}{2}$),
+\item $\left|\dfrac{1}{y} - \dfrac{1}{y_0}\right| < \varepsilon$ (usar ambas condiciones; la segunda es la clave para la acotación final).
+\end{enumerate}
+
+\subsection*{Análisis de la condición $\min\left(\frac{|y_0|}{2}, \frac{\varepsilon|y_0|^2}{2}\right)$}
+
+La hipótesis contiene un mínimo de dos cantidades. Veamos por qué ambas son necesarias:
+
+\subsubsection*{¿Por qué la primera condición $|y - y_0| < \frac{|y_0|}{2}$?}
+
+Esta condición asegura que $y$ no cruza cero. Si $|y - y_0|$ fuera arbitrariamente grande, $y$ podría tener signo opuesto a $y_0$, acercándose a cero, lo que haría que $\dfrac{1}{y}$ sea arbitrariamente grande. Esta cota previene eso.
+
+\subsubsection*{¿Por qué la segunda condición $|y - y_0| < \frac{\varepsilon|y_0|^2}{2}$?}
+
+Esta condición es la que efectivamente controla la magnitud de $\left|\dfrac{1}{y} - \dfrac{1}{y_0}\right|$. De ella y del paso anterior:
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| < \frac{2|y - y_0|}{|y_0|^2} < \frac{2 \cdot \frac{\varepsilon|y_0|^2}{2}}{|y_0|^2} = \varepsilon.
+\]
+
+\subsubsection*{¿Por qué el mínimo de ambas?}
+
+La noción $\min(a, b)$ elige el más restrictivo (pequeño) de los dos. Esto es necesario porque:
+\begin{itemize}
+\item Si $\varepsilon$ es grande, entonces $\dfrac{\varepsilon|y_0|^2}{2}$ es grande, y la primera condición $\dfrac{|y_0|}{2}$ es más restrictiva.
+\item Si $\varepsilon$ es pequeño, la segunda condición $\dfrac{\varepsilon|y_0|^2}{2}$ es más restrictiva.
+\item El mínimo garantiza que ambas se satisfacen simultáneamente, independientemente de los valores de $\varepsilon$ e $y_0$.
+\end{itemize}
+
+\begin{ejemplo}
+Sea $y_0 = 1$ y $\varepsilon = 0.1$. Entonces:
+\[
+\min\left(\frac{1}{2}, \frac{0.1 \cdot 1^2}{2}\right) = \min(0.5, 0.05) = 0.05.
+\]
+Si $|y - 1| < 0.05$, entonces $0.95 < y < 1.05$, así que $y \neq 0$.
+
+Además:
+\[
+\left|\frac{1}{y} - 1\right| = \left|\frac{1 - y}{y}\right| = \frac{|y - 1|}{|y|} < \frac{0.05}{0.95} \approx 0.0526 < 0.1 = \varepsilon. \quad ✓
+\]
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea $y_0 = 0.5$ y $\varepsilon = 0.5$. Entonces:
+\[
+\min\left(\frac{0.5}{2}, \frac{0.5 \cdot 0.5^2}{2}\right) = \min(0.25, 0.0625) = 0.0625.
+\]
+Si $|y - 0.5| < 0.0625$, entonces $0.4375 < y < 0.5625$, así que $y \neq 0$.
+
+La acotación de $\left|\dfrac{1}{y} - \dfrac{1}{0.5}\right| = \left|\dfrac{1}{y} - 2\right|$ también será $< 0.5$.
+\end{ejemplo}
+
+\subsection*{Significado: Continuidad de la Función Recíproca}
+
+Este problema demuestra que la función $f(y) = \dfrac{1}{y}$ es continua en todo punto $y_0 \neq 0$. 
+
+Junto con los Problemas 20 y 21 (suma, resta, producto), podemos concluir:
+
+\textbf{Todas las operaciones algebraicas (suma, resta, producto, cociente) preservan la continuidad.}
+
+Por tanto, cualquier función racional $\dfrac{p(y)}{q(y)}$ (cociente de polinomios) es continua en todos los puntos donde $q(y) \neq 0$.
+
+\subsection*{Comparación de Problemas 20, 21 y 22}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Problema} & \textbf{Operación} & \textbf{Clave Técnica} \\
+\hline
+20 & Suma/Resta & Desigualdad triangular, división de $\varepsilon/2$ \\
+\hline
+21 & Producto & Multiplicador acotado $|x| < 1 + |x_0|$ \\
+\hline
+22 & Cociente/Recíproca & Múltiples condiciones $\min(a,b)$ para $y \neq 0$ \\
+\hline
+\end{tabular}
+\end{center}
+
+Cada operación requiere técnicas cada vez más sofisticadas para mantener el control sobre el error.

@@ -1,0 +1,239 @@
+% Problema 24 del Cálculo de Spivak
+% Demostración de la asociatividad de sumas finitas
+
+\section*{Problema 24 - Spivak: Asociatividad de Sumas Finitas}
+\addcontentsline{toc}{section}{Problema 24 - Spivak: Asociatividad de Sumas Finitas}
+
+\subsection*{Enunciado y Motivación}
+
+El Problema 24 es un resultado técnico importante que demuestra que podemos sumar números finitos en cualquier orden de paréntesis y siempre obtendremos el mismo resultado. Formalmente:
+
+\[
+a_1 + (a_2 + (a_3 + \cdots + (a_{n-2} + (a_{n-1} + a_n)) \cdots )) = a_1 + a_2 + \cdots + a_n.
+\]
+
+Este resultado es **fundamental** para justificar que la notación $a_1 + \cdots + a_n$ está bien definida sin necesidad de especificar paréntesis.
+
+\subsection*{Notación}
+
+Denotamos $a_1 + \cdots + a_n$ como la suma:
+\[
+a_1 + (a_2 + (a_3 + \cdots + (a_{n-2} + (a_{n-1} + a_n)) \cdots )).
+\]
+
+Es decir, $a_1 + \cdots + a_n = a_1 + (a_2 + a_3) = a_1 + (a_2 + (a_3 + a_4))$, etc.
+
+\subsection*{Parte (a): Base de la inducción}
+
+\textbf{Afirmación:} Para todo $k \geq 1$,
+\[
+(a_1 + \cdots + a_k) + a_{k+1} = a_1 + \cdots + a_{k+1}.
+\]
+
+\begin{proof}
+Procederemos por inducción en $k$.
+
+\textbf{Caso base: } $k = 1$.
+\[
+(a_1) + a_2 = a_1 + a_2. \quad \checkmark
+\]
+
+\textbf{Paso inductivo:} Supongamos que 
+\[
+(a_1 + \cdots + a_k) + a_{k+1} = a_1 + \cdots + a_{k+1}
+\]
+es verdadera. Queremos mostrar que
+\[
+(a_1 + \cdots + a_{k+1}) + a_{k+2} = a_1 + \cdots + a_{k+2}.
+\]
+
+Por la definición de notación $a_1 + \cdots + a_{k+1} = (a_1 + \cdots + a_k) + a_{k+1}$ (por hipótesis inductiva). Luego:
+\[
+(a_1 + \cdots + a_{k+1}) + a_{k+2} = ((a_1 + \cdots + a_k) + a_{k+1}) + a_{k+2}.
+\]
+
+Por la propiedad asociativa de los números reales (que asumimos):
+\[
+((a_1 + \cdots + a_k) + a_{k+1}) + a_{k+2} = (a_1 + \cdots + a_k) + (a_{k+1} + a_{k+2}).
+\]
+
+Pero por la hipótesis inductiva aplicada al término $(a_{k+1} + a_{k+2})$:
+\[
+(a_1 + \cdots + a_k) + (a_{k+1} + a_{k+2}) = a_1 + \cdots + a_{k+2}.
+\]
+
+Por tanto, la afirmación es verdadera para $k+1$. ✓
+\end{proof}
+
+\subsection*{Parte (b): Asociatividad entre dos bloques}
+
+\textbf{Afirmación:} Si $n \geq k$, entonces
+\[
+(a_1 + \cdots + a_k) + (a_{k+1} + \cdots + a_n) = a_1 + \cdots + a_n.
+\]
+
+\begin{proof}
+Procederemos por inducción en $k$.
+
+\textbf{Caso base: } $k = 1$.
+\[
+(a_1) + (a_2 + \cdots + a_n) = a_1 + (a_2 + \cdots + a_n) = a_1 + \cdots + a_n. \quad \checkmark
+\]
+
+\textbf{Paso inductivo:} Supongamos que para cierto $k < n$,
+\[
+(a_1 + \cdots + a_k) + (a_{k+1} + \cdots + a_n) = a_1 + \cdots + a_n.
+\]
+
+Queremos mostrar que
+\[
+(a_1 + \cdots + a_{k+1}) + (a_{k+2} + \cdots + a_n) = a_1 + \cdots + a_n.
+\]
+
+\textbf{Escritura estratégica:} Observe que
+\[
+(a_1 + \cdots + a_{k+1}) + (a_{k+2} + \cdots + a_n) = ((a_1 + \cdots + a_k) + a_{k+1}) + (a_{k+2} + \cdots + a_n).
+\]
+
+Reordenando con asociatividad real:
+\[
+= (a_1 + \cdots + a_k) + (a_{k+1} + (a_{k+2} + \cdots + a_n)).
+\]
+
+Por la parte (a), $a_{k+1} + (a_{k+2} + \cdots + a_n) = (a_{k+1} + \cdots + a_n)$, así que:
+\[
+= (a_1 + \cdots + a_k) + (a_{k+1} + \cdots + a_n).
+\]
+
+Por hipótesis inductiva aplicada a este último término (con $k$ y el rango $[k+1, n]$):
+\[
+= a_1 + \cdots + a_n. \quad \checkmark
+\]
+\end{proof}
+
+\subsection*{Parte (c): Cualquier colocación de paréntesis}
+
+\textbf{Afirmación:} Sea $s(a_1, \ldots, a_n)$ una suma formada con $a_1, \ldots, a_n$ (con cualquier colocación válida de paréntesis). Entonces
+\[
+s(a_1, \ldots, a_n) = a_1 + \cdots + a_n.
+\]
+
+\textbf{Indicación (del problema original):} Debe haber dos sumas $s'(a_1, \ldots, a_l)$ y $s''(a_{l+1}, \ldots, a_n)$ tales que
+\[
+s(a_1, \ldots, a_n) = s'(a_1, \ldots, a_l) + s''(a_{l+1}, \ldots, a_n).
+\]
+
+\begin{proof}
+Procederemos por inducción en $n$ (número de términos).
+
+\textbf{Caso base: } $n = 1$.
+\[
+s(a_1) = a_1. \quad \checkmark
+\]
+
+\textbf{Caso base: } $n = 2$.
+\[
+s(a_1, a_2) = a_1 + a_2. \quad \checkmark
+\]
+
+\textbf{Paso inductivo:} Supongamos que para todo $m < n$, cualquier suma de $m$ términos con cualquier paréntesis es igual a la suma estándar $a_1 + \cdots + a_m$.
+
+Sea $s(a_1, \ldots, a_n)$ una suma de $n$ términos con paréntesis arbitrarios. Por construcción, existe un índice $l$ con $1 \leq l < n$ tal que:
+\[
+s(a_1, \ldots, a_n) = s'(a_1, \ldots, a_l) + s''(a_{l+1}, \ldots, a_n),
+\]
+donde $s'$ es una suma de $l$ términos y $s''$ es una suma de $n - l$ términos.
+
+Por hipótesis inductiva (ya que $l < n$ y $n - l < n$):
+\[
+s'(a_1, \ldots, a_l) = a_1 + \cdots + a_l,
+\]
+\[
+s''(a_{l+1}, \ldots, a_n) = a_{l+1} + \cdots + a_n.
+\]
+
+Por tanto:
+\[
+s(a_1, \ldots, a_n) = (a_1 + \cdots + a_l) + (a_{l+1} + \cdots + a_n).
+\]
+
+Aplicando la parte (b):
+\[
+= a_1 + \cdots + a_n. \quad \checkmark
+\]
+
+Por inducción, el resultado es verdadero para todo $n$. ✓
+\end{proof}
+
+\subsection*{Ejemplos Ilustrativos}
+
+\begin{ejemplo}
+Sea $n = 4$ y consideremos distintas colocaciones de paréntesis:
+
+\textit{Opción 1:} $((a_1 + a_2) + a_3) + a_4$
+\[
+= ((a_1 + a_2) + a_3) + a_4 = (a_1 + a_2 + a_3) + a_4 = a_1 + a_2 + a_3 + a_4.
+\]
+
+\textit{Opción 2:} $(a_1 + (a_2 + a_3)) + a_4$
+\[
+= (a_1 + (a_2 + a_3)) + a_4 = (a_1 + a_2 + a_3) + a_4 = a_1 + a_2 + a_3 + a_4.
+\]
+
+\textit{Opción 3:} $a_1 + ((a_2 + a_3) + a_4)$
+\[
+= a_1 + ((a_2 + a_3) + a_4) = a_1 + (a_2 + a_3 + a_4) = a_1 + a_2 + a_3 + a_4.
+\]
+
+Todas las opciones producen el mismo resultado: $a_1 + a_2 + a_3 + a_4$. ✓
+\end{ejemplo}
+
+\subsection*{Significado e Implicaciones}
+
+El Problema 24 establece el \textbf{principio de asociatividad generalizada} para sumas finitas:
+
+\begin{enumerate}
+\item \textbf{Unicidad de la suma:} La notación $a_1 + \cdots + a_n$ está bien definida sin especificar paréntesis.
+
+\item \textbf{Independencia del orden de operaciones:} No importa cómo agrupemos los términos, el resultado es siempre el mismo.
+
+\item \textbf{Simplificación teórica:} Permite trabajar con sumas sin preocuparse por los detalles técnicos de la asociatividad.
+
+\item \textbf{Fundación para series:} Este resultado es la base teórica para definir series infinitas $\sum_{i=1}^{\infty} a_i$ como límites de sumas parciales.
+\end{enumerate}
+
+\subsection*{Conexión con Problemas Anteriores}
+
+\begin{center}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{Problema} & \textbf{Tema} & \textbf{Objetivo} \\
+\hline
+20 & Continuidad de suma/resta & Dos números, $\delta$-$\varepsilon$ \\
+\hline
+21 & Continuidad de producto & Dos números, técnicas de acotación \\
+\hline
+22 & Continuidad de recíproca & División, análisis de signos \\
+\hline
+24 & Asociatividad de sumas & $n$ números, inducción estructural \\
+\hline
+\end{tabular}
+\end{center}
+
+El Problema 24 es más \textit{algebraico} que los anteriores, enfocándose en la estructura de sumas finitas en lugar de límites y continuidad.
+
+\subsection*{Estructura de la Demostración}
+
+La belleza de esta demostración radica en su estructura recursiva:
+
+\vspace{0.5cm}
+
+\textbf{Parte (a):} Muestra que sumar un término al final es lo mismo que incluirlo en la notación estándar.
+
+\textbf{Parte (b):} Extiende (a) para permitir dos bloques de sumas.
+
+\textbf{Parte (c):} Usa (a) y (b) por inducción para manejar \textbf{cualquier} paréntesis.
+
+\vspace{0.5cm}
+
+Este enfoque \textit{bottom-up} construye gradualmente desde operaciones simples a sumas arbitrariamente complejas, garantizando la unicidad del resultado.

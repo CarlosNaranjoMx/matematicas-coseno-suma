@@ -1,0 +1,77 @@
+% Problema 7, Capítulo 2 (Spivak)
+% Sumas de potencias como polinomios
+
+\section*{Problema 7 - Fórmula general para $\sum_{k=1}^n k^p$}
+\addcontentsline{toc}{section}{Problema 7 - Fórmula general para $\sum_{k=1}^n k^p$}
+
+El objetivo es mostrar que para cada entero positivo $p$ existe un polinomio
+en $n$ de grado $p+1$ con coeficiente dominante $1/(p+1)$ tal que
+\[
+\sum_{k=1}^n k^p = \frac{n^{p+1}}{p+1} + A n^p + B n^{p-1}+\cdots
+t\]
+donde los demás coeficientes son racionales que dependen sólo de $p$.
+
+La demostración se basa en el método del problema anterior: escribir
+a partir de la identidad
+\[
+(k+1)^{p+1}-k^{p+1} = (p+1)k^p + \binom{p+1}{2}k^{p-1} + \cdots + 1
+t\]
+y sumar telescópicamente de $k=1$ hasta $n$. Al desplazar términos obtenemos
+a una ecuación lineal entre las sumas de potencias de órdenes $p,p-1,\dots,0$.
+
+Esquema general:
+\begin{align*}
+(n+1)^{p+1}-1 &= \sum_{k=1}^n\big((k+1)^{p+1}-k^{p+1}\big) \\
+&= (p+1)\sum_{k=1}^n k^p + \binom{p+1}{2}\sum_{k=1}^n k^{p-1} + \cdots + \sum_{k=1}^n1.
+\end{align*}
+
+Denotemos $S_j(n)=\sum_{k=1}^n k^j$. La igualdad anterior se reescribe como
+\[
+(p+1)S_p(n) = (n+1)^{p+1}-1 - \binom{p+1}{2}S_{p-1}(n) - \cdots - S_0(n).
+\]
+Por inducción en $p$, suponemos que cada $S_j(n)$ con $j<p$ es un polinomio de
+grado $j+1$ cuyos coeficientes conocidos se han calculado anteriormente.
+Entonces el lado derecho es un polinomio en $n$ de grado $p+1$ cuyo
+coeficiente líder es precisamente $1$ (viene de $(n+1)^{p+1}$). Dividiendo
+por $p+1$ obtenemos el polinomio buscado para $S_p(n)$ con coeficiente
+líder $1/(p+1)$.
+
+\subsection*{Ejemplos concretos}
+
+Las primeras diez fórmulas obtenidas por esta técnica son (tal como se
+muestra en la imagen del enunciado original):
+\begin{align*}
+\sum_{k=1}^n k &= \tfrac12 n^2 + \tfrac12 n, \\
+\sum_{k=1}^n k^2 &= \tfrac13 n^3 + \tfrac12 n^2 + \tfrac16 n, \\
+\sum_{k=1}^n k^3 &= \tfrac14 n^4 + \tfrac12 n^3 + \tfrac14 n^2 = \left(\tfrac12 n^2 + \tfrac12 n\right)^2, \\
+\sum_{k=1}^n k^4 &= \tfrac15 n^5 + \tfrac12 n^4 + \tfrac13 n^3 - \tfrac{1}{30}n, \\
+\sum_{k=1}^n k^5 &= \tfrac16 n^6 + \tfrac12 n^5 + \tfrac56 n^4 - \tfrac16 n^2, \\
+\sum_{k=1}^n k^6 &= \tfrac17 n^7 + \tfrac12 n^6 + \tfrac56 n^5 - \tfrac17 n^3 + \tfrac16 n, \\
+\sum_{k=1}^n k^7 &= \tfrac18 n^8 + \tfrac12 n^7 + \tfrac78 n^6 - \tfrac17 n^4 + \tfrac17 n^2, \\
+\sum_{k=1}^n k^8 &= \tfrac19 n^9 + \tfrac12 n^8 + \tfrac89 n^7 - \tfrac78 n^5 + \tfrac89 n^3 - \tfrac{1}{30}n, \\
+\sum_{k=1}^n k^9 &= \tfrac1{10} n^{10} + \tfrac12 n^9 + \tfrac89 n^8 - \tfrac78 n^6 + \tfrac19 n^4 - \tfrac3{10} n^2, \\
+\sum_{k=1}^n k^{10} &= \tfrac1{11} n^{11} + \tfrac12 n^{10} + \tfrac9{10} n^9 - n^7 + \tfrac12 n^5 - \tfrac1{2}n^3 + \tfrac5{66}n.
+\end{align*}
+
+Observar que el segundo coeficiente es siempre $\tfrac12$ y después de la
+tercera columna las potencias aparecen con coeficientes decrecientes de dos
+en dos. La demostración precedente muestra que estos patrones se derivan de
+las binomiales en la identidad telescópica.
+
+\subsection*{Consecuencias y generalizaciones}
+
+En particular, la existencia de dicho polinomio implica que
+$S_p(n)=O(n^{p+1})$ y que
+\[
+\frac{S_p(n)}{n^{p+1}}\to \frac{1}{p+1} \quad(n\to\infty),
+\]
+una forma elemental de establecer el comportamiento asintótico de las
+sumas de potencias. Este argumento es la base de la llamada "fórmula de
+Faulhaber" y conecta con los números de Bernoulli cuando se busca una
+expresión explícita para los coeficientes.
+
+\vspace{1em}
+Puedes probar inductivamente el paso anterior y calcular coeficientes
+determinados mediante comparaciones de términos en ambos lados de la identidad
+telecópica.
+

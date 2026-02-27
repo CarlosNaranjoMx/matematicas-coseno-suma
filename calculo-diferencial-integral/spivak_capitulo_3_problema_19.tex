@@ -1,0 +1,74 @@
+\section*{Spivak Capítulo 3, Problema 19}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 19}
+
+El problema consta de dos partes.
+
+\textbf{(a)} Se pide demostrar la imposibilidad de funciones $f,g$ que
+satisfagan cualquiera de las siguientes ecuaciones para todos $x,y$:
+\begin{enumerate}[label=(\roman*)]
+\item $f(x)+g(y)=xy$.
+\item $f(x)\cdot g(y)=x+y$.
+\end{enumerate}
+
+En ambos casos la indicación sugiere fijar valores particulares de una de
+las variables.
+
+\emph{Caso (i).} Supongamos que existen tales $f,g$. Tomemos $x=0$ en la
+igualdad; obtenemos
+$$f(0)+g(y)=0\qquad\text{para todo }y.$$  Esto muestra que $g$ es constante,
+sea $g(y)=c$. Sustituyendo de nuevo en la ecuación original tenemos
+$$f(x)+c = xy,$$ lo que para $y=0$ fuerza $f(x)=-c$ constante. Con estas
+formas $f(x)+g(y)=-c+c=0$, y la igualdad se convierte en $0=xy$ para todos
+$x,y$, lo cual es imposible. La única forma de evitar la contradicción sería
+que en el paso anterior hubiésemos dividido por cero; más precisamente, si
+$f(0)=0$ no podemos deducir inmediatamente que $g$ sea constante. Pero si
+$f(0)=0$ la relación con $x=0$ da $g(y)=0$ para todo $y$, y entonces la
+ecuación original se lee $f(x)=xy$ para todos $x,y$. Al fijar $y=0$ se
+obtiene $f(x)=0$ y sustituyendo de nuevo se vuelve a deducir $0=xy$, de nuevo
+contradicción. Concluimos que no existen funciones que satisfagan (i).
+
+\emph{Caso (ii).} Supóngase que $f,g$ cumplen $f(x)g(y)=x+y$ para todo
+$x,y$. Si $f(0)=0$, entonces poniendo $x=0$ deducimos $0\cdot g(y)=y$; esto
+es imposible salvo para $y=0$, así que no puede suceder. Por tanto $f(0)\neq0$.
+Fijando $x=0$ obtenemos
+$$f(0)g(y)=y,$$
+lo que muestra que $g$ es la función lineal $g(y)=y/f(0)$. Análogamente,
+fijando $y=0$ obtenemos $f(x)g(0)=x$, de donde $f(x)=x/g(0)$. Sustituyendo
+estas expresiones en la ecuación original se convierte en
+$$\frac{x}{g(0)}\cdot\frac{y}{f(0)} = x+y$$
+para todo $x,y$. Esto se puede reescribir como
+$$\frac{1}{f(0)g(0)}\,xy = x+y.	ag{*}$$
+La igualdad (*) no puede sostenerse para todos los reales; por ejemplo,
+si elegimos $y=0$ se deduce $0=x$, contradicción a menos que la constante
+$1/(f(0)g(0))$ sea infinita, lo cual no ocurre en $bR$. Otra manera de ver
+la imposibilidad es fijar $x=1$ y dejar que $y$ varíe: la ecuación (*) se
+convierte en $(1/(f(0)g(0)))y = 1+y$, imposible porque la pendiente del
+lado izquierdo es constante mientras que el derecho tiene pendiente~1 y la
+constante no puede ajustarse para cumplir en más de dos puntos. En cualquier
+caso, la derivación muestra que no hay funciones reales $(f,g)$ que cumplan
+(ii).
+
+Con ello se ha probado la parte (a): ninguna de las dos ecuaciones admite
+solución en funciones reales.
+
+\textbf{(b)} Ahora se pide encontrar funciones $f,g$ tales que
+$$f(x+y)=g(xy)	ag{**}$$
+para todo $x,y$. Tomamos la misma táctica de fijar un valor conveniente.
+Poniendo $y=0$ en (**) se obtiene
+$$f(x)=g(0) \qquad\text{para todo }x. $$
+Así $f$ debe ser constante; digamos $f(x)=C$ con $C=g(0)$. Sustituyendo en
+(**) vemos que la función $g$ debe satisfacer $g(xy)=C$ para todo $x,y$.
+Si $C$ es una constante fija, esta igualdad se cumple obviamente siempre que
+$g$ sea la función constante $g(t)=C$ (no hay otra elección posible porque
+el producto $xy$ recorre todo $bR$ al variar $x,y$). Por tanto una pareja
+válida es
+$$f(x)=C,\\ g(t)=C$$
+para cualquier constante $C\in\mathbb{R}$.
+
+No existen otras posibilidades: si existiera alguna solución no constante,
+la igualdad con $y=0$ habría mostrado ya que $f$ debe ser constante; pero
+entonces la misma constante debe ser igual a todos los valores de $g$, lo
+que obliga a que $g$ también sea constante. En resumen, las únicas soluciones
+del problema (b) son las parejas de funciones constantes iguales.
+
+Esto concluye el problema 19.

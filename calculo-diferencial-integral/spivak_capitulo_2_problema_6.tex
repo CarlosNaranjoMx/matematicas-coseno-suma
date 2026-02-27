@@ -1,0 +1,131 @@
+% Problema 6, Capítulo 2 (Spivak)
+% Sumas de potencias y telescopios
+
+\section*{Problema 6 - Sumas mediante telescopios (Spivak)}
+\addcontentsline{toc}{section}{Problema 6 - Sumas mediante telescopios (Spivak)}
+
+\subsection*{Idea general}
+
+La identidad clave es
+\[
+(k+1)^3-k^3=3k^2+3k+1.
+\]
+Sumando esta igualdad para $k=1,2,\dots,n$ obtenemos una relación entre sumas de potencias que permite resolver \(\sum_{k=1}^n k^2\) dadas las sumas \(\sum_{k=1}^n k\).
+
+\subsection*{Suma de los cuadrados: $\displaystyle\sum_{k=1}^n k^2$}
+
+Sumando la identidad telescópica para $k=1$ hasta $n$:
+\[
+\sum_{k=1}^n\big((k+1)^3-k^3\big)=\sum_{k=1}^n (3k^2+3k+1).
+\]
+El lado izquierdo es telescópico:
+\[
+\sum_{k=1}^n\big((k+1)^3-k^3\big)=(n+1)^3-1.
+\]
+Por tanto:
+\[
+(n+1)^3-1=3\sum_{k=1}^n k^2+3\sum_{k=1}^n k+\sum_{k=1}^n 1.
+\]
+Sustituyendo las sumas conocidas: $\sum_{k=1}^n k=\dfrac{n(n+1)}{2}$ y $\sum_{k=1}^n1=n$, se obtiene
+\[
+(n+1)^3-1=3S_2+3\cdot\frac{n(n+1)}{2}+n,
+\]
+donde $S_2=\sum_{k=1}^n k^2$. Despejando $S_2$:
+\begin{align*}
+3S_2 &= (n+1)^3-1-\frac{3n(n+1)}{2}-n \\[4pt]
+&= n^3+3n^2+3n - \frac{3n^2+3n}{2}-n \\[4pt]
+&= \frac{2n^3+3n^2+n}{2} = \frac{n(n+1)(2n+1)}{2}.
+\end{align*}
+Finalmente:
+\[
+\sum_{k=1}^n k^2 = S_2 = \frac{n(n+1)(2n+1)}{6}.
+\]
+
+\subsection*{(i) Suma de cubos: $\displaystyle\sum_{k=1}^n k^3$}
+Usaremos la identidad
+\[
+(k+1)^4-k^4=4k^3+6k^2+4k+1.
+\]
+Sumando para $k=1$ hasta $n$ obtenemos
+\[
+\sum_{k=1}^n\big((k+1)^4-k^4\big)=4\sum_{k=1}^n k^3+6\sum_{k=1}^n k^2+4\sum_{k=1}^n k+\sum_{k=1}^n 1.
+\]
+El lado izquierdo es telescópico y vale $(n+1)^4-1$. Denotando $S_3=\sum_{k=1}^n k^3$ y usando las fórmulas ya probadas $\sum_{k=1}^n k=\dfrac{n(n+1)}{2}$ y $\sum_{k=1}^n k^2=\dfrac{n(n+1)(2n+1)}{6}$ se tiene
+\[
+(n+1)^4-1=4S_3+6\cdot\frac{n(n+1)(2n+1)}{6}+4\cdot\frac{n(n+1)}{2}+n.
+\]
+Simplificando los términos conocidos:
+\[
+(n+1)^4-1=4S_3+n(n+1)(2n+1)+2n(n+1)+n.
+\]
+Despejando $S_3$:
+\begin{align*}
+4S_3 &= (n+1)^4-1 - n(n+1)(2n+1)-2n(n+1)-n \\
+&= n^4+4n^3+6n^2+4n - n(2n^2+3n+1)-2n^2-2n-n \\
+&= n^4+4n^3+6n^2+4n -2n^3-3n^2-n -2n^2-2n-n \\
+&= n^4+2n^3+n^2 \\
+&= n^2(n+1)^2.
+\end{align*}
+Por tanto
+\[
+S_3=\sum_{k=1}^n k^3=\frac{n^2(n+1)^2}{4}=\left(\frac{n(n+1)}{2}\right)^2.
+\]
+
+Esta es la conocida identidad: la suma de los primeros $n$ cubos es el cuadrado de la suma de los primeros $n$ enteros.
+
+\subsection*{(ii) Suma de cuartas potencias: $\displaystyle\sum_{k=1}^n k^4$}
+
+Partimos de la identidad
+\[
+(k+1)^5-k^5=5k^4+10k^3+10k^2+5k+1.
+\]
+Sumando para $k=1$ hasta $n$ y usando telescopio obtenemos
+\[
+(n+1)^5-1=5\sum_{k=1}^n k^4+10\sum_{k=1}^n k^3+10\sum_{k=1}^n k^2+5\sum_{k=1}^n k+\sum_{k=1}^n1.
+\]
+Denotando $S_4=\sum_{k=1}^n k^4$ y sustituyendo las fórmulas ya obtenidas para $S_3,S_2,S_1$ se llega a
+\[
+(n+1)^5-1=5S_4+10\cdot\frac{n^2(n+1)^2}{4}+10\cdot\frac{n(n+1)(2n+1)}{6}+5\cdot\frac{n(n+1)}{2}+n.
+\]
+Simplificando los coeficientes:
+\[
+(n+1)^5-1=5S_4+\frac{10n^2(n+1)^2}{4}+\frac{10n(n+1)(2n+1)}{6}+\frac{5n(n+1)}{2}+n.
+\]
+Reduciendo las fracciones y agrupando términos conocidos, despejamos $S_4$ (tras una simplificación algebraica rutinaria) y obtenemos la fórmula cerrada
+\[
+\sum_{k=1}^n k^4 = S_4 = \frac{n(n+1)(2n+1)(3n^2+3n-1)}{30}.
+\]
+Si quieres, puedo detallar la simplificación paso a paso; la demostración completa consiste en sustituir y simplificar los polinomios resultantes.
+
+\subsection*{(iii) Suma telescópica $\displaystyle\sum_{k=1}^n \frac{1}{k(k+1)}$}
+
+Observamos la descomposición en fracciones simples:
+\[
+\frac{1}{k(k+1)}=\frac{1}{k}-\frac{1}{k+1}.
+\]
+Sumando para $k=1$ hasta $n$ se obtiene un telescopio:
+\[
+\sum_{k=1}^n \left(\frac{1}{k}-\frac{1}{k+1}\right)=1-\frac{1}{n+1}=\frac{n}{n+1}.
+\]
+
+\subsection*{(iv) Suma telescópica $\displaystyle\sum_{k=1}^n \frac{2k+1}{k^2(k+1)^2}$}
+
+Comprobamos que la identitad telescópica
+\[
+\frac{1}{k^2}-\frac{1}{(k+1)^2}=\frac{(k+1)^2-k^2}{k^2(k+1)^2}=\frac{2k+1}{k^2(k+1)^2}
+\]
+es válida. Por tanto la suma telescopa:
+\[
+\sum_{k=1}^n \frac{2k+1}{k^2(k+1)^2}=1-\frac{1}{(n+1)^2}.
+\]
+
+\subsection*{Conclusión y observaciones}
+
+Este problema ilustra cómo las identidades algebraicas del tipo $(k+1)^m-k^m$ permiten "elevar" el conocimiento de una suma de potencias a la siguiente potencia, y cómo las descomposiciones en fracciones simples conducen a sumas telescópicas muy simples.
+
+Si quieres, puedo:
+\begin{itemize}
+  \item añadir demostraciones completas por telescopio para (i) y (ii),
+  \item incluir ejercicios adicionales y comprobaciones numéricas,
+  \item incluir este archivo en `calculo.tex` ahora.
+\end{itemize}

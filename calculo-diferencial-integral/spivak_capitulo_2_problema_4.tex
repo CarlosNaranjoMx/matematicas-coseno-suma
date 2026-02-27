@@ -1,0 +1,91 @@
+\section*{Spivak Capítulo 2, Problema 4}
+\addcontentsline{toc}{section}{Spivak Capítulo 2, Problema 4}
+
+\subsection*{(a) Identidad de Vandermonde}
+
+	extbf{Demostrar que:}
+\[
+\sum_{k=0}^{\ell} \binom{n}{k}\binom{m}{\ell-k} = \binom{n+m}{\ell} \qquad\text{(Identidad de Vandermonde)}
+\]
+
+	extbf{Demostración:}
+
+Comparando coeficientes en la identidad
+\[
+(1+x)^n(1+x)^m=(1+x)^{n+m}
+\]
+obtenemos la igualdad anunciada. Al expandir ambos factores con el teorema binomial, el coeficiente de $x^{\ell}$ en el producto es
+\[
+\sum_{k=0}^{\ell}\binom{n}{k}\binom{m}{\ell-k},
+\]
+mientras que en el otro miembro dicho coeficiente es $\binom{n+m}{\ell}$.
+
+También hay una prueba puramente combinatoria: elegir $\ell$ elementos de un conjunto dividido en dos bloques (de tamaños $n$ y $m$) equivale a fijar cuántos se eligen del primer bloque ($k$) y cuántos del segundo ($\ell-k$), y sumar sobre $k$ da todas las elecciones.
+
+\subsection*{(b) Suma de Cuadrados de Binomios}
+
+\textbf{Demostrar que:}
+\[
+\sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}
+\]
+
+\textbf{Ayuda:} Aplicar el teorema binomial a $(1+x)^n(1+x)^n$.
+
+\textbf{Demostración:}
+
+Consideramos la identidad algebraica:
+\[
+(1+x)^n \cdot (1+x)^n = (1+x)^{2n}
+\]
+
+Expandimos el lado izquierdo usando el teorema binomial:
+\[
+\left(\sum_{k=0}^{n} \binom{n}{k} x^k\right) \left(\sum_{j=0}^{n} \binom{n}{j} x^j\right)
+\]
+
+Al multiplicar estas series, el coeficiente de $x^n$ es:
+\[
+\sum_{k=0}^{n} \binom{n}{k} \binom{n}{n-k}
+\]
+
+Pero $\binom{n}{n-k} = \binom{n}{k}$ por simetría, luego:
+\[
+\sum_{k=0}^{n} \binom{n}{k}^2
+\]
+
+Por el lado derecho, la expansión binomial de $(1+x)^{2n}$ es:
+\[
+(1+x)^{2n} = \sum_{m=0}^{2n} \binom{2n}{m} x^m
+\]
+
+El coeficiente de $x^n$ en esta expansión es simplemente $\binom{2n}{n}$.
+
+Como ambos lados de la igualdad $(1+x)^{2n} = (1+x)^n(1+x)^n$ representan el mismo polinomio, los coeficientes de $x^n$ deben ser iguales:
+\[
+\sum_{k=0}^{n} \binom{n}{k}^2 = \binom{2n}{n}
+\]
+
+\qed
+
+\textbf{Interpretación Combinatoria:}
+
+El lado derecho $\binom{2n}{n}$ cuenta el número de formas de elegir $n$ objetos de un conjunto de $2n$ objetos.
+
+El lado izquierdo $\sum_{k=0}^{n} \binom{n}{k}^2$ cuenta lo mismo de una forma diferente: particionamos los $2n$ objetos en dos grupos de $n$ cada uno, y luego elegimos $k$ del primer grupo y $n-k$ del segundo grupo. Sumando sobre todos los posibles valores de $k$, obtenemos todas las formas de elegir $n$ objetos totales.
+
+\subsection*{Ejemplos}
+
+\paragraph{Ejemplo 1 (Vandermonde).} Tomemos $n=5,m=3,\ell=4$. Calculamos
+\[
+\sum_{k=0}^{4}\binom{5}{k}\binom{3}{4-k} = \binom{5}{1}\binom{3}{3}+\binom{5}{2}\binom{3}{2}+\binom{5}{3}\binom{3}{1}+\binom{5}{4}\binom{3}{0}
+\]
+\[
+=5\cdot1+10\cdot3+10\cdot3+5\cdot1=5+30+30+5=70.
+\]
+Y efectivamente $\binom{8}{4}=70$.
+
+\paragraph{Ejemplo 2 (Suma de cuadrados).} Tomemos $n=4$. Entonces
+\[
+\sum_{k=0}^{4}\binom{4}{k}^2=1^2+4^2+6^2+4^2+1^2=1+16+36+16+1=70,
+\]
+y $\binom{8}{4}=70$, coincidiendo con la identidad del apartado (b).

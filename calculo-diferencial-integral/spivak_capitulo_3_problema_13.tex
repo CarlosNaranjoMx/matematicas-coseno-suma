@@ -1,0 +1,40 @@
+\section*{Spivak Capítulo 3, Problema 13}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 13}
+
+El enunciado dice
+\begin{enumerate}[label=(\alph*)]
+\item Demostrar que cualquier función $f$ con dominio $\mathbb{R}$ puede ser puesta en la forma
+$$f=E+O$$
+con $E$ par y $O$ impar.
+\item Demuéstrese que esta manera de expresar $f$ es única. (Si se intenta resolver primero la parte (b) «despejando $E$ y $O$, se encontrará probablemente la solución a la parte (a).)
+\end{enumerate}
+
+\textbf{Prueba.}
+Para la parte (a) construimos explícitamente las dos funciones. Definimos para todo $x\in\mathbb{R}$
+\[ E(x)=\frac{f(x)+f(-x)}2, \qquad O(x)=\frac{f(x)-f(-x)}2.\]
+Entonces
+\begin{itemize}
+\item $E(-x)=\frac{f(-x)+f(x)}2=E(x)$, de modo que $E$ es par.
+\item $O(-x)=\frac{f(-x)-f(x)}2=-\frac{f(x)-f(-x)}2=-O(x)$, así que $O$ es impar.
+\item Sumando las expresiones para $E$ y $O$ recuperamos
+$$E(x)+O(x)=\frac{(f(x)+f(-x))+(f(x)-f(-x))}2=f(x),$$
+por lo que $f=E+O$ como se requería.
+\end{itemize}
+
+Para la parte (b) supongamos que existen dos descomposiciones
+$$f=E_1+O_1=E_2+O_2$$
+con $E_i$ pares y $O_i$ impares ($i=1,2$). Restando obtenemos
+$$(E_1-E_2)+(O_1-O_2)=0.$$ Por la propiedad de simetría de pares e impares, la función
+$$P(x)=E_1(x)-E_2(x)$$
+es par y
+$$Q(x)=O_1(x)-O_2(x)$$
+es impar. La igualdad anterior dice que $P(x)+Q(x)=0$ para todo $x$. Evaluando en $-x$ da
+$$P(x)-Q(x)=0$$
+(puesto que $P(-x)=P(x)$ y $Q(-x)=-Q(x)$). Sumando y restando estas dos relaciones resulta
+$$P(x)=0,\\ Q(x)=0$$
+para todo $x$. De ahí $E_1=E_2$ y $O_1=O_2$, lo que demuestra la unicidad.
+
+Notamos que, como sugería el enunciado, si uno intenta despejar $E$ y $O$ de la ecuación
+$f=E+O$ tras sustituir $-x$ se llega inmediatamente a las fórmulas que usamos arriba, de modo que (b) guía a (a).
+
+Así queda resuelto el problema completo.

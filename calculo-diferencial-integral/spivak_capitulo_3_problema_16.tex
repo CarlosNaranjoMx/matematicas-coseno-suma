@@ -1,0 +1,57 @@
+\section*{Spivak Capítulo 3, Problema 16}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 16}
+
+Se supone que $f:\mathbb{R}\to\mathbb{R}$ satisface
+\[ f(x+y)=f(x)+f(y) \qquad\text{para todos }x,y. \tag{*}
+\]
+
+\textbf{(a)} Para demostrar que
+\[ f(x_1+\cdots+x_n)=f(x_1)+\cdots+f(x_n) \]
+basta una inducción sobre $n$. El caso $n=1$ es trivial. Si la propiedad vale
+para $n$, entonces aplicando (*) con $x=x_1+\cdots+x_n$ e $y=x_{n+1}$ obtenemos
+\begin{align*}
+f((x_1+\cdots+x_n)+x_{n+1}) &= f(x_1+\cdots+x_n)+f(x_{n+1}) \\
+&= (f(x_1)+\cdots+f(x_n))+f(x_{n+1}),
+\end{align*}
+que es la fórmula para $n+1$. Concluimos por inducción.
+
+\textbf{(b)} Sea $c=f(1)$. En la indicación se sugiere pensar primero en cómo
+debe ser $c$; de hecho, tomamos $x=1$ en (*) y obtenemos
+$$f(1+y)=f(1)+f(y)=c+f(y).$$
+Sustituyendo $y=0$ en (*) da $f(0)=0$ y de allí $c=f(1)$ es coherente.
+
+Para $m$ entero positivo repetimos la aditividad:
+$$f(m)=f(1+\cdots+1)=mf(1)=mc.$$  Aquí empleamos la parte (a) con todos
+los sumandos iguales a $1$. Si $m$ es entero negativo escribimos $m=-k$ y
+entonces
+$$0=f(0)=f(m+(-m))=f(m)+f(-m),$$
+de donde $f(-m)=-f(m)=-mc$.
+
+Para la inversa de un entero, si $m\neq0$ entonces
+$$0=f(m+\frac1m)=f(m)+f(\tfrac1m)=mc+f(\tfrac1m),$$
+lo que da $f(1/m)=-mc = c\cdot(1/m)$.
+
+Finalmente, para cualquier $x=p/q$ racional (con $q>0$) usamos
+$$f(x)=f\!igl(\tfrac{1}{q}+\cdots+\tfrac{1}{q}\bigr)\text{ ($p$ sumandos)}
+= p f(1/q) = p(c/q)= cx.
+$$
+Si $q$ fuera negativo absorvemos el signo en $p$ para reducir al caso
+anterior. Esta demostración muestra que para todo racional $r$ se tiene
+$$f(r)=cr.$$
+
+No se exige demostrar la igualdad para irracionales; sólo se necesitaba
+establecerla en los racionales. Nótese que la constante $c$ queda única y
+está determinada por $f(1)$. 
+
+\textbf{Ejemplo.} Consideremos la función $f(x)=3x$. Es clara que
+$$f(x+y)=3(x+y)=3x+3y=f(x)+f(y),$$
+por lo que cumple la hipótesis. Aquí $c=f(1)=3$ y la conclusión de (b)
+se verifica enseguida: para cualquier racional $r$ tenemos
+$f(r)=3r = c r$. Si se desea, la parte (a) se observa también: la suma
+de varios argumentos da
+$$f(x_1+\cdots+x_n)=3(x_1+\cdots+x_n)=3x_1+\cdots+3x_n
+= f(x_1)+\cdots+f(x_n).$$
+Este ejemplo muestra que la teoría es compatible con la intuición de
+una función lineal con pendiente $c$.
+
+Con esto se completa la parte (b) del problema.

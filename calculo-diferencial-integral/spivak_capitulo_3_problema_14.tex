@@ -1,0 +1,39 @@
+\section*{Spivak Capítulo 3, Problema 14}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 14}
+
+El enunciado propone definir para una función arbitraria $f:\mathbb{R}\to\mathbb{R}$ la función $|f|$ por
+$$|f|(x)=|f(x)|.
+$$
+A partir de dos funciones $f,g$ se introducen
+\begin{align*}
+\max(f,g)(x)&=\max\{f(x),g(x)\},\\
+\min(f,g)(x)&=\min\{f(x),g(x)\}.
+\end{align*}
+
+Se pide encontrar expresiones de $\max(f,g)$ y $\min(f,g)$ en términos de $|\cdot|$.
+
+\textbf{Demostración.}
+Primero observemos algunas identidades numéricas válidas para todos los números reales $a,b$:
+\begin{align}
+\max\{a,b\}&=\frac{a+b+|a-b|}{2},\\
+\min\{a,b\}&=\frac{a+b-|a-b|}{2}.\label{eq:minformula}
+\end{align}
+Casi todos los libros de análisis dedican unas líneas a estas fórmulas; se pueden justificar con un breve razonamiento por casos: si $a\ge b$ entonces $|a-b|=a-b$ y la primera fórmula da $(a+b+(a-b))/2=a$, mientras que la segunda da $(a+b-(a-b))/2=b$, y en el caso opuesto $a<b$ se obtiene simétricamente el resultado adecuado.
+
+Trasladando estas identidades al nivel de funciones, para cada $x\in\mathbb{R}$ aplicamos las fórmulas con $a=f(x)$ y $b=g(x)$; obtenemos
+\begin{align*}
+\max(f,g)(x)&=\frac{f(x)+g(x)+|f(x)-g(x)|}{2} \\
+&=\frac{f(x)+g(x)+|f-g|(x)}2,\\
+\min(f,g)(x)&=\frac{f(x)+g(x)-|f(x)-g(x)|}{2} \\
+&=\frac{f(x)+g(x)-|f-g|(x)}2.
+\end{align*}
+Por tanto, como funciones,
+\begin{align*}
+\max(f,g)&=\frac{f+g+|f-g|}{2}, \\
+\min(f,g)&=\frac{f+g-|f-g|}{2}.
+\end{align*}
+Estas son exactamente las expresiones requeridas.
+
+(Como comentario adicional, las definiciones de $|f|$, $\max(f,g)$ y $\min(f,g)$ son funciones elementales obtenidas componiendo $f,g$ con las operaciones habituales: valor absoluto, suma, y las fórmulas que acabamos de escribir.)
+
+Con esto se da por resuelto el problema.

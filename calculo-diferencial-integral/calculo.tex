@@ -1,0 +1,183 @@
+% Cálculo diferencial e integral — Ejemplos
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{geometry}
+\geometry{margin=1in}
+\usepackage{hyperref} % clickable links in PDF
+\newtheorem{example}{Ejemplo}[section]
+\title{Cálculo diferencial e integral -- Ejemplos}
+\author{}
+\date{}
+
+\begin{document}
+\maketitle
+
+% Índice de contenidos clicable
+\tableofcontents
+\newpage
+
+\section{Números reales}
+\begin{example}
+Sea $S=\{x\in\mathbb{R}: x^2<2\}$. Encontrar $\sup S$ y $\inf S$.\\
+Observamos que $S=(-\sqrt2,\sqrt2)$, por tanto $\sup S=\sqrt2$ y $\inf S=-\sqrt2$.
+\end{example}
+
+\section{Sucesiones infinitas}
+\begin{example}
+Considere la sucesión $a_n=1/n$. Entonces $\lim_{n\to\infty}a_n=0$. Además $\{a_n\}$ es monótona decreciente y acotada inferiormente por $0$.
+\end{example}
+
+\section{Series infinitas}
+\begin{example}
+Serie geométrica: para $|r|<1$ se tiene
+$$\sum_{n=0}^{\infty}r^n=\frac{1}{1-r}.$$ 
+Por ejemplo, si $r=1/2$ la suma es $2$.
+\end{example}
+
+\section{Funciones reales de variable real}
+\subsection{Límites}
+\begin{example}
+Calcular $\displaystyle\lim_{x\to0}\frac{\sin x}{x}$.\\
+Usando la desigualdad del seno (teorema del emparedado) se obtiene el límite igual a $1$.
+\end{example}
+
+\subsection{Continuidad}
+\begin{example}
+Sea
+$$f(x)=\begin{cases}\frac{\sin x}{x}&x\neq0,\\1&x=0.\end{cases}$$
+Entonces $\lim_{x\to0}\frac{\sin x}{x}=1$, por lo que $f$ es continua en $0$ y en todo $\mathbb{R}$.
+\end{example}
+
+\subsection{Sucesiones de funciones}
+\begin{example}
+Considere $f_n:[0,1]\to\mathbb{R}$ dada por $f_n(x)=x^n$. Para $x\in[0,1)$ se tiene $f_n(x)\to0$, y $f_n(1)=1$ para todo $n$. La convergencia es puntual en $[0,1]$ pero no uniforme en $[0,1]$.
+\end{example}
+
+\subsection{Derivadas de primer orden y órdenes superiores}
+\begin{example}
+Sea $f(x)=x^3$. Entonces $f'(x)=3x^2$ y $f''(x)=6x$.
+\end{example}
+
+\subsection{Máximos y mínimos}
+\begin{example}
+Encontrar extremos de $f(x)=x^3-3x$.\\
+Derivando: $f'(x)=3x^2-3=3(x^2-1)$. Puntos críticos: $x=\pm1$. Segunda derivada $f''(x)=6x$. Entonces $x=-1$ es máximo local ($f''(-1)=-6$) y $x=1$ es mínimo local ($f''(1)=6$). Valores: $f(-1)=2$, $f(1)=-2$.
+\end{example}
+
+\subsection{Integrales definidas}
+\begin{example}
+Calcular $\displaystyle\int_0^1 x^2\,dx$.\\
+Se obtiene $\left[\tfrac{x^3}{3}\right]_0^1=\tfrac{1}{3}$.
+\end{example}
+
+\subsection{Integrales impropias}
+\begin{example}
+Estudiar la convergencia de $\displaystyle\int_1^{\infty}\frac{1}{x^p}\,dx$.\\
+Se sabe que converge si y solo si $p>1$. Por ejemplo, para $p=2$ la integral vale $1$.
+\end{example}
+
+\section{Funciones de varias variables}
+\subsection{Límites}
+\begin{example}
+Sea $f(x,y)=\dfrac{xy}{x^2+y^2}$ para $(x,y)\neq(0,0)$ y $f(0,0)=0$. Si tomamos la recta $y=x$ se obtiene $f(x,x)=\dfrac{x^2}{2x^2}=\tfrac12$, mientras que si tomamos $y=x^2$ se obtiene $f(x,x^2)=\dfrac{x^3}{x^2+x^4}\to0$. Así, el límite en $(0,0)$ no existe.
+\end{example}
+
+\subsection{Continuidad}
+\begin{example}
+Polinomios en dos variables, por ejemplo $g(x,y)=x^2+y^2$, son continuos en todo $\mathbb{R}^2$.
+\end{example}
+
+\subsection{Derivadas parciales}
+\begin{example}
+Para $h(x,y)=x^2y+\sin y$ se tiene
+$$h_x(x,y)=2xy,\qquad h_y(x,y)=x^2+\cos y.$$ 
+\end{example}
+
+\subsection{Derivadas totales}
+\begin{example}
+La diferencial total de $h(x,y)=x^2y+\sin y$ en un punto es
+$$dh=2xy\,dx+(x^2+\cos y)\,dy,$$
+y la matriz jacobiana es $[\,2xy\;\; x^2+\cos y\,]$ (fila única para esta función escalar vista como mapeo $\mathbb{R}^2\to\mathbb{R}$).
+\end{example}
+
+\subsection{Máximos y mínimos (multiplicadores de Lagrange)}
+\begin{example}
+Maximizar $f(x,y)=xy$ sujeto a la restricción $x^2+y^2=1$. 
+Usando multiplicadores: $\nabla f=\lambda\nabla g$ con $g=x^2+y^2-1$. Se obtiene $y=2\lambda x$ y $x=2\lambda y$, lo que lleva a $x=\pm y$. Con la restricción $x^2+y^2=1$ se obtiene $x=y=\pm1/\sqrt2$. Valores extremos: $f=\pm1/2$.
+\end{example}
+
+\subsection{Integrales múltiples}
+\begin{example}
+Calcular $\displaystyle\iint_{[0,1]\times[0,1]}xy\,dA$.\\
+Usando iteradas: $\int_0^1\left(\int_0^1 xy\,dx\right)dy=\int_0^1\left(y\int_0^1 x\,dx\right)dy=\int_0^1 y\cdot\tfrac12\,dy=\tfrac14$.
+\end{example}
+
+\subsection{Integrales iteradas}
+\begin{example}
+El ejemplo anterior muestra la igualdad de la integral doble y las iteradas por Fubini cuando la función es continua en el rectángulo.
+\end{example}
+
+\subsection{Fórmula de cambio de variable}
+\begin{example}
+Área del disco unidad: en coordenadas polares
+$$\iint_{x^2+y^2\le1}1\,dA=\int_{0}^{2\pi}\int_{0}^{1}r\,dr\,d\theta=2\pi\cdot\tfrac{1}{2}=\pi.$$
+\end{example}
+
+\newpage
+\appendix
+\include{spivak_problema_1}
+
+\newpage
+\include{spivak_problema_20}
+
+\newpage
+\include{spivak_problema_21}
+
+\newpage
+\include{spivak_problema_22}
+
+\newpage
+\include{spivak_problema_23}
+
+\newpage
+\include{spivak_problema_24}
+
+\newpage
+\include{spivak_capitulo_2_problema_4}
+
+\newpage
+\include{spivak_capitulo_3_problema_10}
+
+\newpage
+\include{spivak_capitulo_3_problema_13}
+
+\newpage
+\include{spivak_capitulo_3_problema_14}
+
+\newpage
+\include{spivak_capitulo_3_problema_16}
+
+\newpage
+\include{spivak_capitulo_3_problema_17}
+
+\newpage
+\include{spivak_capitulo_3_problema_18}
+
+\newpage
+\include{spivak_capitulo_3_problema_19}
+
+\newpage
+\include{spivak_capitulo_3_problema_20}
+
+\newpage
+\include{spivak_capitulo_2_problema_6}
+
+\newpage
+\include{spivak_capitulo_4_problema_5}
+
+\newpage
+\include{spivak_capitulo_2_problema_7}
+
+\end{document}

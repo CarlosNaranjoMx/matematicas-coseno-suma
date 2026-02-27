@@ -1,0 +1,109 @@
+% Problema 20 del Cálculo de Spivak
+% Demostración de acotación para suma y resta
+
+\section*{Problema 20 - Spivak: Demostración de acotación para suma y resta}
+\addcontentsline{toc}{section}{Problema 20 - Spivak: Demostración de acotación para suma y resta}
+
+\subsection*{Enunciado}
+
+Demostrar que si 
+\[
+|x - x_0| < \frac{\varepsilon}{2} \quad \text{y} \quad |y - y_0| < \frac{\varepsilon}{2},
+\]
+entonces
+\[
+|(x + y) - (x_0 + y_0)| < \varepsilon \quad \text{y} \quad |(x - y) - (x_0 - y_0)| < \varepsilon.
+\]
+
+\subsection*{Parte 1: Demostración para la suma}
+
+\textbf{Afirmación:} Si $|x - x_0| < \dfrac{\varepsilon}{2}$ y $|y - y_0| < \dfrac{\varepsilon}{2}$, entonces $|(x + y) - (x_0 + y_0)| < \varepsilon$.
+
+\begin{proof}
+Escribimos:
+\[
+(x + y) - (x_0 + y_0) = (x - x_0) + (y - y_0).
+\]
+
+Tomando valor absoluto y usando la desigualdad triangular:
+\[
+|(x + y) - (x_0 + y_0)| = |(x - x_0) + (y - y_0)| \leq |x - x_0| + |y - y_0|.
+\]
+
+Por hipótesis, $|x - x_0| < \dfrac{\varepsilon}{2}$ e $|y - y_0| < \dfrac{\varepsilon}{2}$, por tanto:
+\[
+|(x + y) - (x_0 + y_0)| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.
+\]
+\end{proof}
+
+\textbf{Interpretación:} La suma es \textbf{continua}: si ambos sumandos se mantienen dentro de una precisión $\dfrac{\varepsilon}{2}$, la suma se mantiene dentro de la precisión total $\varepsilon$.
+
+\begin{ejemplo}
+Sea $\varepsilon = 0.1$. Si $|x - x_0| < 0.05$ e $|y - y_0| < 0.05$, entonces
+\[
+|(x + y) - (x_0 + y_0)| < 0.05 + 0.05 = 0.1 = \varepsilon.
+\]
+\end{ejemplo}
+
+\subsection*{Parte 2: Demostración para la resta}
+
+\textbf{Afirmación:} Si $|x - x_0| < \dfrac{\varepsilon}{2}$ y $|y - y_0| < \dfrac{\varepsilon}{2}$, entonces $|(x - y) - (x_0 - y_0)| < \varepsilon$.
+
+\begin{proof}
+Escribimos:
+\[
+(x - y) - (x_0 - y_0) = (x - x_0) - (y - y_0) = (x - x_0) + (-(y - y_0)).
+\]
+
+Tomando valor absoluto y usando la desigualdad triangular:
+\[
+|(x - y) - (x_0 - y_0)| = |(x - x_0) - (y - y_0)| \leq |x - x_0| + |y - y_0|.
+\]
+
+(Observar que $|-(y - y_0)| = |y - y_0|$ por propiedades del valor absoluto.)
+
+Por hipótesis, $|x - x_0| < \dfrac{\varepsilon}{2}$ e $|y - y_0| < \dfrac{\varepsilon}{2}$, por tanto:
+\[
+|(x - y) - (x_0 - y_0)| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.
+\]
+\end{proof}
+
+\textbf{Interpretación:} La resta también es \textbf{continua}. El tratamiento es idéntico al de la suma porque $|-(y - y_0)| = |y - y_0|$, es decir, el signo negativo no afecta el valor absoluto.
+
+\begin{ejemplo}
+Sea $\varepsilon = 0.2$. Si $|x - x_0| < 0.1$ e $|y - y_0| < 0.1$, entonces
+\[
+|(x - y) - (x_0 - y_0)| < 0.1 + 0.1 = 0.2 = \varepsilon.
+\]
+\end{ejemplo}
+
+\subsection*{Observaciones importantes}
+
+\begin{enumerate}
+\item \textbf{División simétrica de $\varepsilon$:} La clave es dividir el $\varepsilon$ total en dos partes iguales, una para cada término. Esto es una técnica estándar cuando se combinan dos operaciones.
+
+\item \textbf{Generalización a $n$ términos:} Si se suman $n$ variables, se divide $\varepsilon$ en $n$ partes: cada $|x_i - x_{0,i}| < \dfrac{\varepsilon}{n}$ garantiza que la suma muestre error $< \varepsilon$.
+
+\item \textbf{Desigualdad triangular:} Este resultado depende crucialmente de la desigualdad triangular $|a + b| \leq |a| + |b|$.
+
+\item \textbf{Continuidad de operaciones algebraicas:} Estos resultados demuestran que la suma y la resta de funciones continuas son continuas. En general:
+\[
+\text{Si } x_n \to x_0 \text{ y } y_n \to y_0, \text{ entonces } (x_n + y_n) \to (x_0 + y_0) \text{ y } (x_n - y_n) \to (x_0 - y_0).
+\]
+
+\item \textbf{Contraste con Problema 21:} En el caso del producto ($|xy - x_0y_0|$), la situación es más complicada porque el producto de dos diferencias pequeñas puede no ser tan pequeño. Por eso se necesitan cotas adicionales como $|x - x_0| < 1$.
+\end{enumerate}
+
+\subsection*{La cadena de continuidad}
+
+Los Problemas 20, 21 y los resultados sobre límites forman una cadena lógica:
+
+\begin{enumerate}
+\item \textbf{Operaciones aritméticas simples} (suma, resta) son continuas: Problema 20.
+\item \textbf{Producto de funciones} es continuo: Problema 21 (requiere análisis más fino).
+\item \textbf{Cociente de funciones} es continuo donde el denominador no es cero.
+\item \textbf{Composición de funciones continuas} es continua.
+\item Por tanto, \textbf{cualquier función racional, polinomial, o composición de continuas es continua}.
+\end{enumerate}
+
+Esto explica por qué tantas funciones encontradas en cálculo son continuas automáticamente.

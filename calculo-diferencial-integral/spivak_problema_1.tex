@@ -1,0 +1,102 @@
+% Problema 1 del Cálculo de Spivak
+% Demostraciones de identidades algebraicas
+
+\section*{Problema 1 - Spivak: Demostraciones}
+\addcontentsline{toc}{section}{Problema 1 - Spivak: Demostraciones}
+
+\subsection*{(i) Si $ax = a$ para algún número $a \neq 0$, entonces $x = 1$}
+
+\begin{proof}
+Supongamos que $ax = a$ con $a \neq 0$. Multiplicamos ambos lados por $1/a$ (que existe pues $a \neq 0$):
+\[
+\frac{1}{a} \cdot ax = \frac{1}{a} \cdot a
+\]
+Simplificando:
+\[
+x = 1.
+\]
+\end{proof}
+
+\subsection*{(ii) $x^2 - y^2 = (x - y)(x + y)$}
+
+\begin{proof}
+Expandimos el lado derecho:
+\[
+(x - y)(x + y) = x \cdot x + x \cdot y - y \cdot x - y \cdot y = x^2 + xy - xy - y^2 = x^2 - y^2.
+\]
+\end{proof}
+
+\subsection*{(iii) Si $x^2 = y^2$, entonces $x = y$ o $x = -y$}
+
+\begin{proof}
+Supongamos $x^2 = y^2$. Restando $y^2$ de ambos lados:
+\[
+x^2 - y^2 = 0.
+\]
+Por la identidad en (ii):
+\[
+(x - y)(x + y) = 0.
+\]
+Esto implica que $x - y = 0$ o $x + y = 0$, es decir, $x = y$ o $x = -y$.
+\end{proof}
+
+\subsection*{(iv) $x^3 - y^3 = (x - y)(x^2 + xy + y^2)$}
+
+\begin{proof}
+Expandimos el lado derecho:
+\begin{align*}
+(x - y)(x^2 + xy + y^2) &= x(x^2 + xy + y^2) - y(x^2 + xy + y^2)\\
+&= x^3 + x^2y + xy^2 - x^2y - xy^2 - y^3\\
+&= x^3 - y^3.
+\end{align*}
+\end{proof}
+
+\subsection*{(v) $x^n - y^n = (x - y)(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})$}
+
+\begin{proof}
+Denotamos $S = x^{n-1} + x^{n-2}y + x^{n-3}y^2 + \cdots + xy^{n-2} + y^{n-1}$.
+
+Multiplicamos $(x - y) \cdot S$:
+\begin{align*}
+(x - y) \cdot S &= x(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})\\
+&\quad - y(x^{n-1} + x^{n-2}y + \cdots + xy^{n-2} + y^{n-1})\\
+&= (x^n + x^{n-1}y + x^{n-2}y^2 + \cdots + x^2y^{n-2} + xy^{n-1})\\
+&\quad - (x^{n-1}y + x^{n-2}y^2 + \cdots + xy^{n-2} + y^{n-1} + y^n).
+\end{align*}
+Los términos intermedios se cancelan, quedando:
+\[
+(x - y) \cdot S = x^n - y^n.
+\]
+\end{proof}
+
+\subsection*{(vi) $x^3 + y^3 = (x + y)(x^2 - xy + y^2)$}
+
+\begin{proof}
+Usaremos la propiedad (iv). Sea $z = -y$, entonces:
+\[
+x^3 - z^3 = (x - z)(x^2 + xz + z^2).
+\]
+Sustituyendo $z = -y$:
+\[
+x^3 - (-y)^3 = (x - (-y))(x^2 + x(-y) + (-y)^2).
+\]
+Simplificando:
+\[
+x^3 - (-y^3) = (x + y)(x^2 - xy + y^2),
+\]
+\[
+x^3 + y^3 = (x + y)(x^2 - xy + y^2).
+\]
+
+\textit{Observación para descomposición en factores de $x^n + y^n$ cuando $n$ es impar:}
+
+Cuando $n$ es impar, podemos usar la identidad de Spivak (vi) y generalizarla. Por ejemplo:
+\[
+x^5 + y^5 = (x + y)(x^4 - x^3y + x^2y^2 - xy^3 + y^4).
+\]
+Esto se obtiene directamente si hacemos $z = -y$ en la fórmula (v):
+\[
+x^n - (-y)^n = (x - (-y))\left(\sum_{k=0}^{n-1} x^{n-1-k}(-y)^k\right).
+\]
+Cuando $n$ es impar, $(-y)^n = -y^n$, así que $x^n + y^n = (x + y) \times (\text{polinomio})$.
+\end{proof}

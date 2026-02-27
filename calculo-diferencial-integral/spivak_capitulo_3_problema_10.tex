@@ -1,0 +1,39 @@
+\section*{Spivak Capítulo 3, Problema 10}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 10}
+
+El ejercicio plantea preguntas sobre la existencia de funciones que satisfacen ciertas ecuaciones punto a punto. Sea $\mathcal{F}$ el conjunto de todas las funciones reales definidas en un mismo dominio $D\subseteq\mathbb{R}$ (normalmente todos los reales o algún intervalo).
+
+\begin{enumerate}[label=(\alph*)]
+\item ¿Para qué funciones $f\in\mathcal{F}$ existe otra $g\in\mathcal{F}$ tal que
+$$f(t)=\bigl(g(t)\bigr)^2\qquad\text{para todo }t?$$
+
+\textbf{Respuesta.} Una función $f$ admite una "raíz cuadrada" $g$ punto a punto si y solo si $f(t)\ge0$ para todo $t$; en ese caso podemos tomar
+$$g(t)=\sqrt{f(t)}$$
+(o la negativa $g(t)=-\sqrt{f(t)}$, o elegir signo distinto en cada $t$ si se desea). Si hay algún $t$ con $f(t)<0$ no existe $g$ real satisfaciendo la ecuación en ese $t$.
+
+\item ¿Para qué funciones $f$ existe $g$ tal que $f(t)=1/g(t)$ para todo $t$?
+
+\textbf{Respuesta.} Esto equivale a pedir una función recíproca. Se requiere que $f(t)\neq0$ para todo $t$; entonces basta definir $g(t)=1/f(t)$. Si $f$ anula en algún punto no hay función $g$ real que cumpla la igualdad allí.
+
+\item (marcado *) ¿Para qué funciones $b,c$ podemos encontrar una función $x$ tal que
+$$(x(t))^2+b(t)x(t)+c(t)=0\qquad\text{para todo }t?$$
+
+\textbf{Respuesta.} Para cada $t$ esto es una ecuación cuadrática en la variable $x(t)$. Tiene solución real si y sólo si el discriminante es no negativo:
+$$b(t)^2-4c(t)\ge0\quad\text{para todo }t.$$  En ese caso se pueden elegir puntualmente
+$$x(t)=\frac{-b(t)\pm\sqrt{b(t)^2-4c(t)}}2.$$  Si en algún punto el discriminante es negativo no existe solución real completa.
+
+\item (marcado *) ¿Qué condiciones deben satisfacer las funciones $a$ y $b$ si ha de existir una función $x$ tal que
+$$a(t)x(t)+b(t)=0\qquad\text{para todo }t?$$
+¿Cuántas funciones $x$ de éstas existirán?
+
+\textbf{Respuesta.} Para que exista $x$ basta que $a(t)\neq0$ para todos los $t$ (si $a(t)=0$ y $b(t)\neq0$ no se puede resolver, si ambos son cero hay infinitas soluciones locales). Cuando $a(t)\neq0$ definimos
+$$x(t)=-\frac{b(t)}{a(t)}$$
+única en cada punto. En el caso más general, si $A=\{t:a(t)=0\}$, entonces
+\begin{itemize}
+\item si $b(t)\neq0$ para algún $t\in A$, no existe $x$ global;
+\item si $b(t)=0$ para todos $t\in A$, entonces hay infinitas soluciones: en los puntos de $A$ podemos asignar cualquier valor a $x(t)$, mientras que fuera de $A$ está forzada por la fórmula anterior.
+\end{itemize}
+
+\end{enumerate}
+
+Estas observaciones se obtienen simplemente pensando en el caso numérico (sustituir "función" por "número"), tal y como sugiere el enunciado.

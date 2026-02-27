@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  30 JUL 2025 14:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.27 (MiKTeX 25.4) (preloaded format=pdflatex 2025.7.13)  4 AUG 2025 11:26
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -601,29 +601,58 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 [2] (02_identidad_coseno.tex)
 
 [3] (03_demostracion_geometrica.tex
-Overfull \hbox (7.93799pt too wide) in paragraph at lines 2--2
-[]\OT1/cmr/bx/n/14.4 Demostraci^^Son geom^^Setrica us-ando el c^^S^^Prculo uni-
 
- []
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
 
-)
 
-[4] (04_deduccion_rotacion.tex
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 2.
 
-[5])
 
-[6] (05_demostracion_formula_coseno.tex)
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 2.
 
-[7]
 
-[8] (06_complejos_matriz.tex
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 2.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\theta' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\pi' on input line 38.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 38.
+
+
+
+[4])
+
+[5] (04_deduccion_rotacion.tex
+
+[6])
+
+[7] (05_demostracion_formula_coseno.tex)
+
+[8]
+
+[9] (06_complejos_matriz.tex
 Overfull \hbox (6.5014pt too wide) in paragraph at lines 2--2
 []\OT1/cmr/bx/n/14.4 Representaci^^Son de los n^^Sumeros com-ple-jos como
  []
 
 )
 
-[9] (07_ejemplo_rotacion.tex
+[10] (07_ejemplo_rotacion.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 2.
@@ -650,11 +679,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 )
 
-[10] (08_demostracion_coseno_aureo.tex
+[11] (08_demostracion_coseno_aureo.tex
 
-[11])
+[12])
 
-[12] (09_demostracion_alternativa.tex
+[13] (09_demostracion_alternativa.tex
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 1.
@@ -669,15 +698,15 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 
 
 
-[13])
+[14])
 
-[14] (10_chebyshev_fibonacci.tex
+[15] (10_chebyshev_fibonacci.tex
 
-[15]
+[16]
 
-[16])
+[17])
 
-[17] (11_teoremas_ejemplo.tex
+[18] (11_teoremas_ejemplo.tex
 Overfull \hbox (17.5904pt too wide) in paragraph at lines 66--67
 [][]\OT1/cmr/bx/n/10 Ejemplo 11.1 \OT1/cmr/m/n/10 (Apli-caci^^Son de la Iden-ti
 -dad)\OT1/cmr/bx/n/10 . []\OT1/cmr/m/n/10 Cal-cule-mos $[](75[])$ us-ando $[](7
@@ -686,7 +715,7 @@ Overfull \hbox (17.5904pt too wide) in paragraph at lines 66--67
 
 
 
-[18]
+[19]
 Overfull \hbox (14.86731pt too wide) in paragraph at lines 77--78
 [][]\OT1/cmr/m/it/10 Observaci^^Son \OT1/cmr/m/n/10 11.1\OT1/cmr/m/it/10 . []\O
 T1/cmr/m/n/10 La iden-ti-dad del coseno de suma es fun-da-men-tal en trigonomet
@@ -695,24 +724,34 @@ r^^S^^Pa
 
 )
 
-[19]
+[20]
 
-[20] (general.aux)
+[21] (general.aux)
  ***********
 LaTeX2e <2025-06-01> patch level 1
 L3 programming layer <2025-06-09>
  ***********
-Package rerunfilecheck Info: File `general.out' has not changed.
-(rerunfilecheck)             Checksum: 9CAE9287E93A95A338844273A9F50045;6260.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+
+Package rerunfilecheck Warning: File `general.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `general.out':
+(rerunfilecheck)             Before: 9CAE9287E93A95A338844273A9F50045;6260
+(rerunfilecheck)             After:  E03923E22A200A10188782BF77143F0B;6780.
  ) 
 Here is how much of TeX's memory you used:
- 20591 strings out of 468221
- 375178 string characters out of 5449717
- 760087 words of memory out of 5000000
- 48647 multiletter control sequences out of 15000+600000
- 632836 words of font info for 63 fonts, out of 8000000 for 9000
+ 20849 strings out of 468221
+ 380202 string characters out of 5449717
+ 760056 words of memory out of 5000000
+ 48882 multiletter control sequences out of 15000+600000
+ 637183 words of font info for 80 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,11n,107p,546b,638s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,11n,107p,546b,652s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\carlosmx\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\t
 crm1000.pk><H:/miktex/fonts/type1/public/amsfonts/cm/cmbx10.pfb><H:/miktex/font
 s/type1/public/amsfonts/cm/cmbx12.pfb><H:/miktex/fonts/type1/public/amsfonts/cm
@@ -725,9 +764,9 @@ type1/public/amsfonts/cm/cmsy7.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cm
 ti10.pfb><H:/miktex/fonts/type1/public/amsfonts/cm/cmtt10.pfb><H:/miktex/fonts/
 type1/public/amsfonts/symbols/msam10.pfb><H:/miktex/fonts/type1/public/amsfonts
 /symbols/msbm10.pfb>
-Output written on general.pdf (20 pages, 251317 bytes).
+Output written on general.pdf (21 pages, 260755 bytes).
 PDF statistics:
- 416 PDF objects out of 1000 (max. 8388607)
- 131 named destinations out of 1000 (max. 500000)
+ 439 PDF objects out of 1000 (max. 8388607)
+ 147 named destinations out of 1000 (max. 500000)
  221 words of extra memory for PDF output out of 10000 (max. 10000000)
 

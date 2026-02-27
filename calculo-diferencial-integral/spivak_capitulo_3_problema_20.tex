@@ -1,0 +1,67 @@
+\section*{Spivak Capítulo 3, Problema 20}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 20}
+
+El ejercicio tiene dos apartados relacionados con condiciones de
+continuidad/contracción.
+
+\textbf{(a)} "Hallar una función $f$ que no sea constante y tal que
+$|f(y)-f(x)|\le |y-x|$ para todos $x,y$." 
+
+Una elección natural es cualquier función Lipschitz con constante 1; por
+supuesto las funciones lineales $f(x)=cx$ con $|c|\le 1$ cumplen la
+condición, y no son constantes cuando $c\neq0$. Por ejemplo, podemos tomar
+\[ f(x)=x \qquad\text{o} \qquad f(x)=\sin x.\]
+Ambas satisfacen $|f(y)-f(x)|\le |y-x|$; la primera lo hace por igualdad.
+En el caso de $\sin x$ se puede justificar de varias maneras: por ejemplo,
+el teorema del valor medio garantiza que existe algún $c$ entre $x$ y $y$ tal
+que
+\[\sin y-\sin x = (y-x)\cos c.\]
+Como $|\cos c|\le1$ se deduce inmediatamente
+$|\sin y-\sin x|\le |y-x|$. Alternativamente, empleando la identidad trigonométrica
+$\sin y-\sin x = 2\cos\bigl(\tfrac{x+y}{2}\bigr)\sin\bigl(\tfrac{y-x}{2}\bigr)$
+se obtiene
+\[|\sin y-\sin x| = 2\bigl|\cos\tfrac{x+y}{2}\bigr|\,\bigl|\sin\tfrac{y-x}{2}\bigr|
+\le 2\cdot1\cdot\Bigl|\tfrac{y-x}{2}\Bigr| = |y-x|,
+\]
+pues $|\sin t|\le|t|$ para todos los reales $t$. Cualquiera de estas
+justificaciones pertenece al análisis elemental y muestra que la desigualdad
+es válida para todas las parejas $x,y$.
+
+También se pueden elegir funciones fractales o cono subyacente siempre que
+la pendiente en valor absoluto sea como máximo 1 en cada punto; el punto
+clave es que la desigualdad es exactamente la condición Lipschitz con
+constante 1.
+
+\textbf{(b)} Supón ahora que
+$$f(y)-f(x)\le (y-x)^2\qquad\text{para todo }x,y.\tag{*}$$
+Primero notemos que esta desigualdad forzaría también
+$|f(y)-f(x)|\le (y-x)^2$ (la pregunta lo observa). Efectivamente, si escribimos
+(*) con $x$ y $y$ intercambiados obtenemos
+$$f(x)-f(y)\le (x-y)^2=(y-x)^2,$$
+y combinando ambas desigualdades se obtiene la desigualdad en valor
+absoluto mencionada.
+
+Para probar que $f$ es constante partimos de (*) y aplicamos una técnica de
+particionamiento sugerida en la indicación: dado $x<y$, dividamos el
+intervalo $[x,y]$ en $n$ subintervalos iguales. Es decir, define
+$$x_k = x + k\frac{y-x}{n}\qquad (k=0,1,\dots,n).$$
+Entonces $x_0=x$ y $x_n=y$, y además cada diferencia $x_{k+1}-x_k=(y-x)/n$.
+Aplicando (*) con $x=x_k$ y $y=x_{k+1}$ obtenemos
+$$f(x_{k+1})-f(x_k) \le (x_{k+1}-x_k)^2 = \frac{(y-x)^2}{n^2}.	ag{1}$$
+Sumando las desigualdades (1) para $k=0,\ldots,n-1$ se telescopa el lado
+izquierdo y hallamos
+$$f(y)-f(x) \le n\cdot\frac{(y-x)^2}{n^2} = \frac{(y-x)^2}{n}.	ag{2}$$
+La clave es que la cota derecha puede hacerse arbitrariamente pequeña si
+eligimos $n$ grande. Puesto que la desigualdad vale para todo $n$, enviamos
+$n\to\infty$ y deducimos
+$$f(y)-f(x) \le 0$$
+en el caso $y>x$. Invirtiendo los papeles de $x$ e $y$ obtenemos
+$$f(x)-f(y) \le 0$$
+siempre. Por lo tanto $f(y)-f(x)=0$ para todos $x,y$, lo que implica que
+$f$ es constante.
+
+Esta es la demostración solicitada. En resumen, la condición cuadrática
+implica una contracción tan fuerte que obliga a la función a ser rígida.
+
+(No se necesita construir contrapartidas no constantes en la parte (b), la
+conclusión única es la constancia.)

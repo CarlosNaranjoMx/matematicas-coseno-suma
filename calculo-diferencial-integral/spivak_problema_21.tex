@@ -1,0 +1,95 @@
+% Problema 21 del Cálculo de Spivak
+% Demostración de acotación para $|xy - x_0y_0|$
+
+\section*{Problema 21 - Spivak: Demostración de acotación para $|xy - x_0y_0|$}
+\addcontentsline{toc}{section}{Problema 21 - Spivak: Demostración de acotación para $|xy - x_0y_0|$}
+
+\subsection*{Enunciado}
+
+Demostrar que si 
+\[
+|x - x_0| < \min\left(\frac{\varepsilon}{2(|y_0| + 1)}, 1\right) \quad \text{y} \quad |y - y_0| < \frac{\varepsilon}{2(|x_0| + 1)},
+\]
+entonces $|xy - x_0y_0| < \varepsilon$.
+
+\subsection*{Demostración}
+
+Comenzamos escribiendo $xy - x_0y_0$ de forma estratégica:
+\[
+xy - x_0y_0 = xy - x_0y + x_0y - x_0y_0 = (x - x_0)y + x_0(y - y_0).
+\]
+
+Tomando valor absoluto:
+\[
+|xy - x_0y_0| = |(x - x_0)y + x_0(y - y_0)| \leq |x - x_0| \cdot |y| + |x_0| \cdot |y - y_0|.
+\]
+
+Ahora necesitamos acotar $|y|$. De la primera hipótesis se tiene:
+\[
+|x - x_0| < 1.
+\]
+
+Esto implica:
+\[
+|x| = |x - x_0 + x_0| \leq |x - x_0| + |x_0| < 1 + |x_0|.
+\]
+
+Además, aplicando la desigualdad triangular a $y$:
+\[
+|y| = |y - y_0 + y_0| \leq |y - y_0| + |y_0|.
+\]
+
+Por la segunda hipótesis, $|y - y_0| < \dfrac{\varepsilon}{2(|x_0| + 1)}$, así que:
+\[
+|y| < \frac{\varepsilon}{2(|x_0| + 1)} + |y_0|.
+\]
+
+Ahora acotamos cada término:
+
+\textbf{Primer término:} $|x - x_0| \cdot |y|$
+
+\[
+|x - x_0| \cdot |y| < \min\left(\frac{\varepsilon}{2(|y_0| + 1)}, 1\right) \cdot \left(\frac{\varepsilon}{2(|x_0| + 1)} + |y_0|\right).
+\]
+
+Por definición del mínimo, $\min \leq \dfrac{\varepsilon}{2(|y_0| + 1)}$:
+\[
+|x - x_0| \cdot |y| < \frac{\varepsilon}{2(|y_0| + 1)} \cdot \left(\frac{\varepsilon}{2(|x_0| + 1)} + |y_0|\right).
+\]
+
+Ahora es clave observar que el factor $\left(\dfrac{\varepsilon}{2(|x_0| + 1)} + |y_0|\right)$ es menor que $(|y_0| + 1)$:
+\[
+\frac{\varepsilon}{2(|x_0| + 1)} + |y_0| < 1 + |y_0| = |y_0| + 1,
+\]
+porque $\dfrac{\varepsilon}{2(|x_0| + 1)} < 1$ (ya que $\varepsilon$ es arbitrariamente pequeño y el denominador es $\geq 1$).
+
+Por tanto:
+\[
+\frac{\varepsilon}{2(|y_0| + 1)} \cdot \left(\frac{\varepsilon}{2(|x_0| + 1)} + |y_0|\right) < \frac{\varepsilon}{2(|y_0| + 1)} \cdot (|y_0| + 1) = \frac{\varepsilon}{2}.
+\]
+
+\textbf{Segundo término:} $|x_0| \cdot |y - y_0|$
+
+\[
+|x_0| \cdot |y - y_0| < |x_0| \cdot \frac{\varepsilon}{2(|x_0| + 1)} < (|x_0| + 1) \cdot \frac{\varepsilon}{2(|x_0| + 1)} = \frac{\varepsilon}{2}.
+\]
+
+(ya que $|x_0| < |x_0| + 1$).
+
+\textbf{Conclusión:}
+
+\[
+|xy - x_0y_0| \leq |x - x_0| \cdot |y| + |x_0| \cdot |y - y_0| < \frac{\varepsilon}{2} + \frac{\varepsilon}{2} = \varepsilon.
+\]
+
+\subsection*{Observaciones importantes}
+
+\begin{enumerate}
+\item La condición $|x - x_0| < 1$ en la primera hipótesis es crucial: garantiza que $x$ no se desvía demasiado de $x_0$, lo que permite acotar $|y|$ en términos de datos iniciales.
+
+\item La división de $\varepsilon$ en dos partes iguales ($\varepsilon/2$ para cada término) es una técnica estándar en demostraciones de límites con dos variables.
+
+\item Este resultado es fundamental para demostrar que el producto de funciones continuas es continuo: si $x \to x_0$ y $y \to y_0$, entonces $xy \to x_0y_0$.
+
+\item La notación $\min(\cdot, \cdot)$ se utiliza para elegir la restricción más fuerte entre dos cotas, asegurando que ambas desigualdades de la hipótesis se satisfagan simultáneamente.
+\end{enumerate}

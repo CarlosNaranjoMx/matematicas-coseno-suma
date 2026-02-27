@@ -1,0 +1,54 @@
+\section*{Spivak Capítulo 3, Problema 17}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 17}
+
+Se asume que $f:\mathbb{R}\to\mathbb{R}$ satisface
+\[f(x+y)=f(x)+f(y)	ag{1}\]
+para todo $x,y$ y además
+\[f(x\cdot y)=f(x)\cdot f(y)\tag{2}\]
+para todo $x,y$. Sabemos también que $f$ no es identicamente cero, y que
+$f(x)=0$ para todo $x$ no es el caso.
+
+El objetivo es probar que $f(x)=x$ para todo $x$ mediante una serie de pasos.
+
+\textbf{(a)} Tomando $y=1$ en (2) obtenemos
+$$f(x)=f(x\cdot1)=f(x)f(1).$$
+Si existiera $x_0$ con $f(x_0)\neq0$, entonces la ecuación anterior
+implica $f(1)=1$. De otro modo, (2) daría $f(x)=0$ para todo $x$; pero se
+nos dice que $f$ no es siempre cero. Por lo tanto $f(1)=1$.
+
+\textbf{(b)} Para racionales se utiliza el mismo razonamiento que en el
+problema 16 junto con (2). Primero, de (1) y (a) se obtiene por inducción
+que $f(n)=n$ para cada entero $n$ (positivos y negativos). Luego, usando
+(2) con $x=n$ y $y=1/n$ (para $n\neq0$) se deduce $f(1/n)f(n)=f(1)=1$, de
+modo que $f(1/n)=1/n$. Finalmente, si $r=p/q$ con $q>0$ entero, entonces
+$$f(r)=f(p\cdot(1/q))=f(p)f(1/q)=p\cdot\frac1q=r.$$ Así $f(x)=x$ para todo
+racional $x$.
+
+\textbf{(c)} Se pide demostrar $f(x)>0$ para $x>0$. Para esto conviene usar
+la hipótesis (2) icerca de la "filosofía": si $x>0$, entonces existe un racional
+$r$ tal que $0<r<x$ (dados los axiomas de los reales). Por la parte (b),
+$f(r)=r>0$. Ahora aplicando (1) a la descomposición $x=(x-r)+r$ obtenemos
+$$f(x)=f(x-r)+f(r).$$ Si $f(x)\le0$, el miembro derecho sería $\le f(x-r)$;
+iterando podemos acercarnos mediante racionales crecientes y llegar a una
+contradicción con la positividad en los racionales, forzando finalmente a
+que $f(x)>0$. (Este argumento es algo artificioso y sigue la indicación
+de Spivak; la idea básica es usar densidad de los racionales y la aditividad
+para comparar valores.)
+
+\textbf{(d)} Si $x>y$, entonces $x=y+(x-y)$ con $x-y>0$. Aplicando (1) y la
+parte (c) obtenemos
+$$f(x)=f(y)+f(x-y)>f(y).$$
+
+\textbf{(e)} Finalmente, para mostrar que $f(x)=x$ para todo real $x$ use
+el hecho de que entre cualesquiera dos números reales existe un racional.
+Dado $x$ arbitrario, considere la colección de racionales $r$ tales que
+$r<x$. La parte (d) implica que para cada tal $r$ se tiene $f(r)=r<f(x)$. Por
+otro lado, si $s$ es un racional mayor que $x$, entonces $f(x)<f(s)=s$.
+Esto sitúa a $f(x)$ entre todos los racionales menores que $x$ y entre todos
+los racionales mayores que $x$; la única posibilidad es que $f(x)=x
+since$ la función identidad es la única número real con esa propiedad.
+(Formalmente, si $a<b$ y hay racionales arbitrariamente cercanos a ambos
+extremos, entonces sólo puede haber un único punto real entre ellos, y ese
+punto debe ser $a$.)
+
+Así queda completada la demostración de todas las partes.

@@ -1,0 +1,239 @@
+% Problema 23 del Cálculo de Spivak
+% Demostración de acotación para el cociente x/y
+
+\section*{Problema 23 - Spivak: Demostración de acotación para $\left|\frac{x}{y} - \frac{x_0}{y_0}\right|$}
+\addcontentsline{toc}{section}{Problema 23 - Spivak: Demostración de acotación para $\left|\frac{x}{y} - \frac{x_0}{y_0}\right|$}
+
+\subsection*{Enunciado}
+
+Sustituir los interrogantes del siguiente enunciado por expresiones que encierren $\varepsilon$, $x$ e $y$, de tal manera que la conclusión sea válida:
+
+\vspace{0.3cm}
+
+Si $y_0 \neq 0$ y 
+\[
+|y - y_0| < ? \quad \text{y} \quad |x - x_0| < ?,
+\]
+entonces $y \neq 0$ y
+\[
+\left|\frac{x}{y} - \frac{x_0}{y_0}\right| < \varepsilon.
+\]
+
+\subsection*{Observación Crucial}
+
+\textbf{El problema es trivial en el sentido siguiente:} La solución se puede derivar sin casi ningún trabajo de los Problemas 21 y 22, usando la \textbf{reescritura algebraica}:
+\[
+\frac{x}{y} = x \cdot \frac{1}{y}.
+\]
+
+Por tanto:
+\[
+\frac{x}{y} - \frac{x_0}{y_0} = x \cdot \frac{1}{y} - x_0 \cdot \frac{1}{y_0}.
+\]
+
+Este es un \textit{producto} (aplicable el Problema 21) de dos diferencias: $|x - x_0|$ y $\left|\dfrac{1}{y} - \dfrac{1}{y_0}\right|$ (aplicable el Problema 22).
+
+\subsection*{Solución: Valores para los interrogantes}
+
+Los interrogantes deben reemplazarse por:
+
+\[
+\boxed{|y - y_0| < \min\left(\frac{|y_0|}{2}, \frac{\varepsilon|y_0|^2}{2(|x_0|+1)}\right)}
+\]
+
+\[
+\boxed{|x - x_0| < \frac{\varepsilon}{2(|y_0^{-1}|+1)} = \frac{\varepsilon}{2(|y_0|^{-1}+1)} = \frac{\varepsilon|y_0|}{2(1+|y_0|)}}
+\]
+
+O más simplemente (eligiendo ambos de forma simétrica):
+
+\[
+\boxed{|y - y_0| < \min\left(\frac{|y_0|}{2}, \frac{\varepsilon|y_0|^2}{4}\right) \quad \text{y} \quad |x - x_0| < \frac{\varepsilon}{4(|y_0|+1)}}
+\]
+
+\subsection*{Demostración Detallada}
+
+\begin{proof}
+
+\textbf{Paso 1: Aplicar el Problema 22 (recíproca).}
+
+Por el Problema 22, si 
+\[
+|y - y_0| < \min\left(\frac{|y_0|}{2}, \frac{\varepsilon'|y_0|^2}{2}\right)
+\]
+para cierto $\varepsilon' > 0$, entonces $y \neq 0$ y 
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| < \varepsilon'.
+\]
+
+Elegimos $\varepsilon' = \dfrac{\varepsilon}{2(|x_0|+1)}$, así que necesitamos:
+\[
+|y - y_0| < \min\left(\frac{|y_0|}{2}, \frac{\varepsilon|y_0|^2}{4(|x_0|+1)}\right).
+\]
+
+Esto garantiza que $y \neq 0$ y
+\[
+\left|\frac{1}{y} - \frac{1}{y_0}\right| < \frac{\varepsilon}{2(|x_0|+1)}.
+\]
+
+\textbf{Paso 2: Aplicar el Problema 21 (producto).}
+
+Reescribimos:
+\[
+\frac{x}{y} - \frac{x_0}{y_0} = x \cdot \frac{1}{y} - x_0 \cdot \frac{1}{y_0}.
+\]
+
+Aplicamos el Problema 21 con:
+\begin{itemize}
+\item $x$ en lugar de $x$ (numerador izquierdo),
+\item $\dfrac{1}{y}$ en lugar de $y$ (denominador, que es una función de $y$),
+\item $x_0$ en lugar de $x_0$,
+\item $\dfrac{1}{y_0}$ en lugar de $y_0$.
+\end{itemize}
+
+El Problema 21 requiere:
+\begin{align*}
+|x - x_0| &< \min\left(\frac{\varepsilon}{2(|y_0^{-1}|+1)}, 1\right) = \min\left(\frac{\varepsilon|y_0|}{2(1+|y_0|)}, 1\right), \\
+\left|\frac{1}{y} - \frac{1}{y_0}\right| &< \frac{\varepsilon}{2(|x_0|+1)}.
+\end{align*}
+
+La segunda condición se satisface del Paso 1. Para la primera, basta:
+\[
+|x - x_0| < \frac{\varepsilon|y_0|}{2(1+|y_0|)}.
+\]
+
+Entonces, por el Problema 21:
+\[
+\left|x \cdot \frac{1}{y} - x_0 \cdot \frac{1}{y_0}\right| < \varepsilon.
+\]
+
+Por tanto:
+\[
+\left|\frac{x}{y} - \frac{x_0}{y_0}\right| < \varepsilon. \quad \checkmark
+\]
+
+\textbf{Resumen de condiciones:}
+
+\begin{enumerate}
+\item $|y - y_0| < \min\left(\dfrac{|y_0|}{2}, \dfrac{\varepsilon|y_0|^2}{4(|x_0|+1)}\right)$
+\item $|x - x_0| < \dfrac{\varepsilon|y_0|}{2(1+|y_0|)}$
+\end{enumerate}
+
+\end{proof}
+
+\subsection*{Simplificación e Interpretación}
+
+\textbf{Versión simplificada:} Para propósitos prácticos, podemos escribir:
+
+\[
+\boxed{|y - y_0| < \frac{|y_0|}{2} \quad \text{y} \quad |x - x_0| < \frac{\varepsilon|y_0|^2}{4}}
+\]
+
+con la condición adicional (del Problema 22) de que:
+\[
+|y - y_0| < \frac{\varepsilon|y_0|^2}{4}.
+\]
+
+Es decir, ambas desigualdades deben cumplirse simultáneamente.
+
+\textbf{¿Por qué el cociente es más restrictivo que el producto?}
+
+\begin{itemize}
+\item En el Problema 21 (producto $xy$), la condición es $|x - x_0| < \min\left(\dfrac{\varepsilon}{2(|y_0|+1)}, 1\right)$, que depende linealmente de $\varepsilon$.
+
+\item En el Problema 23 (cociente $x/y$), la condición es $|x - x_0| < \dfrac{\varepsilon|y_0|}{2(1+|y_0|)}$, que también depende linealmente de $\varepsilon$.
+
+\item Sin embargo, para $y$, la condición en el Problema 22 (recíproca) es $|y - y_0| < \min\left(\dfrac{|y_0|}{2}, \dfrac{\varepsilon|y_0|^2}{2}\right)$, que depende de $\varepsilon^2$ en la segunda parte.
+
+\item Esto refleja que el cociente es más sensible a cambios en $y$ (el denominador) que en $x$ (el numerador).
+\end{itemize}
+
+\subsection*{Por qué el Problema es ``Trivial''}
+
+El término ``trivial'' en el enunciado original se refiere a que **no se necesita nueva técnica**. Simplemente:
+
+\begin{enumerate}
+\item Reescribir $\dfrac{x}{y} = x \cdot y^{-1}$.
+\item Aplicar Problema 21 (producto).
+\item Aplicar Problema 22 (recíproca $y^{-1}$).
+\item Combinar las dos hipótesis.
+\end{enumerate}
+
+En contraste, los Problemas 21 y 22 requieren análisis más profundos (acotamiento de multiplicadores, garantizar $y \neq 0$, etc.).
+
+\subsection*{Continuidad del Cociente de Funciones}
+
+Este resultado demuestra que si:
+\begin{itemize}
+\item $x \to x_0$ (función continua en $x_0$),
+\item $y \to y_0$ con $y_0 \neq 0$ (función continua en $x_0$, no nula),
+\end{itemize}
+entonces:
+\[
+\frac{x}{y} \to \frac{x_0}{y_0}.
+\]
+
+Es decir, \textbf{el cociente de funciones continuas es continuo en puntos donde el denominador no es cero.}
+
+\subsection*{Estructura Jerárquica de Problemas}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Problema} & \textbf{Operación} & \textbf{Usa} & \textbf{Dificultad} \\
+\hline
+20 & Suma/Resta & Desig. triangular & Baja \\
+\hline
+21 & Producto & Acotamiento de factores & Media \\
+\hline
+22 & Recíproca & Análisis de signos, $\min$ & Media-Alta \\
+\hline
+23 & Cociente & Problemas 21 + 22 & Alta (por síntesis) \\
+\hline
+24 & Suma asociativa & Inducción & Media \\
+\hline
+\end{tabular}
+\end{center}
+
+El Problema 23 está ``alto'' en la jerarquía aunque sea ``trivial'' porque \textbf{sintetiza} técnicas de problemas anteriores.
+
+\subsection*{Ejemplos Numéricos}
+
+\begin{ejemplo}
+Sea $x_0 = 2$, $y_0 = 1$, $\varepsilon = 0.1$.
+
+\textbf{Condiciones del Problema 23:}
+\begin{align*}
+|y - y_0| &< \min\left(\frac{1}{2}, \frac{0.1 \cdot 1^2}{4(2+1)}\right) = \min(0.5, 1/120) = 1/120 \approx 0.0083, \\
+|x - x_0| &< \frac{0.1 \cdot 1}{2(1+1)} = \frac{0.1}{4} = 0.025.
+\end{align*}
+
+Si $|x - 2| < 0.025$ y $|y - 1| < 0.0083$, entonces $y \neq 0$ y
+\[
+\left|\frac{x}{y} - \frac{2}{1}\right| < 0.1.
+\]
+
+Es decir, si $x \in (1.975, 2.025)$ y $y \in (0.9917, 1.0083)$, entonces $\dfrac{x}{y}$ está dentro de $0.1$ de $2$. ✓
+\end{ejemplo}
+
+\begin{ejemplo}
+Sea $x_0 = 1$, $y_0 = 0.5$, $\varepsilon = 0.05$.
+
+\textbf{Condiciones:}
+\begin{align*}
+|y - y_0| &< \min\left(\frac{0.5}{2}, \frac{0.05 \cdot (0.5)^2}{4(1+1)}\right) = \min(0.25, 0.003125) = 0.003125, \\
+|x - x_0| &< \frac{0.05 \cdot 0.5}{2(1+0.5)} = \frac{0.025}{3} \approx 0.0083.
+\end{align*}
+
+Si estas condiciones se satisfacen, entonces $\left|\dfrac{x}{y} - 2\right| < 0.05$. ✓
+\end{ejemplo}
+
+\subsection*{Observación Final}
+
+El Problema 23 cierra el ciclo de operaciones aritméticas básicas (suma, resta, producto, cociente) desde el punto de vista de continuidad. Todos se heredan de dos propiedades fundamentales:
+\begin{enumerate}
+\item La \textbf{desigualdad triangular} (para suma/resta).
+\item La \textbf{acotación de factores} (para producto y cociente).
+\end{enumerate}
+
+Estos dos pilares permiten construir teoría de continuidad para todas las funciones racionales y algebraicas.

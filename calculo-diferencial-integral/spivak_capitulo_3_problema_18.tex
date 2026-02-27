@@ -1,0 +1,67 @@
+\section*{Spivak Capítulo 3, Problema 18}
+\addcontentsline{toc}{section}{Spivak Capítulo 3, Problema 18}
+
+El enunciado pide hallar condiciones necesarias y suficientes sobre cuatrounciones
+$f,g,h,k:\mathbb{R}\to\mathbb{R}$ de modo que
+\[f(x)g(y)=h(x)k(y)\qquad\text{para todo }x,y.\tag{*}
+\]
+La idea típica es que cada lado debe factorizarse en un producto de una
+función de $x$ por otra de $y$, lo cual conduce a relaciones de proporcionalidad.
+
+\textbf{Solución.} Supongamos primero que existe una constante $c$ tal
+que, para todos $x$, $f(x)=c\,h(x)$ y, para todos $y$, $k(y)=c\,g(y)$.
+Entonces claramente
+$$h(x)k(y) = h(x)\bigl(cg(y)\bigr) = c\,h(x)g(y) = f(x)g(y),$$
+por lo cual (*) se cumple. Esto demuestra que la condición indicada es suficiente.
+
+Para ver que es también necesaria, fijemos un valor particular $x_0$ para la
+variable $x$ con $h(x_0)\neq0$ (si $h$ fuera idénticamente cero entonces
+la igualdad (*) obliga a que $f$ sea nula y la condición queda trivial con
+cualquier $c$; asumimos el caso no trivial). Sustituyendo $x=x_0$ en (*),
+obtenemos
+$$f(x_0)g(y) = h(x_0)k(y)	ag{1}
+$$
+para todo $y$. Si $h(x_0)\neq0$ podemos despejar
+$$k(y)=\frac{f(x_0)}{h(x_0)}\,g(y).$$
+La razón entre $f(x_0)$ y $h(x_0)$ es una constante que no depende de $y$.
+Llamando $c:=f(x_0)/h(x_0)$ tenemos
+\[k(y)=c\,g(y)\qquad\text{para todo }y.\tag{2}
+\]
+Análogamente, fijando ahora un valor $y_0$ con $g(y_0)\neq0$ y usando
+(*) con esa $y_0$ llegamos a
+$$f(x)g(y_0) = h(x)k(y_0),$$
+que tras reordenar da
+$$f(x) = \frac{k(y_0)}{g(y_0)}\,h(x).$$
+Definiendo la constante
+$c'=k(y_0)/g(y_0)$ obtenemos
+\[f(x)=c'\,h(x)\qquad\text{para todo }x.\tag{3}
+\]
+
+Ahora consultemos la relación (2): si sustituimos en (*) las expresiones
+(2) y (3) con constantes $c'$ y $c$, obtenemos
+en el lado izquierdo
+$$f(x)g(y)=\bigl(c'h(x)\bigr)g(y) = c'h(x)g(y)$$
+y en el derecho
+$$h(x)k(y)=h(x)\bigl(cg(y)\bigr) = c\,h(x)g(y).$$
+Para que la igualdad se mantenga para todo $x,y$ debe cumplirse
+$c'=c$. Por consiguiente hay una única constante $c$ para la cual las dos
+proporcionalidades (3) y (2) valen simultáneamente. Hemos demostrado que si
+existe alguna solución no trivial de (*), entonces necesariamente existen $c
+e0$
+con
+$$f(x)=c\,h(x),\qquad k(y)=c\,g(y)$$
+para todo $x,y$. (En el caso extremo en que $h$ o $g$ sean nulas en todos los
+puntos, la discusión se simplifica: si $h\equiv0$ entonces la condición (*)
+implica $f\equiv0$, y cualquier elección de $c$ satisface las relaciones; de
+modo análogo para $g\equiv0$.)
+
+En resumen: **las condiciones precisas son que las funciones de la primera
+columna sean constantes múltiples de las de la segunda columna**. Más
+formalmente, (*) se cumple si y sólo si existe un escalar $c$ tal que
+\[f = c\,h\quad\text{y}\quad k = c\,g.\]
+Este resultado encapsula la idea de que la dependencia en $x$ y en $y$ está
+separada de forma compatible en los dos productos.
+
+(Se puede reescribir también la conclusión como $f/h = k/g = c$,
+interpretando $f/h$ y $k/g$ como funciones constantes, siempre que $h,g$ no se
+anulen.)

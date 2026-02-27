@@ -1,0 +1,216 @@
+% Análisis de División a/b bajo diferentes condiciones
+% Los cuatro casos y sus combinaciones
+
+\section{Análisis de División: $\frac{a}{b}$ bajo Diferentes Condiciones}
+
+\subsection{Definición de los Cuatro Casos}
+
+\begin{enumerate}
+\item \textbf{Caso A:} $0 < a < 1$ (numerador es fracción positiva)
+\item \textbf{Caso B:} $b > 1$ (denominador es mayor que 1)
+\item \textbf{Caso C:} $a > 1$ (numerador es mayor que 1)
+\item \textbf{Caso D:} $0 < b < 1$ (denominador es fracción positiva)
+\end{enumerate}
+
+\section*{Combinaciones de Casos y sus Efectos en $\frac{a}{b}$}
+
+\subsection{Combinación 1: $0 < a < 1$ y $b > 1$}
+
+\begin{caso}
+Numerador fraccionario, denominador mayor que 1.
+\end{caso}
+
+\textbf{Efecto en $\frac{a}{b}$:} El resultado es \textbf{pequeño}.
+
+\textbf{Justificación:}
+\[
+0 < a < 1 \implies \frac{a}{b} < \frac{1}{b}.
+\]
+Además, si $b > 1$, entonces $\dfrac{1}{b} < 1$, por lo tanto:
+\[
+\frac{a}{b} < 1.
+\]
+Más aún, cuanto mayor sea $b$, menor será $\dfrac{a}{b}$.
+
+\begin{ejemplo}
+$a = 0.5$, $b = 2$:
+\[
+\frac{a}{b} = \frac{0.5}{2} = 0.25.
+\]
+El resultado es más pequeño que ambos $a$ y $b$.
+\end{ejemplo}
+
+\begin{ejemplo}
+$a = 0.3$, $b = 10$:
+\[
+\frac{a}{b} = \frac{0.3}{10} = 0.03.
+\]
+El resultado es muy pequeño.
+\end{ejemplo}
+
+\subsection{Combinación 2: $0 < a < 1$ y $0 < b < 1$}
+
+\begin{caso}
+Ambos, numerador y denominador, son fraccionarios.
+\end{caso}
+
+\textbf{Efecto en $\frac{a}{b}$:} El resultado \textbf{depende de la relación entre $a$ y $b$}.
+
+\textbf{Justificación:}
+\[
+\frac{a}{b} = a \cdot \frac{1}{b}.
+\]
+Como $0 < b < 1$, se tiene $\dfrac{1}{b} > 1$. Por tanto, $\dfrac{a}{b}$ puede ser:
+\begin{itemize}
+\item Mayor que $a$ (si $b$ es muy pequeño)
+\item Igual a $a$ (si $b = 1$, pero $b < 1$ por hipótesis)
+\item Menor que $a$ nunca ocurre en esta combinación
+\end{itemize}
+
+En realidad: $\dfrac{a}{b} > a$ siempre que $0 < b < 1$.
+
+\begin{ejemplo}
+$a = 0.5$, $b = 0.2$:
+\[
+\frac{a}{b} = \frac{0.5}{0.2} = 2.5.
+\]
+El resultado es \textbf{mayor que} $a$ (amplificado por dividir por un número pequeño).
+\end{ejemplo}
+
+\begin{ejemplo}
+$a = 0.3$, $b = 0.5$:
+\[
+\frac{a}{b} = \frac{0.3}{0.5} = 0.6.
+\]
+Nuevamente, $0.6 > 0.3 = a$.
+\end{ejemplo}
+
+\subsection{Combinación 3: $a > 1$ y $b > 1$}
+
+\begin{caso}
+Numerador y denominador ambos mayores que 1.
+\end{caso}
+
+\textbf{Efecto en $\frac{a}{b}$:} El resultado \textbf{depende de cuál es más grande}.
+
+\textbf{Justificación:}
+\[
+\frac{a}{b} \begin{cases}
+> 1 & \text{si } a > b, \\
+= 1 & \text{si } a = b, \\
+< 1 & \text{si } a < b.
+\end{cases}
+\]
+Ambos son mayores que 1, pero el resultado puede estar en cualquier intervalo $(0, \infty)$ dependiendo de la magnitud relativa.
+
+\begin{ejemplo}
+$a = 5$, $b = 2$:
+\[
+\frac{a}{b} = \frac{5}{2} = 2.5 > 1.
+\]
+El numerador domina.
+\end{ejemplo}
+
+\begin{ejemplo}
+$a = 2$, $b = 5$:
+\[
+\frac{a}{b} = \frac{2}{5} = 0.4 < 1.
+\]
+El denominador domina, aunque ambos son mayores que 1.
+\end{ejemplo}
+
+\subsection{Combinación 4: $a > 1$ y $0 < b < 1$}
+
+\begin{caso}
+Numerador mayor que 1, denominador fraccionario.
+\end{caso}
+
+\textbf{Efecto en $\frac{a}{b}$:} El resultado es \textbf{grande}.
+
+\textbf{Justificación:}
+\[
+\frac{a}{b} = a \cdot \frac{1}{b}.
+\]
+Como $a > 1$ y $\dfrac{1}{b} > 1$ (pues $0 < b < 1$), obtenemos:
+\[
+\frac{a}{b} > 1 \cdot 1 = 1.
+\]
+De hecho, cuanto más pequeño sea $b$, mayor será $\dfrac{a}{b}$.
+
+\begin{ejemplo}
+$a = 4$, $b = 0.5$:
+\[
+\frac{a}{b} = \frac{4}{0.5} = 8.
+\]
+El resultado es grande por ambas razones: numerador amplifica, denominador pequeño amplifica aún más.
+\end{ejemplo}
+
+\begin{ejemplo}
+$a = 3$, $b = 0.1$:
+\[
+\frac{a}{b} = \frac{3}{0.1} = 30.
+\]
+El resultado es muy grande.
+\end{ejemplo}
+
+\section{Resumen de Efectos: Tabla Comparativa}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Caso} & \textbf{Rango de $a$} & \textbf{Rango de $b$} & \textbf{Resultado $\frac{a}{b}$} \\
+\hline
+1 & $0 < a < 1$ & $b > 1$ & Muy pequeño: $\frac{a}{b} < a < 1$ \\
+\hline
+2 & $0 < a < 1$ & $0 < b < 1$ & Amplificado: $\frac{a}{b} > a$, puede ser $> 1$ \\
+\hline
+3 & $a > 1$ & $b > 1$ & Variable según $a$ vs $b$ \\
+\hline
+4 & $a > 1$ & $0 < b < 1$ & Muy grande: $\frac{a}{b} > a > 1$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\section{Reglas Prácticas}
+
+\begin{enumerate}
+\item \textbf{Dividir por algo grande que 1 reduce el resultado.}
+  \[
+  \frac{a}{b} < a \quad \text{si } b > 1.
+  \]
+
+\item \textbf{Dividir por algo pequeño entre 0 y 1 amplifica el resultado.}
+  \[
+  \frac{a}{b} > a \quad \text{si } 0 < b < 1.
+  \]
+
+\item \textbf{Si el numerador es pequeño y el denominador es grande, el resultado es muy pequeño.}
+  \[
+  0 < a < 1, \ b > 1 \implies \frac{a}{b} \to 0.
+  \]
+
+\item \textbf{Si el numerador es grande y el denominador es pequeño, el resultado es muy grande.}
+  \[
+  a > 1, \ 0 < b < 1 \implies \frac{a}{b} \to \infty.
+  \]
+
+\item \textbf{Cuando ambos están en el mismo "lado" (ambos $>1$ o ambos $<1$), la magnitud relativa decide.}
+  \[
+  0 < a < 1, \ 0 < b < 1: \quad \frac{a}{b} > 1 \iff a > b.
+  \]
+  \[
+  a > 1, \ b > 1: \quad \frac{a}{b} > 1 \iff a > b.
+  \]
+\end{enumerate}
+
+\section{Visualización Conceptual}
+
+\textbf{Escala de magnitudes:}
+
+\vspace{0.5cm}
+
+Muy pequeño \quad $\underbrace{0 < a < 1, b > 1}_{\text{Caso 1}}$ \quad $\underbrace{0 < a, b < 1}_{\text{Caso 2}}$ \quad $\underbrace{a, b > 1}_{\text{Caso 3}}$ \quad $\underbrace{a > 1, 0 < b < 1}_{\text{Caso 4}}$ \quad Muy grande
+
+\vspace{0.5cm}
+
+La posición en esta escala muestra cómo el resultado de $\dfrac{a}{b}$ varía dramáticamente según los rangos de $a$ y $b$.
