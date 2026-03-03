@@ -6,6 +6,8 @@
 \usepackage{geometry}
 \geometry{margin=1in}
 \usepackage{hyperref} % clickable links in PDF
+\usepackage{pgfplots}
+\pgfplotsset{compat=1.18}
 \newtheorem{example}{Ejemplo}[section]
 \title{Cálculo diferencial e integral -- Ejemplos}
 \author{}
@@ -125,6 +127,9 @@ El ejemplo anterior muestra la igualdad de la integral doble y las iteradas por 
 $$\iint_{x^2+y^2\le1}1\,dA=\int_{0}^{2\pi}\int_{0}^{1}r\,dr\,d\theta=2\pi\cdot\tfrac{1}{2}=\pi.$$
 \end{example}
 
+\section{Problemas de Spivak}
+\input{spivak_capitulo_5_problema_14.tex}
+
 \newpage
 \appendix
 \include{spivak_problema_1}
@@ -180,7 +185,26 @@ $$\iint_{x^2+y^2\le1}1\,dA=\int_{0}^{2\pi}\int_{0}^{1}r\,dr\,d\theta=2\pi\cdot\t
 \newpage
 \include{spivak_capitulo_2_problema_7}
 
+% \newpage
+% \input{spivak_capitulo_4_problema_19.tex}
 
-% nuevo comentario
+% \newpage
+% \input{spivak_capitulo_4_problema_20.tex}
 
+% \newpage
+% \input{spivak_capitulo_4_problema_18.tex}
+
+\newpage
+\input{spivak_capitulo_5_problema_3}
+
+\newpage
+\input{spivak_capitulo_5_problema_6.tex}
+\newpage
+\input{spivak_capitulo_5_problema_14.tex}
+\newpage
+\input{spivak_capitulo_5_problema_15.tex}
+\newpage
+\input{spivak_capitulo_5_problema_20.tex}
+\newpage
+\input{spivak_capitulo_5_problema_22.tex}
 \end{document}

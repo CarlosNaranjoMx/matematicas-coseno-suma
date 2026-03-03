@@ -1,0 +1,50 @@
+\section*{Problema 14}
+\textbf{(a)} Demostrar que si $\lim_{x \to \infty} f(x)x = l$ y $b \neq 0$, entonces $\lim_{x \to \infty} f(bx)/x = bl$.\\
+
+\textit{Demostración:}
+
+Sea $L = \lim_{x \to \infty} f(x)x$. Por definición de límite, para todo $\epsilon > 0$, existe $M > 0$ tal que si $x > M$, entonces
+\[
+|f(x)x - l| < \epsilon.
+\]
+Dividimos ambos lados de la desigualdad por $x$ (suponiendo $x > 0$):
+\[
+\left|f(x) - \frac{l}{x}\right| < \frac{\epsilon}{x}.
+\]
+Ahora, consideremos $f(bx)$ y reescribamos $\lim_{x \to \infty} \frac{f(bx)}{x}$ como:
+\[
+\lim_{x \to \infty} \frac{f(bx)}{x} = \lim_{x \to \infty} \frac{f(bx) \cdot b}{bx} = b \cdot \lim_{x \to \infty} f(bx) \cdot x.
+\]
+Dado que $\lim_{x \to \infty} f(x)x = l$, podemos sustituir $f(bx) \cdot x$ por $l$ (ya que $bx \to \infty$ cuando $x \to \infty$ y $b \neq 0$):
+\[
+\lim_{x \to \infty} \frac{f(bx)}{x} = b \cdot l = bl.
+\]
+Por lo tanto, se cumple que $\lim_{x \to \infty} \frac{f(bx)}{x} = bl$.\\
+
+\textbf{(b)} ¿Qué ocurre si $b = 0$?\\
+
+Si $b = 0$, entonces $f(bx) = f(0)$ para todo $x$. Por lo tanto,
+\[
+\lim_{x \to \infty} \frac{f(bx)}{x} = \lim_{x \to \infty} \frac{f(0)}{x} = 0.
+\]
+Esto se debe a que $f(0)$ es una constante y $x \to \infty$, lo que implica que $\frac{f(0)}{x} \to 0$.\\
+
+\textbf{(c)} La parte (a) nos permite hallar $\lim_{x \to \infty} \frac{\sin(2x)}{x}$ en función de $\lim_{x \to \infty} \frac{\sin x}{x}$. Hallar este límite por otro procedimiento.\\
+
+Usando la parte (a), tomamos $f(x) = \frac{\sin x}{x}$ y $b = 2$. Entonces,
+\[
+\lim_{x \to \infty} \frac{\sin(2x)}{x} = 2 \cdot \lim_{x \to \infty} \frac{\sin x}{x}.
+\]
+Sabemos que $\lim_{x \to \infty} \frac{\sin x}{x} = 0$, ya que $|\sin x| \leq 1$ para todo $x$ y $x \to \infty$. Por lo tanto,
+\[
+\lim_{x \to \infty} \frac{\sin(2x)}{x} = 2 \cdot 0 = 0.
+\]
+
+Por otro procedimiento, consideremos $\lim_{x \to \infty} \frac{\sin(2x)}{x}$. Sabemos que $|\sin(2x)| \leq 1$, por lo que
+\[
+-\frac{1}{x} \leq \frac{\sin(2x)}{x} \leq \frac{1}{x}.
+\]
+Cuando $x \to \infty$, tanto $-\frac{1}{x}$ como $\frac{1}{x}$ tienden a $0$. Por el teorema del emparedado, se concluye que
+\[
+\lim_{x \to \infty} \frac{\sin(2x)}{x} = 0.
+\]

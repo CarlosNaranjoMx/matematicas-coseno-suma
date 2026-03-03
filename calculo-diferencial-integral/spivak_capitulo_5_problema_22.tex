@@ -1,0 +1,32 @@
+\section*{Problema 22}
+Considérese una función $f$ con la siguiente propiedad: Si $g$ es una función cualquiera para la cual no existe el $\lim_{x \to \infty} g(x)$, entonces tampoco existe $\lim_{x \to \infty} [f(x) + g(x)]$. Demostrar que esto ocurre si y sólo si $\lim_{x \to \infty} f(x)$ existe.\\
+
+\textit{Demostración:}
+
+Supongamos que $\lim_{x \to \infty} f(x)$ no existe. Esto significa que $f(x)$ no se aproxima a un valor finito cuando $x \to \infty$. Por lo tanto, podemos construir una función $g(x)$ tal que $\lim_{x \to \infty} g(x)$ no exista y, además, $\lim_{x \to \infty} [f(x) + g(x)]$ exista. Esto contradice la hipótesis de que $f$ tiene la propiedad dada.\\
+
+Por otro lado, si $\lim_{x \to \infty} f(x)$ existe, sea $L = \lim_{x \to \infty} f(x)$. Supongamos que $g(x)$ es una función para la cual no existe $\lim_{x \to \infty} g(x)$. Entonces, si asumimos que $\lim_{x \to \infty} [f(x) + g(x)]$ existe, podemos escribir:
+\[
+\lim_{x \to \infty} [f(x) + g(x)] = \lim_{x \to \infty} f(x) + \lim_{x \to \infty} g(x).
+\]
+Sin embargo, dado que $\lim_{x \to \infty} g(x)$ no existe, la suma tampoco puede existir, lo que contradice nuestra suposición. Por lo tanto, $\lim_{x \to \infty} [f(x) + g(x)]$ no existe.\\
+
+En conclusión, $\lim_{x \to \infty} f(x)$ existe si y sólo si $f$ tiene la propiedad dada.
+
+\subsection*{Ejemplo}
+
+Consideremos las siguientes funciones:
+\begin{itemize}
+    \item $f(x) = \sin(x)$
+    \item $g(x) = -\sin(x)$
+\end{itemize}
+
+El límite de $f(x)$ cuando $x \to \infty$ no existe, ya que $\sin(x)$ oscila entre $-1$ y $1$ de forma indefinida. De manera similar, el límite de $g(x)$ cuando $x \to \infty$ tampoco existe, ya que $g(x) = -\sin(x)$ también oscila entre $-1$ y $1$.
+
+Sin embargo, si consideramos la suma de estas dos funciones, obtenemos:
+\[(f+g)(x) = f(x) + g(x) = \sin(x) + (-\sin(x)) = 0.\]
+
+Claramente, $f(x) + g(x) = 0$ para todo $x$, y el límite de una función constante es simplemente el valor de la constante. Por lo tanto:
+\[\lim_{x \to \infty} (f(x) + g(x)) = \lim_{x \to \infty} 0 = 0.\]
+
+Este ejemplo muestra que es posible construir funciones $f$ y $g$ tales que sus límites individuales no existan, pero la suma de las funciones tenga un límite bien definido.

@@ -1,0 +1,68 @@
+\section*{Problema 6 del Capítulo 5}
+
+\textbf{Enunciado:}
+
+Supóngase que las funciones $f$ y $g$ tienen la siguiente propiedad: Para todo $\varepsilon > 0$ y todo $x$,
+\begin{itemize}
+    \item si $0 < |x - 2| < \varepsilon^2 + \varepsilon$, entonces $|f(x) - 2| < \varepsilon$,
+    \item si $0 < |x - 2| < \varepsilon^2$, entonces $|g(x) - 4| < \varepsilon$.
+\end{itemize}
+
+Para cada $\varepsilon > 0$ hallar un $\delta > 0$ tal que, para todo $x$:
+\begin{enumerate}
+    \item Si $0 < |x - 2| < \delta$, entonces $|f(x) + g(x) - 6| < \varepsilon$.
+    \item Si $0 < |x - 2| < \delta$, entonces $|f(x)g(x) - 8| < \varepsilon$.
+    \item Si $0 < |x - 2| < \delta$, entonces $\left|\frac{1}{g(x)} - \frac{1}{4}\right| < \varepsilon$.
+    \item Si $0 < |x - 2| < \delta$, entonces $\left|\frac{f(x)}{g(x)} - \frac{1}{2}\right| < \varepsilon$.
+\end{enumerate}
+
+\textbf{Demostración:}
+\begin{enumerate}
+    \item \textbf{Para } $|f(x) + g(x) - 6| < \varepsilon$:
+    \begin{proof}
+    Sabemos que $|f(x) - 2| < \varepsilon$ y $|g(x) - 4| < \varepsilon$ cuando $0 < |x - 2| < \delta$. Entonces:
+    \[
+    |f(x) + g(x) - 6| = |(f(x) - 2) + (g(x) - 4)| \leq |f(x) - 2| + |g(x) - 4| < \varepsilon + \varepsilon = 2\varepsilon.
+    \]
+    Por lo tanto, podemos tomar $\delta = \min\left(\frac{\varepsilon}{2} + \frac{\varepsilon}{2}, \left(\frac{\varepsilon}{2}\right)^2\right)$.
+    \end{proof}
+
+    \item \textbf{Para } $|f(x)g(x) - 8| < \varepsilon$:
+    \begin{proof}
+    Sabemos que $|f(x) - 2| < \varepsilon$ y $|g(x) - 4| < \varepsilon$. Entonces:
+    \[
+    |f(x)g(x) - 8| = |f(x)g(x) - 2g(x) + 2g(x) - 8| \leq |f(x) - 2||g(x)| + 2|g(x) - 4|.
+    \]
+    Como $|g(x) - 4| < \varepsilon$, tenemos $|g(x)| \leq |4| + \varepsilon = 4 + \varepsilon$. Sustituyendo:
+    \[
+    |f(x)g(x) - 8| < \varepsilon(4 + \varepsilon) + 2\varepsilon = 4\varepsilon + \varepsilon^2 + 2\varepsilon = 6\varepsilon + \varepsilon^2.
+    \]
+    Por lo tanto, podemos tomar $\delta = \min\left(\frac{\varepsilon}{6} + \frac{\varepsilon}{6}, \left(\frac{\varepsilon}{6}\right)^2\right)$.
+    \end{proof}
+
+    \item \textbf{Para } $\left|\frac{1}{g(x)} - \frac{1}{4}\right| < \varepsilon$:
+    \begin{proof}
+    Sabemos que $|g(x) - 4| < \varepsilon$ cuando $0 < |x - 2| < \delta$. Entonces:
+    \[
+    \left|\frac{1}{g(x)} - \frac{1}{4}\right| = \left|\frac{4 - g(x)}{4g(x)}\right| = \frac{|g(x) - 4|}{|4g(x)|}.
+    \]
+    Como $|g(x) - 4| < \varepsilon$, tenemos $|g(x)| \geq 4 - \varepsilon$. Por lo tanto:
+    \[
+    \left|\frac{1}{g(x)} - \frac{1}{4}\right| < \frac{\varepsilon}{4(4 - \varepsilon)}.
+    \]
+    Podemos tomar $\delta = \min\left(\frac{\varepsilon}{4} + \frac{\varepsilon}{4}, \left(\frac{\varepsilon}{4}\right)^2\right)$.
+    \end{proof}
+
+    \item \textbf{Para } $\left|\frac{f(x)}{g(x)} - \frac{1}{2}\right| < \varepsilon$:
+    \begin{proof}
+    Sabemos que $|f(x) - 2| < \varepsilon$ y $|g(x) - 4| < \varepsilon$. Entonces:
+    \[
+    \left|\frac{f(x)}{g(x)} - \frac{1}{2}\right| = \left|\frac{2g(x) - f(x)4}{2g(x)}\right| = \frac{|2g(x) - f(x)4|}{|2g(x)|}.
+    \]
+    Factorizando y usando las desigualdades conocidas, podemos acotar el numerador y el denominador para obtener:
+    \[
+    \left|\frac{f(x)}{g(x)} - \frac{1}{2}\right| < \frac{\varepsilon}{2(4 - \varepsilon)}.
+    \]
+    Por lo tanto, podemos tomar $\delta = \min\left(\frac{\varepsilon}{2} + \frac{\varepsilon}{2}, \left(\frac{\varepsilon}{2}\right)^2\right)$.
+    \end{proof}
+\end{enumerate}

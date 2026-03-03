@@ -1,0 +1,46 @@
+\documentclass[12pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb}
+\usepackage{geometry}
+\geometry{margin=1in}
+
+\title{Límites y demostraciones}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\section*{Demostración de que $f(x) = \sin(1/x)$ no tiende a $0$ cuando $x \to 0$}
+
+Para demostrar que $f$ no tiende hacia $l$ en $a$, téngase cuidado en negar la definición correctamente:
+
+Si \textbf{no} es verdad que
+\begin{quote}
+    para todo $\varepsilon > 0$ existe algún $\delta > 0$ tal que, para todo $x$, si $0 < |x - a| < \delta$, entonces $|f(x) - l| < \varepsilon$,
+\end{quote}
+se cumple entonces que,
+\begin{quote}
+    existe \textbf{algún} $\varepsilon > 0$ tal que para \textbf{todo} $\delta > 0$ existe \textbf{algún} $x$ para el cual $0 < |x - a| < \delta$, pero no $|f(x) - l| < \varepsilon$.
+\end{quote}
+
+Así, para demostrar que la función $f(x) = \sin(1/x)$ no tiende a $0$ cerca de $0$, consideramos $\varepsilon = \frac{1}{2}$ y observamos que para todo $\delta > 0$ existe algún $x$ con $0 < |x - 0| < \delta$, pero no $|\sin(1/x) - 0| < \frac{1}{2}$, a saber, un $x$ de la forma $1/(90 + 360n)$ con $n$ suficientemente grande para que $1/(90 + 360n) < \delta$.
+
+\section*{Negación de la definición de límite}
+
+La definición de límite establece que:
+
+\begin{quote}
+    Una función $f(x)$ tiende al valor $L$ cuando $x \to a$ si, para todo $\varepsilon > 0$, existe un $\delta > 0$ tal que, para todo $x$, si $0 < |x - a| < \delta$, entonces $|f(x) - L| < \varepsilon$.
+\end{quote}
+
+La negación de esta definición se expresa de la siguiente manera:
+
+\begin{quote}
+    Existe algún $\varepsilon > 0$ tal que, para todo $\delta > 0$, existe algún $x$ con $0 < |x - a| < \delta$, pero $|f(x) - L| \geq \varepsilon$.
+\end{quote}
+
+Esto significa que, si una función no tiene límite en un punto, no importa cuán pequeño sea el intervalo alrededor de $a$ (es decir, no importa cuán pequeño sea $\delta$), siempre habrá un valor de $x$ dentro de ese intervalo para el cual $f(x)$ no se acerca lo suficiente a $L$ (es decir, $|f(x) - L| \geq \varepsilon$).
+
+\end{document}
